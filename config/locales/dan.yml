@@ -154,9 +154,9 @@
   - collaborators: Samarbejdspartner
   - confirm_remove_all_data: Er du sikker på, at du ønsker at fjerne alle data fra
       %s?
-  - contact_documentcloud: Kontakt DocumentCloud
+  - contact_documentcloud: Kontakt sourceAFRICA
   - contact_reviewer: Kontakt %s på %s, hvis du har brug for hjælp, eller besøg %s
-      for mere information om DocumentCloud.
+      for mere information om sourceAFRICA.
   - contact_us: Kontakt os
   - contributed_by: Tilføjet af
   - contributor: Bidragyder
@@ -200,7 +200,7 @@
       for dine læsere, før du gør det offentligt. Ændr på %sadgangs-rettigheder%s
       nu eller %s ret udgivelsesdato
   - document_publish_public_help: Dette dokument er offentligt. Det er i øjeblikket
-      tilgængeligt for brugere, der søger i DocumentClouds katalog og vil være synligt
+      tilgængeligt for brugere, der søger i sourceAFRICAs katalog og vil være synligt
       for offentligheden , når du embeder det på din hjemmeside. Ændr på %adgangs-rettigheder%s
       .
   - document_tools: Dokument-værktøjer
@@ -244,7 +244,7 @@
   - edit_x: Rediger %s
   - editing_notes_sections: Redigering af noter og sektioner
   - email: Email adresse
-  - email_for_assistance: Hvis du har brug for hjælp, kan du kontakte os på support@documentcloud.org.
+  - email_for_assistance: Hvis du har brug for hjælp, kan du kontakte os på support@codeforafrica.org.
   - email_when_complete: Email mig, når %sdokumenter er%s færdige med at blive bearbejdet.
   - embed_a_note: Embed en note
   - embed_document: Embed dette dokument
@@ -288,13 +288,13 @@
       der matcher din søgning. Vælg en enhed for at filtrere dine søgeresultater.
   - entities_unavailable: Enheder er midlertidigt utilgængelige.
   - error: 'Fejl '
-  - explain_disable_account: "%1$s vil ikke være i stand til at logge ind på DocumentCloud.
+  - explain_disable_account: "%1$s vil ikke være i stand til at logge ind på sourceAFRICA.
       Offentlige dokumenter og noter fra %1$s vil forblive tilgængelige. %2$skontakt
       support%3$s for helt at fjerne %1$s konto."
   - export: Eksport
   - export_to_overview_explain: Du er ved at eksportere til Overview. Du skal oprette
       en konto i Overview, og du skal oplyse Overview om dit brugernavn og adgangskode
-      til DocumentCloud.
+      til sourceAFRICA.
   - featured_examples_documents_list: Du kan finde masser af eksempler på embeddede
       dokumenter på vores liste over %seksempler%s .
   - featured_examples_notes_list: Du kan finde masser af eksempler på embeddede noter
@@ -429,7 +429,7 @@
   - pages_are_being_removed: Siderne bliver fjernet. Luk venligst dette dokument.
   - paragraph_description_of_document: Beskrivelse af dette dokument på sætningsniveau
   - password_no_blank: Dit password kan ikke være tomt
-  - password_reset: 'DocumentCloud nulstilling af adgangskode '
+  - password_reset: 'sourceAFRICA nulstilling af adgangskode '
   - password_updated: Password opdateret
   - pending: Afventer
   - person: Mennesker
@@ -443,7 +443,7 @@
   - preview_email: preview email
   - preview_search_embed_help: Før du fortsætter, skal du bruge et øjeblik på at %sgennemse
       dokumenterne%s. Publicerede dokumenter vil åbne på den URL, hvor de oprindeligt
-      blev udgivet, mens andre offentlige dokumenter åbner i DocumentCloud.
+      blev udgivet, mens andre offentlige dokumenter åbner i sourceAFRICA.
   - preview_viewer: Før du fortsætter, skal du kaste et blik på %sDocument Viewer%s.
   - print_notes: Udskriv noter
   - print_notes_missing_error: "%s indeholder ikke nogen printbare noter."
@@ -454,10 +454,10 @@
       adgang.
   - private_documents_visible_instructions:
     - Dette dokument er privat. Du skal gøre det offentligt, før det vil være synligt
-      på din hjemmeside eller i søgninger i DocumentClouds katalog. Du kan vælge at
+      på din hjemmeside eller i søgninger i sourceAFRICAs katalog. Du kan vælge at
       gøre det offentligt på et senere tidspunkt , eller du kan %2$sændre det nu%3$s.
     - Disse dokumenter er private. Du skal gøre dem offentlige, før de vil være synlige
-      på din hjemmeside eller i søgninger i DocumentClouds katalog. Du kan vælge at
+      på din hjemmeside eller i søgninger i sourceAFRICA katalog. Du kan vælge at
       gøre dem offentlige på et senere tidspunkt, eller du kan %2$sændre det nu%3$s.
   - private_note: Privat note
   - private_note_visible: Denne private note er kun synlig for dig.
@@ -542,14 +542,14 @@
   - resend_welcome_email: Gensend velkomst email
   - restricted: 'Begrænset '
   - review_x_documents:
-    - 'Gennemse "%2$s" på DocumentCloud '
-    - 'Anmeldelse% d dokumenter på DocumentCloud '
+    - 'Gennemse "%2$s" på sourceAFRICA '
+    - 'Anmeldelse% d dokumenter på sourceAFRICA '
   - reviewer: Bedømt af
   - reviewer_add_permission_denied: Du har ikke tilladelse til at tilføje bedømmere.
   - reviewer_email_instructions:
     - Email instruktioner til %2$s
     - Email-instruktioner til %d bedømmere
-  - reviewer_email_message: DocumentCloud vil emaile instruktionen for bedømmere til
+  - reviewer_email_message: sourceAFRICA vil emaile instruktionen for bedømmere til
       %s. Hvis du ønsker, kan du tilføje en personlig besked.
   - reviewer_enter_email: 'Indtast email-adressen på den første bedømmer, du vil invitere:'
   - reviewer_name: Giv bedømmer et navn
@@ -625,7 +625,7 @@
       før bearbejdning. Dokumentet lukker, mens det bliver genopbygget. Er du sikker
       på, du vil fortsætte?
   - text_tools: Tekstværktøjer
-  - the_api: DocumentCloud API
+  - the_api: sourceAFRICA API
   - timeline_for_doc: Tidslinje for "%s"
   - timeline_for_x_docs: Tidslinje for %d dokumenter
   - timeline_max_documents: Du kan kun se en tidslinje for ti dokumenter ad gangen.
@@ -655,7 +655,7 @@
   - view_pages: Vis sider
   - view_timeline: Se tidslinje
   - welcome_message_sent_to: En velkomstbesked er sendt til %s.
-  - welcome_to_document_cloud: 'Velkommen til DocumentCloud '
+  - welcome_to_document_cloud: 'Velkommen til sourceAFRICA '
   - width: Bredde
   - workspace: Arbejdsområde
   - wp_shortcode_plugin_docs_link: "%sPlugin nødvendigt%s."

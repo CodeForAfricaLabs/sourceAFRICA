@@ -97,7 +97,7 @@ dc.ui.ProjectDialog = dc.ui.Dialog.extend({
         if (errorResp.errors) {
           this.error(errorResp.errors[0]);
         } else {
-          this.error('No DocumentCloud account was found with that email.');
+          this.error('No sourceAFRICA account was found with that email.');
         }
         this.hideSpinner();
       }, this)

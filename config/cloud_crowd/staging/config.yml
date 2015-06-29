@@ -39,7 +39,7 @@
 # to the central server). If yes, specify the login and password that all
 # requests must provide for authentication.
 :http_authentication: no
-:login:               documentcloud
+:login:               sourceafrica
 :password:            <%= secrets['db_password'] %>
 
 # By default, CloudCrowd looks for installed actions inside the 'actions'

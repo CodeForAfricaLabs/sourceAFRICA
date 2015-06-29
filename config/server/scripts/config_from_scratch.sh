@@ -97,7 +97,7 @@ sudo -u postgres createuser -s ubuntu
 sudo -u postgres createuser -s documentcloud
 sudo -u postgres psql -c "alter user documentcloud password 'YOUR_DB_PASSWORD_GOES_HERE' "
 sudo -u postgres createdb dcloud_$RAILS_ENVIRONMENT
-cd /home/$USERNAME/documentcloud
+cd /home/$USERNAME/sourceAFRICA
 sudo -u postgres psql -f db/development_structure.sql dcloud_$RAILS_ENVIRONMENT 2>&1|grep ERROR
 # rake $RAILS_ENVIRONMENT db:migrate
 

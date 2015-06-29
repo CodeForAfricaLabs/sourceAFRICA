@@ -1,4 +1,4 @@
-# A (News or Watchdog) organization with the power to create DocumentCloud
+# A (News or Watchdog) organization with the power to create sourceAFRICA
 # accounts and upload documents.
 class Organization < ActiveRecord::Base
   include ActionView::Helpers::DateHelper

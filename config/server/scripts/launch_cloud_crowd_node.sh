@@ -8,5 +8,5 @@ export DEBIAN_FRONTEND=noninteractive
 USERNAME=ubuntu
 
 su -c "curl http://169.254.169.254/latest/meta-data/hostname | sudo xargs hostname"
-cd /home/$USERNAME/documentcloud
+cd /home/$USERNAME/sourceAFRICA
 su $USERNAME -c "rake production crowd:node:start"

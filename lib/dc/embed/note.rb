@@ -180,7 +180,7 @@ module DC
           {
             :type             => "rich",
             :version          => "1.0",
-            :provider_name    => "DocumentCloud",
+            :provider_name    => "sourceAFRICA",
             :provider_url     => DC.server_root(:force_ssl => true),
             :cache_age        => 300,
             :height           => @embed_config[:maxheight],

@@ -1,6 +1,6 @@
-# Bienvenido a DocumentCloud
+# Bienvenido a sourceAFRICA
 
-Si usted desea comenzar, pruebe nuestra [visita guiada](/help/tour), o eche un vistazo a [lo que otros periodistas están haciendo con DocumentCloud.](/help/tour)
+Si usted desea comenzar, pruebe nuestra [visita guiada](/help/tour), o eche un vistazo a [lo que otros periodistas están haciendo con sourceAFRICA.](/help/tour)
 
 Descubra cómo:
 

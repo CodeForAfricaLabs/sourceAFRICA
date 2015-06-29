@@ -10,16 +10,20 @@ test $USER = 'root' || { echo run this as root >&2; exit 1; }
 USERNAME=ubuntu
 RAILS_ENV=production
 
+rm -rf /etc/apt/sources.list.d/passenger.list
+
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 561F9B9CAC40B2F7
 apt-get install apt-transport-https ca-certificates -y
 
+apt-get update
+
+apt-get install nginx-extras -y
+
 echo "deb https://oss-binaries.phusionpassenger.com/apt/passenger trusty main" | tee /etc/apt/sources.list.d/passenger.list
-gpg --keyserver keyserver.ubuntu.com --recv-keys 561F9B9CAC40B2F7
-gpg --armor --export 561F9B9CAC40B2F7 | sudo apt-key add -
 
 apt-get update
 
-apt-get install nginx-extras passenger -y
+apt-get install passenger -y
 # crash-watch gdb libc6-dbg libev4 liblua5.1-0 libperl5.14 nginx-common nginx-extras passenger passenger-dev passenger-doc ruby-daemon-controller ruby-rack
 
 apt-get install nodejs nodejs-dev npm -y
@@ -33,7 +37,7 @@ cd /home/$USERNAME
 
 test -e pixel-ping || su -c "git clone git://github.com/documentcloud/pixel-ping.git pixel-ping" $USERNAME
 
-cd /home/$USERNAME/documentcloud
+cd /home/$USERNAME/sourceAFRICA
 
 test -e /etc/nginx/nginx.conf && mv /etc/nginx/nginx.conf /etc/nginx/nginx.default.conf
 test -e /etc/nginx/sites-enabled/default && rm /etc/nginx/sites-enabled/default

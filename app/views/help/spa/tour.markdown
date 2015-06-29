@@ -1,6 +1,6 @@
 # Visita guiada
 
-DocumentCloud es una herramienta para organizar y trabajar con documentos de gran tamaño y colecciones de documentos, un visor de documentos que facilita a los periodistas compartir materiales de fuentes (source material) con los lectores y un repositorio de acceso público a los documentos de fuentes primarias que se utilizaron en investigaciones periodísticas. Si es nuevo en DocumentCloud, este es un tour que esperamos le ayude a ubicarse.
+sourceAFRICA es una herramienta para organizar y trabajar con documentos de gran tamaño y colecciones de documentos, un visor de documentos que facilita a los periodistas compartir materiales de fuentes (source material) con los lectores y un repositorio de acceso público a los documentos de fuentes primarias que se utilizaron en investigaciones periodísticas. Si es nuevo en sourceAFRICA, este es un tour que esperamos le ayude a ubicarse.
 
 ## Creando su primer proyecto.
 
@@ -10,7 +10,7 @@ Utilice el botón "New Project" a la izquierda para crear un proyecto titulado "
 
 Busque [gulf oil spill](#search/gulf%20oil%20spill)
 
-Esto buscará las palabras "gulf", "oil" y "spill" en el texto o el título de los documentos que se han hechos públicos por todos los usuarios en DocumentCloud. Puede [refinar su búsqueda con criterios especiales](#help/searching) también. Los resultados incluirán  una serie de documentos relacionados con el derrame de petróleo de British Petroleum en el Golfo de México. Arrastre uno o dos de estos documentos a su proyecto titulado "Demo Documents".
+Esto buscará las palabras "gulf", "oil" y "spill" en el texto o el título de los documentos que se han hechos públicos por todos los usuarios en sourceAFRICA. Puede [refinar su búsqueda con criterios especiales](#help/searching) también. Los resultados incluirán  una serie de documentos relacionados con el derrame de petróleo de British Petroleum en el Golfo de México. Arrastre uno o dos de estos documentos a su proyecto titulado "Demo Documents".
 
 Haga clic en "Demo Documents" para abrir el proyecto. Usted verá los documentos en una lista.
 
@@ -20,7 +20,7 @@ Haga doble clic en uno de los documentos para abrirlo. Si el periodista aportado
 
 ## <span id="analytic_tools">Pruebe nuestras herramientas de análisis..</span>
 
-DocumentCloud brinda a los periodistas un gran conjunto de herramientas de análisis para trabajar con documentos grandes y pequeños. Cuando se carga un documento, se corre a través de OCR,  el cual extrae las letras y palabras de la imagen de cada documento. Pero eso no es todo.
+sourceAFRICA brinda a los periodistas un gran conjunto de herramientas de análisis para trabajar con documentos grandes y pequeños. Cuando se carga un documento, se corre a través de OCR,  el cual extrae las letras y palabras de la imagen de cada documento. Pero eso no es todo.
 
 Busque [source: "House Committee on the Judiciary"][].
 

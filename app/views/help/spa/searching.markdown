@@ -1,6 +1,6 @@
 # Búsqueda de documentos
 
-Por defecto, la búsqueda encuentra todas las palabras incluidas en el título y el texto completo del documento en sí. Por ejemplo: [John Yoo detainee](#search/John%20Yoo%20detainee). Sin embargo, usted puede pedir que DocumentCloud busque el contenido de campos específicos.
+Por defecto, la búsqueda encuentra todas las palabras incluidas en el título y el texto completo del documento en sí. Por ejemplo: [John Yoo detainee](#search/John%20Yoo%20detainee). Sin embargo, usted puede pedir que sourceAFRICA busque el contenido de campos específicos.
 
 ## Búsquedas avanzadas
 Incluya términos entre comillas para buscar una frase específica de varias palabras. `"Robert Smith"`
@@ -30,7 +30,7 @@ filter                     | Filtre documentos por criterios interesantes (uno d
 
 ![OpenCalais Logo](/images/help/opencalais.jpg)
 
-Cada vez que se carga un documento en DocumentCloud enviamos el contenido a [OpenCalais](http://www.opencalais.com/), un servicio que descubre las entidades (personas, lugares, organizaciones, términos, etc) que están presentes en texto sin formato. OpenCalais nos puede decir que "Barack Obama" es la misma persona que "el presidente Obama", "el senador Obama", "Señor Presidente"... e incluso "él" o "su" en cláusulas como "sus propuestas políticas".
+Cada vez que se carga un documento en sourceAFRICA enviamos el contenido a [OpenCalais](http://www.opencalais.com/), un servicio que descubre las entidades (personas, lugares, organizaciones, términos, etc) que están presentes en texto sin formato. OpenCalais nos puede decir que "Barack Obama" es la misma persona que "el presidente Obama", "el senador Obama", "Señor Presidente"... e incluso "él" o "su" en cláusulas como "sus propuestas políticas".
 
 Para ver las entidades, seleccione un documento y elija **Ver Entidades**  en el menú **Analyze** ... o haga clic con el lado derecho del mouse en un documento y elija View Entities  en el menú context. Las entidades se mostrarán  en una gráfica que muestra la frecuencia con la que cada entidad aparece en cada página. En esta gráfica, puede ver cuales empresas e individuos tienden a ser mencionados juntos con frecuencia, o qué partes de un documento largo se enfocan en un tema determinado. Pase el ratón sobre cualquier mención (los pequeños cuadros grises) para ver el contexto que lo rodea, y haga clic en los cuadros grises para saltar directamente a esa mención en el documento.
 
@@ -38,7 +38,7 @@ Para ver las entidades, seleccione un documento y elija **Ver Entidades**  en el
 
 ## <span id="metadata">Editando y buscando sus propios datos personalizados</span>
 
-DocumentCloud le permite definir y buscar su propio conjunto de datos personalizados (pares clave/valor) asociados a documentos específicos. Para empezar a trabajar con los datos del documento, puede utilizar [la API](#help/api) para agregar datos a sus documentos en conjunto – lo cual es útil si ya tiene una base de datos de información acerca de sus documentos.
+sourceAFRICA le permite definir y buscar su propio conjunto de datos personalizados (pares clave/valor) asociados a documentos específicos. Para empezar a trabajar con los datos del documento, puede utilizar [la API](#help/api) para agregar datos a sus documentos en conjunto – lo cual es útil si ya tiene una base de datos de información acerca de sus documentos.
 
 Para editar los datos de documentos individuales en el área de trabajo, seleccione los documentos que desea actualizar y elija **Editar Datos del Documento*** en el menú **Editar**...o haga clic con el lado derecho del mouse en un documento y elija **Editar Datos del Documento** en el menú context.
 

@@ -1,3 +1,19 @@
+sourceAFRICA GPL v3 License
+---------------------------
+
+Copyright (c) 2015 Code for Africa
+
+The GPL ([V2](http://choosealicense.com/licenses/gpl-2.0/) or [V3](http://choosealicense.com/licenses/gpl-3.0/)) is a copyleft license that requires anyone who distributes your code or a derivative work to make the source available under the same terms. V3 is similar to V2, but further restricts use in hardware that forbids software alterations.
+
+Linux, Git, and WordPress use the GPL.
+
+You can view the entire license [here](http://choosealicense.com/licenses/gpl-3.0/).
+
+---
+
+DocumentCloud MIT License
+-------------------------
+
 Copyright (c) 2011 DocumentCloud, Investigative Reporters & Editors
 
 Permission is hereby granted, free of charge, to any person

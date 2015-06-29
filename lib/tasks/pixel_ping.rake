@@ -21,6 +21,6 @@ namespace :ping do
 end
 
 def launch_command
-  "node ../pixel-ping/lib/pixel-ping.js secrets/pixel_ping/#{RAILS_ENV}.json"
+  "nodejs ../pixel-ping/lib/pixel-ping.js secrets/pixel_ping/#{RAILS_ENV}.json"
 end
 

@@ -1,6 +1,6 @@
-# The DocumentCloud API
+# The sourceAFRICA API
 
-DocumentCloud's API allows users to search, upload, edit, and organize documents. In addition, an oEmbed service provides easy embedding of documents.
+sourceAFRICA's API allows users to search, upload, edit, and organize documents. In addition, an oEmbed service provides easy embedding of documents.
 
 ## Contents
 
@@ -25,11 +25,11 @@ DocumentCloud's API allows users to search, upload, edit, and organize documents
 <a name="guidelines"></a>
 # API Guidelines and Terms of Service
 
-No API key is required, so performing searches directly from JavaScript is fair game. Please be considerate and don't hammer our servers. _Restrictions on the use of the DocumentCloud API do not apply to participating organizations working with documents uploaded by their own users._
+No API key is required, so performing searches directly from JavaScript is fair game. Please be considerate and don't hammer our servers. _Restrictions on the use of the sourceAFRICA API do not apply to participating organizations working with documents uploaded by their own users._
 
- * You may not recreate DocumentCloud.org in its entirety or build an application that simply displays the complete set of documents. You may not build an application that displays the document set of a contributing organization.
+ * You may not recreate sourceAFRICA.org in its entirety or build an application that simply displays the complete set of documents. You may not build an application that displays the document set of a contributing organization.
 
- * If your project allows users to interact with data from DocumentCloud, you must cite DocumentCloud as the source of your data. If your project allows users to view or browse specific documents, you must cite DocumentCloud and the relevant contributing organizations, as identified in the API.
+ * If your project allows users to interact with data from sourceAFRICA, you must cite sourceAFRICA as the source of your data. If your project allows users to view or browse specific documents, you must cite sourceAFRICA and the relevant contributing organizations, as identified in the API.
 
  * You may not use the API commercially, by which we mean you may not charge people money to look at the data or sell advertising specifically against it.
 
@@ -91,7 +91,7 @@ mentions      | include highlighted mentions of the search phrase | 3 (not prese
 
 Our API for bulk uploads exposes the same method that we use internally, but wraps it in basic authentication over HTTPS. Documents will be uploaded into the authenticated account.
 
-You can either upload a local file using a standard multi-part upload, or tell DocumentCloud to download the file from a public server by passing a URL.
+You can either upload a local file using a standard multi-part upload, or tell sourceAFRICA to download the file from a public server by passing a URL.
 
 Parameter     | Description           |  Example
 --------------|-----------------------|--------------
@@ -116,7 +116,7 @@ secure          | (optional) If you're dealing with a truly sensitive document, 
 
 Using Ruby's RestClient library you could do:
 
-    RestClient.post('https://ME%40TEST.COM:SECRET@www.documentcloud.org/api/upload.json',
+    RestClient.post('https://ME%40TEST.COM:SECRET@www.sourceafrica.net/api/upload.json',
       :file   => File.new('/full/path/to/document/document.pdf','rb'),
       :title  => "2008 Blagojevich Tax Return",
       :source => "U.S. Attorney's Office",
@@ -147,6 +147,7 @@ Retrieve the canonical JSON representation of a particular document, as specifie
       "contributor_organization":"DocumentCloud",
       "display_language":"eng",
       "resources":{
+<<<<<<< HEAD
         "pdf":"https://s3.amazonaws.com/s3.documentcloud.org/documents/1659580/economic-analysis-of-the-south-pole-traverse.pdf",
         "text":"https://s3.amazonaws.com/s3.documentcloud.org/documents/1659580/economic-analysis-of-the-south-pole-traverse.txt",
         "thumbnail":"https://s3.amazonaws.com/s3.documentcloud.org/documents/1659580/pages/economic-analysis-of-the-south-pole-traverse-p1-thumbnail.gif",
@@ -158,6 +159,17 @@ Retrieve the canonical JSON representation of a particular document, as specifie
           "text":"https://www.documentcloud.org/documents/1659580/pages/economic-analysis-of-the-south-pole-traverse-p{page}.txt"
           },
         "annotations_url":"https://www.documentcloud.org/documents/1659580/annotations"
+=======
+        "pdf":"http://s3.sourceafrica.net/documents/207/american-academy-v-napolitano.pdf",
+        "text":"http://s3.sourceafrica.net/documents/207/american-academy-v-napolitano.txt",
+        "thumbnail":"http://s3.sourceafrica.net/documents/207/pages/american-academy-v-napolitano-p1-thumbnail.gif",
+        "search":"http://s3.sourceafrica.net/207/search.json?q={query}",
+        "page":{
+          "text":"http://s3.sourceafrica.net/documents/207/pages/american-academy-v-napolitano-p{page}.txt",
+          "image":"http://s3.sourceafrica.net/asset_store/documents/207/pages/american-academy-v-napolitano-p{page}-{size}.gif"
+        },
+        "related_article":"http://example.com/article.html"
+>>>>>>> master
       },
       "sections":[],
       "data":{},
@@ -192,7 +204,7 @@ The response value of this method will be the JSON representation of your docume
 <a name="delete-document"></a>
 ## DELETE /api/documents/[id].json
 
-Delete a document from DocumentCloud. You must be authenticated as the owner of the document for this method to work.
+Delete a document from sourceAFRICA. You must be authenticated as the owner of the document for this method to work.
 
 ### Tips
 
@@ -279,8 +291,8 @@ Generate an embed code for a resource (a document or a note) using our [oEmbed](
     {
       "type": "rich",
       "version": "1.0",
-      "provider_name": "DocumentCloud",
-      "provider_url": "https://www.documentcloud.org/",
+      "provider_name": "sourceAFRICA",
+      "provider_url": "https://sourceafrica.net/",
       "cache_age": 300,
       "height": 750,
       "width": 600,
@@ -290,13 +302,13 @@ Generate an embed code for a resource (a document or a note) using our [oEmbed](
 <a name="oembed-documents"></a>
 ### Example document request
 
-    /api/oembed.json?url=https%3A%2F%2Fwww.documentcloud.org%2Fdocuments%2Fdoc-name.html&responsive=true
+    /api/oembed.json?url=https%3A%2F%2Fsourceafrica.net%2Fdocuments%2Fdoc-name.html&responsive=true
 
 ### Parameters for documents
 
 Parameter        | Description           |  Example
 -----------------|-----------------------|--------------
-url              | **(required)** URL-escaped document to embed     | https%3A//www.documentcloud.org/ documents/doc-name.html
+url              | **(required)** URL-escaped document to embed     | https%3A//sourceafrica.net/ documents/doc-name.html
 maxheight        | (optional) The viewer's height (pixels)    | 750
 maxwidth         | (optional) The viewer's width (pixels)     | 600
 container        | (optional) Specify the DOM container in which to embed the viewer | #my-document-div
@@ -314,13 +326,13 @@ default_page     | (optional) Open the document to a specific page   | 3
 <a name="oembed-notes"></a>
 ### Example note request
 
-    /api/oembed.json?url=https%3A%2F%2Fwww.documentcloud.org%2Fdocuments%2Fdoc-name%2Fannotations%2F123.js
+    /api/oembed.json?url=https%3A%2F%2Fsourceafrica.net%2Fdocuments%2Fdoc-name%2Fannotations%2F123.js
 
 ### Parameters for notes
 
 Parameter        | Description           |  Example
 -----------------|-----------------------|--------------
-url              | **(required)** URL-escaped document to embed     | https%3A//www.documentcloud.org/ documents/doc-name.html
+url              | **(required)** URL-escaped document to embed     | https%3A//sourceafrica.net/ documents/doc-name.html
 container        | (optional) Specify the DOM container in which to embed the viewer | #my-document-div
 
 

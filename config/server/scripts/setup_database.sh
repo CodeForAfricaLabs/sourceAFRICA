@@ -3,7 +3,7 @@
 USERNAME=ubuntu
 RAILS_ENVIRONMENT=production
 
-echo "deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main" > /etc/apt/sources.list.d/pgdg.list
+echo "deb http://apt.postgresql.org/pub/repos/apt/ utopic-pgdg main" > /etc/apt/sources.list.d/pgdg.list
 
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 sudo apt-get update
@@ -28,7 +28,7 @@ sudo -u postgres psql -c "CREATE EXTENSION hstore;"
 sudo -u postgres createdb dcloud_$RAILS_ENVIRONMENT
 sudo -u postgres createdb dcloud_analytics_$RAILS_ENVIRONMENT
 sudo -u postgres createdb dcloud_crowd_$RAILS_ENVIRONMENT
-cd /home/$USERNAME/documentcloud
+cd /home/$USERNAME/sourceAFRICA
 sudo -u postgres psql -f db/development_structure.sql dcloud_$RAILS_ENVIRONMENT 2>&1|grep ERROR
 sudo -u postgres psql -f db/analytics_structure.sql dcloud_analytics_$RAILS_ENVIRONMENT 2>&1|grep ERROR
 rake $RAILS_ENVIRONMENT db:migrate

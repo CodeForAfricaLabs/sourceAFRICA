@@ -161,9 +161,9 @@
   - collaboration: "Совместная работа участников"
   - collaborators: "Участник"
   - confirm_remove_all_data: "Вы уверены, что хотите удалить все данные из %s?"
-  - contact_documentcloud: "Связаться с DocumentCloud"
+  - contact_documentcloud: "Связаться с sourceAFRICA"
   - contact_reviewer: "Если вам нужна помощь, свяжитесь с %s - %s. Больше информации
-      о DocumentCloud также есть на %s."
+      о sourceAFRICA также есть на %s."
   - contact_us: "Контакты"
   - contributed_by: "Добавлено"
   - contributor: "Пользователь"
@@ -209,7 +209,7 @@
       общедоступным, найти и посмотреть его сможете только вы. Вы можете прямо сейчас
       сменить %sуровень доступа%s или %s время публикации."
   - document_publish_public_help: "Этот документ доступен публично. Сейчас он доступен
-      пользователям через поиск в каталоге DocumentCloud, он также будет находится
+      пользователям через поиск в каталоге sourceAFRICA, он также будет находится
       в открытом доступе, если вы встроите его в сайт. Изменить %sуровень доступа%s."
   - document_tools: "Инструменты"
   - document_viewer_size: "Размер окна просмотра документов"
@@ -254,7 +254,7 @@
   - edit_x: "Редактировать %s"
   - editing_notes_sections: "Редактирование заметок и секций"
   - email: Email
-  - email_for_assistance: "Если вам нужна помощь, напишите нам на support@documentcloud.org."
+  - email_for_assistance: "Если вам нужна помощь, напишите нам на support@codeforafrica.org."
   - email_when_complete: "Я хочу получить email когда закончится %sобработка документов%s."
   - embed_a_note: "Встроить заметку"
   - embed_document: "Добавить документ на сайт"
@@ -301,14 +301,14 @@
       поиска."
   - entities_unavailable: "Ключевые слова временно недоступны."
   - error: "Ошибка"
-  - explain_disable_account: "%1$s не сможет войти в DocumentCloud. Публичные документы
+  - explain_disable_account: "%1$s не сможет войти в sourceAFRICA. Публичные документы
       и заметки, сделанные пользователем %1$s останутся общедоступными. %2$sСвяжитесь
       со службой поддержки %3$s чтобы польностью удалить аккаунт %1$s."
   - export: "Экспорт"
   - export_to_overview_explain: "Вы собираетесь экспортировать проект в Overview.
       Не забудьте, что для этого у вас должен быть аккаунт Overview. Также вы должны
       предоставить Overview имя пользователя и пароль, которые используете для входа
-      в DocumentCloud."
+      в sourceAFRICA."
   - featured_examples_documents_list: "Множество примеров встроеных документов вы
       можете найти в нашем %sсписке примеров%s."
   - featured_examples_notes_list: "Много примеров встроенных заметок есть на нашей
@@ -450,7 +450,7 @@
   - pages_are_being_removed: "Идет удаление страниц. Пожалуйста, закройте документ."
   - paragraph_description_of_document: "Описание документа в несколько предложений"
   - password_no_blank: "Поле нельзя оставить пустым"
-  - password_reset: "Восстановление пароля DocumentCloud"
+  - password_reset: "Восстановление пароля sourceAFRICA"
   - password_updated: "Пароль изменен"
   - pending: "Не активирован"
   - person: "Люди"
@@ -465,7 +465,7 @@
   - preview_search_embed_help: "Перед тем как продолжить, пожалуйста, %sпроверьте
       список документов.%s Опубликованные документы откроются по тому URL, по которому
       их изначально опубликовали, в то время как остальные публичные документы откроются
-      в DocumentCloud."
+      в sourceAFRICA."
   - preview_viewer: "Перед тем, как продолжить, %sпроверьте, правильно ли выглядит
       окно просмотра документа%s."
   - print_notes: "Напечатать заметки"
@@ -477,10 +477,10 @@
       (участники)."
   - private_documents_visible_instructions:
     - "Это приватный документ. Перед тем, как он станет доступен на вашем сайте или
-      через поиск в каталоге DocumentCloud, его нужно сделать публичным. Вы можете
+      через поиск в каталоге sourceAFRICA, его нужно сделать публичным. Вы можете
       задать время и дату публикации или %2$sсделать документ публичным сейчас%3$s."
     - "Эти документы приватны. Перед тем, как они станут доступны на вашем сайте или
-      через поиск в каталоге DocumentCloud, их нужно сделать публичными. Вы можете
+      через поиск в каталоге sourceAFRICA, их нужно сделать публичными. Вы можете
       задать время и дату публикации или %2$sвнести изменения сейчас%3$s."
   - private_note: "Приватная заметка"
   - private_note_visible: "Эта приватная заметка видна только вам"
@@ -574,17 +574,17 @@
   - resend_welcome_email: "Отослать приглашение еще раз"
   - restricted: "Ограниченный"
   - review_x_documents:
-    - Рецензировать "%2$s" с помощью DocumentCloud
-    - "Рецензировать %d документа с помощью DocumentCloud"
-    - "Рецензировать %d документов с помощью DocumentCloud"
+    - Рецензировать "%2$s" с помощью sourceAFRICA
+    - "Рецензировать %d документа с помощью sourceAFRICA"
+    - "Рецензировать %d документов с помощью sourceAFRICA"
   - reviewer: "Рецензент"
   - reviewer_add_permission_denied: "Вы не можете отправлять документы на рецензию"
   - reviewer_email_instructions:
     - "Отправить инструкции %2$s"
     - "Отправить инструкции %d рецензентам"
   - reviewer_email_message: |-
-      DocumentCloud отправит инструкции рецензентам, если хотите, можете добавить что-то от себя
-      DocumentCloud
+      sourceAFRICA отправит инструкции рецензентам, если хотите, можете добавить что-то от себя
+      sourceAFRICA
   - reviewer_enter_email: "Введите email первого рецензента"
   - reviewer_name: "Укажите имя рецензента"
   - reviewer_remove_error: "При удалении рецензента возникла проблема"
@@ -659,7 +659,7 @@
       чтобы избавиться от некоторых ошибок и провести распознание с помощью Tessaract.
       Во время проведения операции документ будет закрыт. Вы уверены, что хотите продолжить?
   - text_tools: "Работа с текстом"
-  - the_api: " API системы DocumentCloud"
+  - the_api: " API системы sourceAFRICA"
   - timeline_for_doc: Временная шкала для "%s"
   - timeline_for_x_docs: "Временная шкала для %d документов"
   - timeline_max_documents: "Временную шкалу можно посмотреть только для не более
@@ -684,12 +684,12 @@
     - "Загружено %d документов"
   - uploading: "Идет загрузка"
   - uploading_documents: "Загрузка документов"
-  - uservoice_discuss: "Форум DocumentCloud"
+  - uservoice_discuss: "Форум sourceAFRICA"
   - view_entities: "Показать ключевые слова"
   - view_pages: "Показать страницы"
   - view_timeline: "Показать временную шкалу"
   - welcome_message_sent_to: "Сообщение было отправлено %s."
-  - welcome_to_document_cloud: "Добро пожаловать в DocumentCloud!"
+  - welcome_to_document_cloud: "Добро пожаловать в sourceAFRICA!"
   - width: "Ширина"
   - workspace: "Интерфейс"
   - wp_shortcode_plugin_docs_link: "%sНужен плагин%s."

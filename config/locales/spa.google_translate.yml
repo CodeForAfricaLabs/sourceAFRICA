@@ -141,7 +141,7 @@ workspace:
     de aire. Anotaciones privadas son para su propia referencia. Incluso% s no se puede
     ver.
   contact_reviewer: Póngase en contacto con %s en %s si necesita ayuda o visite %s para
-    más información sobre DocumentCloud.
+    más información sobre sourceAFRICA.
   title: Título
 
 
@@ -216,10 +216,10 @@ workspace:
   at: en
   private_documents_visible_instructions:
   - Este documento es privado. Debe hacerlo público antes de que sea visible en su página
-    web o en búsquedas de catálogo de DocumentCloud. Usted puede optar por hacerlo público
+    web o en búsquedas de catálogo de sourceAFRICA. Usted puede optar por hacerlo público
     en una fecha futura o puede %2$schange ahora %3$s.
   - Estos documentos son privados. Debe hacen públicos antes de que sean visibles en
-    su página web o en búsquedas de catálogo de DocumentCloud. Usted puede optar por
+    su página web o en búsquedas de catálogo de sourceAFRICA. Usted puede optar por
     hacerlos públicos en una fecha futura o puede %2$schange ellos ahora%3$s.
   set_publication_date_for: Establecer fecha de publicación de %s
   no_past_publication: No se puede establecer un documento que se publicará en el pasado.
@@ -266,7 +266,7 @@ workspace:
   make_document_public: Hacer público el documento
   set_the: establecer el
   document_publish_public_help: Este documento es público. Actualmente está disponible
-    para los usuarios que buscan el catálogo de DocumentCloud y estará visible al público
+    para los usuarios que buscan el catálogo de sourceAFRICA y estará visible al público
     al incrustar en su sitio web. Cambie el %saccess nivel%s.
   document_publish_private_help: Este documento es privado. No será visible a sus lectores
     hasta que lo hagas público. Cambie el %saccess nivel%s%s ahora o fecha de publicación
@@ -315,7 +315,7 @@ workspace:
   terms: Condiciones
   privacy: Intimidad
   uservoice_discuss: Discuta Características y bichos
-  contact_documentcloud: Contacto DocumentCloud
+  contact_documentcloud: Contacto sourceAFRICA
   in_project: en este proyecto
   matching_search: juego esta búsqueda
   set_will_appear: aparecerá en este set.
@@ -331,9 +331,9 @@ workspace:
   allow_readers_to_search: Permitir a los lectores a buscar en este conjunto de documentos
   preview_search_embed_help: Antes de continuar, por favor tome un momento para %spreview
     el documento conjunto%s los documentos publicados, se abrirán a la URL donde se
-    publicaron originalmente, mientras que otros documentos públicos se abrirá el DocumentCloud.
+    publicaron originalmente, mientras que otros documentos públicos se abrirá el sourceAFRICA.
   entities_unavailable: Las entidades no están disponibles temporalmente.
-  email_for_assistance: Si usted necesita ayuda, por favor envíenos un email a support@documentcloud.org.
+  email_for_assistance: Si usted necesita ayuda, por favor envíenos un email a support@codeforafrica.org.
   open: Abierto
 
   by_relevance: por relevancia
@@ -394,7 +394,7 @@ workspace:
   download_pdf: Descargar PDF original
   download_text: Descargar texto completo
   export: Exportar
-  export_to_overview_explain: Estás a punto de exportar a la vista. Debe crear una cuenta general, y usted debe proveer general con su nombre de usuario y contraseña DocumentCloud.
+  export_to_overview_explain: Estás a punto de exportar a la vista. Debe crear una cuenta general, y usted debe proveer general con su nombre de usuario y contraseña sourceAFRICA.
   timeline_max_documents: Sólo se puede ver una línea de tiempo de diez documentos a la vez.
   timeline_must_select: Para ver una línea de tiempo, seleccione algunos documentos.
   demo_no_viewer: cuentas de demostración no se permite descargar los espectadores. % s si usted necesita una cuenta con todas las funciones.
@@ -442,7 +442,7 @@ workspace:
   collaboration: Colaboración
   privacy: Intimidad
   publishing_embedding: Publishing & Embedding
-  the_api: El API DocumentCloud
+  the_api: El API sourceAFRICA
   guides_howtos: Guías y Cómo la
   select_with_public_note: Por favor, seleccione un documento con al menos una nota pública.
   embed_note_step_one: 'Paso uno: Seleccione una nota para incrustar'
@@ -470,7 +470,7 @@ workspace:
   already_has_account: '%s ya tiene una cuenta.'
   account_is_disabled: '%s se ha desactivado.'
   double_check_disable: Realmente deshabilitar la cuenta de %s
-  explain_disable_account: '%1$s no podrá iniciar sesión en DocumentCloud. Los documentos públicos y anotaciones proporcionadas por %1$s seguirán estando disponibles. %2$sPóngase en contacto%3$s con apoyo para purgar completamente la cuenta de %1$s.'
+  explain_disable_account: '%1$s no podrá iniciar sesión en sourceAFRICA. Los documentos públicos y anotaciones proporcionadas por %1$s seguirán estando disponibles. %2$sPóngase en contacto%3$s con apoyo para purgar completamente la cuenta de %1$s.'
   signup_sent_to: Signup enviado a %s
   account_add_failure: No se pudo agregar la cuenta.
   enter_title_and_page: Por favor, añadir un título y el número de página para cada sección.

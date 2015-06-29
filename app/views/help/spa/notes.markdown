@@ -1,7 +1,7 @@
 # Comentarios en documentos: Notas públicas, privadas, y de borrador
 ![Annotations](/images/help/document_annotations.jpg)
 
-DocumentCloud soporta notas privadas y públicas. Las notas públicas son visibles para cualquier persona que tenga acceso al documento, mientras que las notas privadas son solamente visibles para su autor. Las notas públicas también pueden guardarse como  notas de borrador: las notas de borrador son visibles para cualquier persona con los privilegios necesarios para comentar en un documento, incluyendo [los evaluadores y colaboradores](collaboration), pero dichas notas no se publicarán en el documento. 
+sourceAFRICA soporta notas privadas y públicas. Las notas públicas son visibles para cualquier persona que tenga acceso al documento, mientras que las notas privadas son solamente visibles para su autor. Las notas públicas también pueden guardarse como  notas de borrador: las notas de borrador son visibles para cualquier persona con los privilegios necesarios para comentar en un documento, incluyendo [los evaluadores y colaboradores](collaboration), pero dichas notas no se publicarán en el documento. 
 
 Puede escribir notas en cualquier documento abriendo y seleccionando "Añadir una Nota Pública" o "Añadir una nota privada.", según corresponda. El cursor debe cambiar a punto de mira: haga clic y arrastre para seleccionar el área que desea resaltar. Al soltar el cursor, usted podrá añadir y guardar la nota. 
 

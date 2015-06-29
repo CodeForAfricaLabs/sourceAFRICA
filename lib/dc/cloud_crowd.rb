@@ -6,7 +6,7 @@ module CloudCrowd
 
     def initialize(options = {})
       @user            = options[:user]     || "ubuntu"
-      @key_path        = options[:key_path] || "secrets/keys/documentcloud.pem"
+      @key_path        = options[:key_path] || "secrets/keys/sourceafrica.pem"
       @script_dir_path = options[:script_dir_path] || File.join(File.dirname(__FILE__), '..', '..', 'secrets', 'scripts', 'cloud_crowd')
       @scripts         = {}
       @threads         = []

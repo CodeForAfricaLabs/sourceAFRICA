@@ -250,7 +250,7 @@ dc.ui.Toolbar = Backbone.View.extend({
         }
       );
     } else {
-      // Overview will refuse to import all DocumentCloud documents at once
+      // Overview will refuse to import all sourceAFRICA documents at once
       dc.ui.Dialog.alert("In order to analyze documents in Overview, please select a project or some documents.");
     }
   },

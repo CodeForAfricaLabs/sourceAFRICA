@@ -1,4 +1,4 @@
-# The base DocumentCloud schema.
+# The base sourceAFRICA schema.
 class InitialMigration < ActiveRecord::Migration
   extend DC::Store::MigrationHelpers
 

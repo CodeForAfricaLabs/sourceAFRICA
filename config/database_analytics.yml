@@ -13,7 +13,7 @@ development:
 
 staging:
   <<: *defaults
-  host: staging.documentcloud.org
+  host: staging.sourceafrica.net
   database: dcloud_analytics_staging
 
 production:

@@ -20,7 +20,7 @@ class AuthenticationController < ApplicationController
     account = Account.log_in(params[:email], params[:password], session, cookies)
     return redirect_to(next_url) if account && account.active?
     if account && !account.active?
-      flash[:error] = "Your account has been disabled. Contact support@documentcloud.org."
+      flash[:error] = "Your account has been disabled. Contact support@codeforafrica.org."
     else
       flash[:error] = "Invalid email or password."
     end

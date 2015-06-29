@@ -5,7 +5,7 @@ module DC
     # Forgiving Domain Name validator (the longest TLD is .museum at the moment)
     DOMAIN = /\A((?:[a-z0-9\-_]+\.)+[a-z]{2,6})\Z/i
 
-    # We're not talking full domains, just (prefix).documentcloud.org
+    # We're not talking full domains, just (prefix).sourceafrica.net
     SUBDOMAIN = /\A[0-9a-z\-_]+\Z/i
 
     # Proper slugs are alphanumeric, lowercased, with dashes.

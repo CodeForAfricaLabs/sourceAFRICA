@@ -2,11 +2,11 @@ require 'cgi'
 
 module DC
 
-  # Proof of concept of the DocumentCloud upload API.
+  # Proof of concept of the sourceAFRICA upload API.
   class Uploader
 
-    # The location of the DocumentCloud API.
-    API = 'www.documentcloud.org/api/upload.json'
+    # The location of the sourceAFRICA API.
+    API = 'www.sourceafrica.net/api/upload.json'
 
     # Initialize the uploader with the document file, it's title, and the
     # optional access, source, and description...

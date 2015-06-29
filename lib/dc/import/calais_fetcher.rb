@@ -43,7 +43,7 @@ module DC
             :license_id                     => DC::SECRETS['calais_license'],
             :allow_distribution             => false,
             :allow_search                   => false,
-            :submitter                      => "DocumentCloud (#{Rails.env})",
+            :submitter                      => "sourceAFRICA (#{Rails.env})",
             :omit_outputting_original_text  => true
           )
           Calais::Response.new(client.enlighten)

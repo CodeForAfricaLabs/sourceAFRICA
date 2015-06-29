@@ -31,7 +31,7 @@ module DC
     config.action_controller.page_cache_directory = "#{Rails.root.to_s}/public"
     config.cache_store = :file_store, "#{Rails.root}/tmp/cache", { expires_in: 10.minutes,:race_condition_ttl => 120 }
 
-    # DocumentCloud-specific configuration.
+    # sourceAFRICA-specific configuration.
     ::DC::SECRETS.merge! YAML.load_file("#{Rails.root}/secrets/secrets.yml")[Rails.env]
     ::DC::CONFIG.merge!  YAML.load( ERB.new(File.read( Rails.root.join('config','document_cloud.yml') ) ).result )[Rails.env]
 

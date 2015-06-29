@@ -1,6 +1,6 @@
-# El API de DocumentCloud
+# El API de sourceAFRICA
 
-El API de DocumentCloud permite a los usuarios buscar, cargar, editar y organizar documentos. Además, un servicio oEmbed ofrece fácil incorporación de documentos.
+El API de sourceAFRICA permite a los usuarios buscar, cargar, editar y organizar documentos. Además, un servicio oEmbed ofrece fácil incorporación de documentos.
 
 ## Contenido
 
@@ -25,10 +25,10 @@ El API de DocumentCloud permite a los usuarios buscar, cargar, editar y organiza
 <a name="guidelines"></a>
 # Directrices y Condiciones del Servicio de API
 
-No se requiere ninguna clave de API, por lo cual realizar búsquedas directamente desde JavaScript es válido. Por favor sea amable, y no sobrecargue nuestros servidores. Restricciones sobre el uso de la API de DocumentCloud no aplican a las organizaciones aportadoras que trabajan con documentos cargados por sus propios usuarios.
+No se requiere ninguna clave de API, por lo cual realizar búsquedas directamente desde JavaScript es válido. Por favor sea amable, y no sobrecargue nuestros servidores. Restricciones sobre el uso de la API de sourceAFRICA no aplican a las organizaciones aportadoras que trabajan con documentos cargados por sus propios usuarios.
 
- * Bajo ninguna circunstancia se permitirá la reproducción de DocumentCloud.org en su totalidad o construir una aplicación que simplemente muestre el conjunto completo de documentos. Tiene prohibido crear una aplicación que muestre el conjunto de documentos de una organización aportadora.
- * Si su proyecto permite a los usuarios interactuar con los datos de DocumentCloud, está obligado a citar DocumentCloud como la fuente de sus datos. Si su proyecto permite a los usuarios ver o explorar documentos específicos, debe citar DocumentCloud, así como a las organizaciones aportadoras pertinentes, identificadas en el API.
+ * Bajo ninguna circunstancia se permitirá la reproducción de sourceAFRICA.org en su totalidad o construir una aplicación que simplemente muestre el conjunto completo de documentos. Tiene prohibido crear una aplicación que muestre el conjunto de documentos de una organización aportadora.
+ * Si su proyecto permite a los usuarios interactuar con los datos de sourceAFRICA, está obligado a citar sourceAFRICA como la fuente de sus datos. Si su proyecto permite a los usuarios ver o explorar documentos específicos, debe citar sourceAFRICA, así como a las organizaciones aportadoras pertinentes, identificadas en el API.
  * No se permite utilizar la API comercialmente, lo que significa que no se permite cobrar dinero a la gente para mirar los datos, o vender publicidad con dicha información.
  * Usted entiende y acepta que los datos proporcionados por nuestro API pueden contener errores y omisiones.
 
@@ -89,7 +89,7 @@ mentions      |  incluyen las menciones destacadas de la frase de búsqueda    |
 
 Nuestra API para cargas en conjunto expone el mismo método que se utiliza internamente, pero lo envuelve en la autenticación básica a través de HTTPS. Los documentos se cargan en la cuenta autenticada.
 
-Puede cargar un archivo local utilizando una carga estándar de varias partes, u ordenando a DocumentCloud que descargue el archivo de un servidor público por medio de un URL.
+Puede cargar un archivo local utilizando una carga estándar de varias partes, u ordenando a sourceAFRICA que descargue el archivo de un servidor público por medio de un URL.
 
 Parámetro 	|	Descripción 					|	Ejemplo
 ------------|-----------------------------------|------------
@@ -115,7 +115,7 @@ secure	        |   (opcional) Si está trabajando con un documento  realmente se
 Usando biblioteca RestClient de Ruby podría hacerlo siguiente:
 
 
-    RestClient.post('https://ME%40TEST.COM:SECRET@www.documentcloud.org/api/upload.json',
+    RestClient.post('https://ME%40TEST.COM:SECRET@www.sourceafrica.net/api/upload.json',
       :file   => File.new('/full/path/to/document/document.pdf','rb'),
       :title  => "2008 Blagojevich Tax Return",
       :source => "U.S. Attorney's Office",
@@ -146,6 +146,7 @@ Recupere la representación canónica JSON de un documento en particular, según
       "contributor_organization":"DocumentCloud",
       "display_language":"eng",
       "resources":{
+<<<<<<< HEAD
         "pdf":"https://s3.amazonaws.com/s3.documentcloud.org/documents/1659580/economic-analysis-of-the-south-pole-traverse.pdf",
         "text":"https://s3.amazonaws.com/s3.documentcloud.org/documents/1659580/economic-analysis-of-the-south-pole-traverse.txt",
         "thumbnail":"https://s3.amazonaws.com/s3.documentcloud.org/documents/1659580/pages/economic-analysis-of-the-south-pole-traverse-p1-thumbnail.gif",
@@ -157,6 +158,17 @@ Recupere la representación canónica JSON de un documento en particular, según
           "text":"https://www.documentcloud.org/documents/1659580/pages/economic-analysis-of-the-south-pole-traverse-p{page}.txt"
           },
         "annotations_url":"https://www.documentcloud.org/documents/1659580/annotations"
+=======
+        "pdf":"http://s3.sourceafrica.net/documents/207/american-academy-v-napolitano.pdf",
+        "text":"http://s3.sourceafrica.net/documents/207/american-academy-v-napolitano.txt",
+        "thumbnail":"http://s3.sourceafrica.net/documents/207/pages/american-academy-v-napolitano-p1-thumbnail.gif",
+        "search":"http://s3.sourceafrica.net/207/search.json?q={query}",
+        "page":{
+          "text":"http://s3.sourceafrica.net/documents/207/pages/american-academy-v-napolitano-p{page}.txt",
+          "image":"http://s3.sourceafrica.net/asset_store/documents/207/pages/american-academy-v-napolitano-p{page}-{size}.gif"
+        },
+        "related_article":"http://example.com/article.html"
+>>>>>>> master
       },
       "sections":[],
       "data":{},
@@ -194,7 +206,7 @@ El valor en la respuesta de este método será la representación JSON de su doc
 <a name="delete-document"></a>
 ## DELETE/api/documents /[id].Json
 
-Elimine un documento de DocumentCloud. Debe ser autentificado como el propietario del documento para que este método funcione.
+Elimine un documento de sourceAFRICA. Debe ser autentificado como el propietario del documento para que este método funcione.
 Consejos
 
  * Si su cliente HTTP no puede crear una petición DELETE, puede enviarlo como POST, y añadir un parámetro adicional: _method=delete
@@ -279,10 +291,10 @@ Generar un código de inserción para un recurso (un documento o una nota) utili
     {
       "type": "rich",
       "version": "1.0",
-      "provider_name": "DocumentCloud",
-      "provider_url": "https://www.documentcloud.org/",
+      "provider_name": "sourceAFRICA",
+      "provider_url": "https://sourceafrica.net/",
       "cache_age": 300,
-      "resource_url": "https://www.documentcloud.org/documents/doc-name.html",
+      "resource_url": "https://sourceafrica.net/documents/doc-name.html",
       "height": 750,
       "width": 600,
       "display_language": "en",
@@ -292,13 +304,13 @@ Generar un código de inserción para un recurso (un documento o una nota) utili
 <a name="oembed-documents"></a>
 ### Ejemplo petición documento
 
-    /api/oembed.json?url=https%3A%2F%2Fwww.documentcloud.org%2Fdocuments%2Fdoc-name.html&responsive=true
+    /api/oembed.json?url=https%3A%2F%2Fsourceafrica.net%2Fdocuments%2Fdoc-name.html&responsive=true
 
 ### Parámetros para documentos
 
 Parámetro   | Descripción           | Ejemplo
 -----------------|-----------------------|--------------
-url              | **(requerido)** De escape de URL documento para incrustar     | https%3A//www.documentcloud.org/ documents/doc-name.html
+url              | **(requerido)** De escape de URL documento para incrustar     | https%3A//sourceafrica.net/ documents/doc-name.html
 maxheight        | (opcional) La altura del espectador (pixels)    | 750
 maxwidth         | (opcional) La ancho del espectador (pixels)     | 600
 container        | (opcional) Especifique el contenedor DOM en el que se incorporará al espectador | #my-document-div
@@ -316,13 +328,13 @@ default_page     | (opcional) Abra el documento a una página específica   | 3
 <a name="oembed-notes"></a>
 ### Ejemplo petición nota
 
-    /api/oembed.json?url=https%3A%2F%2Fwww.documentcloud.org%2Fdocuments%2Fdoc-name%2Fannotations%2F123.js
+    /api/oembed.json?url=https%3A%2F%2Fsourceafrica.net%2Fdocuments%2Fdoc-name%2Fannotations%2F123.js
 
 ### Parámetros para notas
 
 Parámetro   | Descripción           | Ejemplo
 -----------------|-----------------------|--------------
-url              | **(required)** De escape de URL documento para incrustar     | https%3A//www.documentcloud.org/ documents/doc-name.html
+url              | **(required)** De escape de URL documento para incrustar     | https%3A//sourceafrica.net/ documents/doc-name.html
 container        | (optional) Especifique el contenedor DOM en el que se incorporará al espectador | #my-document-div
 
 # Preguntas?

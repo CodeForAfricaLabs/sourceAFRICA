@@ -11,7 +11,7 @@ export DEBIAN_FRONTEND=noninteractive
 USERNAME=ubuntu
 
 chown -R $USERNAME /home/$USERNAME
-cd /home/$USERNAME/documentcloud
+cd /home/$USERNAME/sourceAFRICA
 sudo -u $USERNAME git pull
 bundle install
 chown -R $USERNAME /home/$USERNAME

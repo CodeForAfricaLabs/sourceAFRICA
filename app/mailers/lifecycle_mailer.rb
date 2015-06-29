@@ -1,11 +1,12 @@
 # Responsible for sending out lifecycle emails to active accounts.
 class LifecycleMailer < ActionMailer::Base
   include ActionView::Helpers::TextHelper # pluralize and friends
+  
+  SUPPORT    = 'support@codeforafrica.org'
+  EXCEPTIONS = 'exceptions@sourceafrica.net'
+  NO_REPLY   = 'no-reply@sourceafrica.net'
+  INFO       = 'info@sourceafrica.net'
 
-  SUPPORT    = 'support@documentcloud.org'
-  EXCEPTIONS = 'exceptions@documentcloud.org'
-  NO_REPLY   = 'no-reply@documentcloud.org'
-  INFO       = 'info@documentcloud.org'
   default from: SUPPORT
 
   # Mail instructions for a new account, with a secure link to activate,
@@ -76,7 +77,7 @@ class LifecycleMailer < ActionMailer::Base
     @message = params[:message]
     @email   = params[:email]
     mail({
-        :subject  => "DocumentCloud message from #{name}",
+        :subject  => "sourceAFRICA message from #{name}",
         :from     => NO_REPLY,
         :reply_to => account ? account.email : params[:email],
         :to       => SUPPORT
@@ -89,7 +90,7 @@ class LifecycleMailer < ActionMailer::Base
     @params = params
     @error  = error
     mail({
-        :subject  => "DocumentCloud exception (#{Rails.env}:#{`hostname`.chomp}): #{error.class.name}",
+        :subject  => "sourceAFRICA exception (#{Rails.env}:#{`hostname`.chomp}): #{error.class.name}",
         :from     => NO_REPLY,
         :to       => EXCEPTIONS
       })

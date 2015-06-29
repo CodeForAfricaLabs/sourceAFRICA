@@ -1,4 +1,4 @@
-# The public DocumentCloud API.
+# The public sourceAFRICA API.
 class ApiController < ApplicationController
   include DC::Access
   include DC::Search::Controller

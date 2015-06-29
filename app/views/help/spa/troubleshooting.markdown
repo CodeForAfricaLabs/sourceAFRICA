@@ -1,6 +1,6 @@
 # Solución de problemas de documentos
 
-Siempre estamos (con su ayuda) descubriendo nuevas y diferentes maneras de descomponer nuestro importador de documentos. Estas son buenas noticias, ya que es una de las maneras que usted está ayudando a mejorar DocumentCloud. En algunos casos, la solución a un problema de importación de un documento es tan simple como abrir el documento en Adobe Acrobat o Vista previa de Apple, optimizarlo para uso web y volver a guardarlo.
+Siempre estamos (con su ayuda) descubriendo nuevas y diferentes maneras de descomponer nuestro importador de documentos. Estas son buenas noticias, ya que es una de las maneras que usted está ayudando a mejorar sourceAFRICA. En algunos casos, la solución a un problema de importación de un documento es tan simple como abrir el documento en Adobe Acrobat o Vista previa de Apple, optimizarlo para uso web y volver a guardarlo.
 
 En Vista Previa, abra el PDF y elija "Archivo> Imprimir". Cuando se abra el cuadro de diálogo, haga clic en el menú "PDF" en la esquina inferior izquierda, y seleccione "Guardar como PDF".
 
@@ -18,7 +18,7 @@ Si tiene texto de alta calidad incrustada en el PDF, no queremos reemplazar su t
 
 ## <span id="encrypted">Documentos encriptados o protegidos</span>
 
-No es sorprendente que las agencias del gobierno publiquen documentos que utilizan herramientas de restricción de usuarios  o  de monitoreo en archivos PDF. DocumentCloud puede procesar algunos archivos PDF que han sido bloqueados o protegidos por contraseña, pero si no podemos abrir su documento, aún podría navegar dichas restricciones. Puede que sea capaz de abrir un documento por sí mismo con [qpdf][]. Si qpdf no está funcionando, averigüe si su sistema operativo o el diálogo de impresión incluyen la opción "Imprimir en archivo" (Print to file) o "Imprimir a PDF” (Print PDF). Usted podrá "imprimir" un nuevo documento con el cual podría  trabajar en DocumentCloud.
+No es sorprendente que las agencias del gobierno publiquen documentos que utilizan herramientas de restricción de usuarios  o  de monitoreo en archivos PDF. sourceAFRICA puede procesar algunos archivos PDF que han sido bloqueados o protegidos por contraseña, pero si no podemos abrir su documento, aún podría navegar dichas restricciones. Puede que sea capaz de abrir un documento por sí mismo con [qpdf][]. Si qpdf no está funcionando, averigüe si su sistema operativo o el diálogo de impresión incluyen la opción "Imprimir en archivo" (Print to file) o "Imprimir a PDF” (Print PDF). Usted podrá "imprimir" un nuevo documento con el cual podría  trabajar en sourceAFRICA.
 
 ## <span id="more">Más herramientas</span>
 

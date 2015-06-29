@@ -1,12 +1,11 @@
 {
-  "name": "documentcloud",
+  "name": "sourceafrica",
   "version": "1.0.0",
-  "homepage": "https://github.com/documentcloud/documentcloud",
+  "homepage": "https://github.com/CodeForAfrica/sourceAFRICA",
   "authors": [
-    "Ted Han <ted@knowtheory.net>",
-    "Nathan Stitt <nathan@stitt.com>",
-    "Jeremy Ashkenas <jashkenas@gmail.com>",
-    "Samuel Clay <samuel@ofbrooklyn.com>"
+    "Code for Africa <support@codeforafrica.org",
+    "DocumentCloud <support@documentcloud.org>",
+    "David Lemayian <david@codeforafrica.org>"
   ],
   "description": "Document transparency tools for journalists",
   "dependencies":{

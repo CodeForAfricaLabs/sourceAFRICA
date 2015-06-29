@@ -1,7 +1,7 @@
 # Annotate Documents: Public, Private, and Draft Notes
 ![Annotations][]
 
-DocumentCloud supports both private and public notes. Public notes are visible to anyone who has access to the  document, while private notes are only ever visible to their author. Public notes may also be saved as drafts: draft notes are visible to anyone with the privileges necessary to annotate a document, including [reviewers and collaborators](collaboration), but they won't be published with the document.
+sourceAFRICA supports both private and public notes. Public notes are visible to anyone who has access to the  document, while private notes are only ever visible to their author. Public notes may also be saved as drafts: draft notes are visible to anyone with the privileges necessary to annotate a document, including [reviewers and collaborators](collaboration), but they won't be published with the document.
 
 Annotate any document by opening and selecting either "Add a public note" or "Add a private note." Your cursor should change to crosshairs: click and drag to select the area you'd like to highlight. When you release the cursor, you will be able to add and save your note.
 

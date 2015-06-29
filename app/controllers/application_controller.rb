@@ -96,7 +96,7 @@ class ApplicationController < ActionController::Base
   end
 
   def api_login_required
-    authenticate_or_request_with_http_basic("DocumentCloud") do |email, password|
+    authenticate_or_request_with_http_basic("sourceAFRICA") do |email, password|
       if @current_account = Account.log_in(email, password)
         @current_organization = @current_account.organization
         @current_account
@@ -205,7 +205,7 @@ class ApplicationController < ActionController::Base
 
   # Simple HTTP Basic Auth to make sure folks don't snoop where the shouldn't.
   def bouncer
-    authenticate_or_request_with_http_basic("DocumentCloud") do |login, password|
+    authenticate_or_request_with_http_basic("sourceAFRICA") do |login, password|
       login == DC::SECRETS['guest_username'] && password == DC::SECRETS['guest_password']
     end
   end

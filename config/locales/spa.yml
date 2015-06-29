@@ -158,9 +158,9 @@
   - collaborators: Colaborador
   - confirm_remove_all_data: "¿Estás seguro de que quieres eliminar todos los datos
       de %s?"
-  - contact_documentcloud: Contactar a DocumentCloud
+  - contact_documentcloud: Contactar a sourceAFRICA
   - contact_reviewer: Contactar a %s en %s si necesitas cualquier ayuda, o visita
-      %s para más información sobre DocumentCloud.
+      %s para más información sobre sourceAFRICA.
   - contact_us: Contáctenos
   - contributed_by: Contribuido por
   - contributor: Contribuidor
@@ -204,7 +204,7 @@
       los lectores hasta que lo designes público. Cambiar el %snivel de acceso%s ahora
       o %s fecha de actualización.
   - document_publish_public_help: Este documento es público. Es accesible por los
-      usuarios que buscan el catálogo de DocumentCloud y se podrá ver en tu sitio
+      usuarios que buscan el catálogo de sourceAFRICA y se podrá ver en tu sitio
       web. Cambiar el %snivel de acceso%s.
   - document_tools: Herramientas
   - document_viewer_size: Tamaño del documento
@@ -248,7 +248,7 @@
   - editing_notes_sections: Editar Notas y Secciones
   - email: Correo electrónico
   - email_for_assistance: Si necesitas asistencia, envíanos un correo electrónico
-      a support@documentcloud.org.
+      a support@codeforafrica.org.
   - email_when_complete: Notifícame cuando %slos documentos%s estén procesados.
   - embed_a_note: Incrustar una Nota
   - embed_document: Incrustar este Documento
@@ -293,12 +293,12 @@
       relacionados con tu búsqueda. Selecciona una entidad para filtrar estos resultados.
   - entities_unavailable: Entidades no están disponibles en estos momentos.
   - error: 'Error '
-  - explain_disable_account: "%1$s no podrá acceder a DocumentCloud. Documentos y
+  - explain_disable_account: "%1$s no podrá acceder a sourceAFRICA. Documentos y
       anotaciones públicas de %1$s permanecerán disponibles. %2$sContactar a soporte
       técnico%3$s para purgar completamente la cuenta de %1$s."
   - export: Exportar
   - export_to_overview_explain: Estás a punto de exportar a Panorama. Necesitas crear
-      una cuenta de Panorama que requiere tu nombre de usuario y contraseña de DocumentCloud.
+      una cuenta de Panorama que requiere tu nombre de usuario y contraseña de sourceAFRICA.
   - featured_examples_documents_list: Puedes ver varios ejemplos de documentos incrustados
       en nuestra lista de %sreportajes destacados%s.
   - featured_examples_notes_list: Usted puede encontrar un montón de ejemplos de notas
@@ -435,7 +435,7 @@
       documento.
   - paragraph_description_of_document: Un párafo descriptivo de este documento
   - password_no_blank: Tu contraseña no puede quedar vacio
-  - password_reset: Restablecimiento de contraseña DocumentCloud
+  - password_reset: Restablecimiento de contraseña sourceAFRICA
   - password_updated: Contraseña actualizada
   - pending: Pendiente
   - person: Personas
@@ -450,7 +450,7 @@
   - preview_search_embed_help: Antes de continuar, por favor toma el tiempo de %s
       revisar la colección de documentos%s Documentos publicados estarán disponibles
       en el URL donde originalmente fueron publicados, mientras otros se abrirán en
-      DocumentCloud.
+      sourceAFRICA.
   - preview_viewer: Antes de continuar, por favor %srevisa el marco del documento%s.
   - print_notes: Imprimir Notas
   - print_notes_missing_error: "%s no contiene ningún notas imprimibles."
@@ -461,10 +461,10 @@
       acceso.
   - private_documents_visible_instructions:
     - Este documento es privado. Necesitas cambiar el acceso a público antes de que
-      sea disponible en tu sitio web o en búsquedas del catálogo de DocumentCloud.
+      sea disponible en tu sitio web o en búsquedas del catálogo de sourceAFRICA.
       Puedes cambiar el acceso en el futuro o %2$sahora%3$s.
     - Estos documentos son privados. Necesitas cambiar su acceso a público antes de
-      que sean disponibles en tu sitio web o en búsquedas del catálogo de DocumentCloud.
+      que sean disponibles en tu sitio web o en búsquedas del catálogo de sourceAFRICA.
       Puedes cambiar su acceso en el futuro o %2$sahora%3$s
   - private_note: Nota privada
   - private_note_visible: This private note is only visible to you.
@@ -548,14 +548,14 @@
   - resend_welcome_email: Reenviar Correo de Bienvenida
   - restricted: Restringido
   - review_x_documents:
-    - Crítica "%2$s" en DocumentCloud
-    - Revise %d documentos en DocumentCloud
+    - Crítica "%2$s" en sourceAFRICA
+    - Revise %d documentos en sourceAFRICA
   - reviewer: Revisor
   - reviewer_add_permission_denied: No se permite añadir colaboradores.
   - reviewer_email_instructions:
     - Las instrucciones por correo electrónico a %2$s
     - Las instrucciones por correo electrónico a %d revisores
-  - reviewer_email_message: DocumentCloud le enviará revisar las instrucciones a %s
+  - reviewer_email_message: sourceAFRICA le enviará revisar las instrucciones a %s
       Si lo desea, puede agregar un mensaje personal.
   - reviewer_enter_email: 'Introduzca la dirección de correo electrónico de la primera
       crítica de invitar:'
@@ -633,7 +633,7 @@
       de reprocesar. El documento se va a cerrar mientras se reconstruye. ¿Quieres
       continuar?
   - text_tools: Herramientas de Texto
-  - the_api: El API de DocumentCloud
+  - the_api: El API de sourceAFRICA
   - timeline_for_doc: Cronograma para "%s"
   - timeline_for_x_docs: Cronograma para %d documentos
   - timeline_max_documents: Sólo puedes ver una cronología de 10 documentos a la vez.
@@ -663,7 +663,7 @@
   - view_pages: Ver Páginas
   - view_timeline: Ver cronología
   - welcome_message_sent_to: Un mensaje de bienvenida se envió a  %s.
-  - welcome_to_document_cloud: 'Bienvenido a DocumentCloud '
+  - welcome_to_document_cloud: 'Bienvenido a sourceAFRICA '
   - width: Anchura
   - workspace: "Área de trabajo"
   - wp_shortcode_plugin_docs_link: "%sPrograma adicional requerida%s."

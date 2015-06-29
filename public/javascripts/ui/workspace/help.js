@@ -40,7 +40,7 @@ dc.ui.Help = Backbone.View.extend({
   },
 
   openUserVoice : function() {
-    window.open('http://documentcloud.uservoice.com');
+    window.open('https://github.com/CodeForAfrica/sourceAFRICA/issues');
   },
 
   openPage : function(page) {

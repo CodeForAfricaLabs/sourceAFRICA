@@ -20,11 +20,11 @@ sudo mount $DEVICE /mnt/ami/
 # 3) Set up the application.
 #    For DocumentCloud the process goes like this (after you've scp'd up the scripts dir & github key)
 git clone
-cd ~/documentcloud
+cd ~/sourceAFRICA
 sudo ./config/server/scripts/setup_common_dependencies.sh
 source /etc/profile.d/chruby.sh
 gem install bundler
-git clone git@github.com:documentcloud/documentcloud-secrets secrets
+git clone git@github.com:CodeForAfrica/sourceAFRICA-secrets secrets
 bundle install
 rails runner -e production "puts Organization.count"
 sudo mkdir /mnt/cloud_crowd
@@ -55,7 +55,7 @@ SECRET_KEY=$(egrep "aws_secret_key"  secrets/secrets.yml | awk '{print $NF}')
 ec2-describe-regions --aws-access-key $ACCESS_KEY --aws-secret-key $SECRET_KEY
 
 sudo -E su
-ec2-bundle-vol -k /home/ubuntu/documentcloud/secrets/keys/ami_signing.key -c /home/ubuntu/documentcloud/secrets/keys/ami_signing.pem --no-filter --exclude /etc/ssh/*_key* -u $(egrep "aws_account_id"  /home/ubuntu/documentcloud/secrets/secrets.yml | awk '{print $NF}') -r x86_64 -d /mnt/ami
+ec2-bundle-vol -k /home/ubuntu/sourceAFRICA/secrets/keys/ami_signing.key -c /home/ubuntu/sourceAFRICA/secrets/keys/ami_signing.pem --no-filter --exclude /etc/ssh/*_key* -u $(egrep "aws_account_id"  /home/ubuntu/sourceAFRICA/secrets/secrets.yml | awk '{print $NF}') -r x86_64 -d /mnt/ami
 exit
 
 AMI_NAME=dc-worker-ephemeral-`date +'%Y-%m-%d'`

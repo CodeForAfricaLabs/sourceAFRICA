@@ -4,14 +4,14 @@ module DC
     # An implementation of an AssetStore.
     module AwsS3Store
 
-      BUCKET_NAME     = Rails.env.production? ? 's3.documentcloud.org' : "dcloud_#{Rails.env}"
+      BUCKET_NAME     = Rails.env.production? ? 's3.sourceafrica.net' : "dcloud_#{Rails.env}"
 
       AUTH_PERIOD     = 5.minutes
 
       IMAGE_EXT       = /\.(gif|png|jpe?g)\Z/
 
       DEFAULT_ACCESS  = DC::Access::PUBLIC
-
+      
       AWS_REGION      = DC::CONFIG['aws_region']
 
       # 60 seconds for persistent connections.

@@ -23,7 +23,7 @@ Before you publish a note, document or document set, you'll want to make sure th
 <a name="embed-document"></a>
 # Embed Codes for Individual Documents
 
-To publish any document from DocumentCloud, either download a standalone copy of the viewer, or generate, copy, and paste a simple embed code for that document. We strongly encourage you to embed code that links back to DocumentCloud for most documents. The instructions that follow assume some basic familiarity with HTML, but we've tried to keep the embedding process as simple as possible.
+To publish any document from sourceAFRICA, either download a standalone copy of the viewer, or generate, copy, and paste a simple embed code for that document. We strongly encourage you to embed code that links back to sourceAFRICA for most documents. The instructions that follow assume some basic familiarity with HTML, but we've tried to keep the embedding process as simple as possible.
 
 We maintain a list of some of our [favorite embedded documents][] as examples of how newsrooms might embed documents.
 
@@ -35,9 +35,9 @@ Before you embed a document on your site, we encourage you to fill in a couple o
 
 Select a document, open the "Publish" menu and click "Embed Document Viewer." Alternately, right-click the document and select "Embed Document Viewer."
 
-A dialog will appear, asking you to fill in two additional pieces of information: the **Related Article URL** and the **Published URL**. The **Related Article URL** is the location of the article that uses this document as source material &mdash; adding this URL means that readers who find the document first will still find your reporting, too. The **Published URL** is the page where the document is embedded. Most users won't need to provide this &mdash; [pixel ping](http://www.propublica.org/nerds/item/pixel-ping-a-nodejs-stats-tracker) can usually tell us where the document is embedded. If a document might be accessed at more than one URL, however, you can specify the URL we should send users to if they find the document through a search of DocumentCloud.
+A dialog will appear, asking you to fill in two additional pieces of information: the **Related Article URL** and the **Published URL**. The **Related Article URL** is the location of the article that uses this document as source material &mdash; adding this URL means that readers who find the document first will still find your reporting, too. The **Published URL** is the page where the document is embedded. Most users won't need to provide this &mdash; [pixel ping](http://www.propublica.org/nerds/item/pixel-ping-a-nodejs-stats-tracker) can usually tell us where the document is embedded. If a document might be accessed at more than one URL, however, you can specify the URL we should send users to if they find the document through a search of sourceAFRICA.
 
-On step one, you'll also see a checkbox offering to make the document public, if it's not already. While it's possible to paste the embed code before the document is made public, it won't start working until you've published the document on DocumentCloud.
+On step one, you'll also see a checkbox offering to make the document public, if it's not already. While it's possible to paste the embed code before the document is made public, it won't start working until you've published the document on sourceAFRICA.
 
 If you're not ready to make the document public, you can schedule it to be published at a future date. Click "Set Publication Date" in the "Publish" menu and choose a date and an hour when you would like the document to be made public. This is useful if you know when your story is going live, or if your story is running in the middle of the night.
 
@@ -64,7 +64,7 @@ Click on the "Next" button to proceed to step 3, and you'll see the embed code: 
     <div id="viewer-10-general-report"></div>
     <script src="//s3.amazonaws.com/s3.documentcloud.org/viewer/loader.js"></script>
     <script>
-      DV.load('http://www.documentcloud.org/documents/10-general-report.js', {
+      DV.load('https://sourceafrica.net/documents/10-general-report.js', {
         container : '#viewer-10-general-report'
       });
     </script>
@@ -91,17 +91,17 @@ You'll be asked to select the note to embed, and will be able to preview the emb
     <div id="DC-note-237"></div>
     <script src="//s3.amazonaws.com/s3.documentcloud.org/notes/loader.js"></script>
     <script>
-      dc.embed.loadNote('http://www.documentcloud.org/documents/223/annotations/237.js');
+      dc.embed.loadNote('https://sourceafrica.net/documents/223/annotations/237.js');
     </script>
 
-Copy and paste the HTML onto your own site. Clicking the title or the image will open the document. Documents will open in DocumentCloud unless you've published them elsewhere. We use [pixel ping](http://www.propublica.org/nerds/item/pixel-ping-a-nodejs-stats-tracker) to guess a document's Published URL, so if users won't find the document another way, you may need to add the Published URL manually.
+Copy and paste the HTML onto your own site. Clicking the title or the image will open the document. Documents will open in sourceAFRICA unless you've published them elsewhere. We use [pixel ping](http://www.propublica.org/nerds/item/pixel-ping-a-nodejs-stats-tracker) to guess a document's Published URL, so if users won't find the document another way, you may need to add the Published URL manually.
 
 <a name="embed-set"></a>
 # <span id="docset">Embed Codes for a Document Set</span>
 
 ![Embed Search Menu][]
 
-If you'd rather embed a complete set of documents, DocumentCloud can provide the HTML to do that as well. Readers will be able to search or filter through as many documents as you'd like to share with them.
+If you'd rather embed a complete set of documents, sourceAFRICA can provide the HTML to do that as well. Readers will be able to search or filter through as many documents as you'd like to share with them.
 
 You can embed any set of documents, whether or not you uploaded them: any document that has already been published by its contributor will open to the URL at which it originally appeared.
 
@@ -117,7 +117,7 @@ Once you're comfortable with your settings, preview the embedded document set. I
     <div id="DC-search-projectid-8-epa-flouride"></div>
     <script src="//s3.amazonaws.com/s3.documentcloud.org/embed/loader.js"></script>
     <script>
-      dc.embed.load('http://www.documentcloud.org/search/embed/', {
+      dc.embed.load('https://sourceafrica.net/search/embed/', {
         q: "projectid: 8-epa-flouride",
         container: "#DC-search-projectid-8-epa-flouride",
         order: "title",
@@ -131,39 +131,39 @@ Paste the code into on your website, and you'll see the set of documents appear.
 
 <img src="/images/help/search_embed.png" class="full_line" />
 
-Click on any document to open it. If you've previously published the document on your website, we should have automatically detected its URL, and it will open at that URL. If the document is public but has not yet been published, it will open on DocumentCloud.org. If you're sure that you've published a document but it still opens on DocumentCloud.org, open the "Edit" menu, click "Published URL", and manually set the URL at which the document has been published.
+Click on any document to open it. If you've previously published the document on your website, we should have automatically detected its URL, and it will open at that URL. If the document is public but has not yet been published, it will open on sourceAFRICA.org. If you're sure that you've published a document but it still opens on sourceAFRICA.org, open the "Edit" menu, click "Published URL", and manually set the URL at which the document has been published.
 
 <a name="wordpress"></a>
 # <span id="docset">WordPress Shortcodes</span>
 
-Users who publish via WordPress can install a plugin that lets you embed DocumentCloud resources using [shortcodes](https://codex.wordpress.org/Shortcode_API).
+Users who publish via WordPress can install a plugin that lets you embed sourceAFRICA resources using [shortcodes](https://codex.wordpress.org/Shortcode_API).
 
-Download the DocumentCloud plugin at its [WordPress plugin page](https://wordpress.org/plugins/documentcloud/). Install and activate it according to the directions.
+Download the sourceAFRICA plugin at its [WordPress plugin page](https://wordpress.org/plugins/sourceafrica/). Install and activate it according to the directions.
 
 Once activated, you can embed resources with a simple shortcode. You also can pass additional parameters to control the size and attributes of the embed. For example, if you want to embed a document at 800px wide, pre-scrolled to page 3:
 
-    [documentcloud url="https://www.documentcloud.org/documents/282753-lefler-thesis.html" width="800" default_page="3"]
+    [sourceafrica url="https://sourceafrica.net/documents/282753-lefler-thesis.html" width="800" default_page="3"]
 
 If you don't indicate a width (or manually disable responsive widths with `responsive="false"`), then the document will automatically narrow and widen to fill available width.
 
 For a note, use any note-specific URL:
 
-    [documentcloud url="https://www.documentcloud.org/documents/282753-lefler-thesis.html#document/p1/a53674"]
+    [sourceafrica url="https://sourceafrica.net/documents/282753-lefler-thesis.html#document/p1/a53674"]
 
-A list of all the parameters you can use with the shortcode is available on the [plugin page](https://wordpress.org/plugins/documentcloud/).
+A list of all the parameters you can use with the shortcode is available on the [plugin page](https://wordpress.org/plugins/sourceafrica/).
 
 <a name="oembed"></a>
 # <span id="docset">oEmbed Service</span>
 
-oEmbed is a Web standard for providing embedded content on a site via a request to the URL of the resource. If a content management system supports oEmbed, you can simply paste in the URL to a DocumentCloud resource, and the CMS will fetch it via our [oEmbed API][] and embed it. Check with your organization's systems administrator about whether your CMS supports oEmbed.
+oEmbed is a Web standard for providing embedded content on a site via a request to the URL of the resource. If a content management system supports oEmbed, you can simply paste in the URL to a sourceAFRICA resource, and the CMS will fetch it via our [oEmbed API][] and embed it. Check with your organization's systems administrator about whether your CMS supports oEmbed.
 
 ### Example document URL for oEmbed
 
-    https://www.documentcloud.org/documents/1234-document-name.html
+    https://sourceafrica.net/documents/1234-document-name.html
 
 ### Example note URL for oEmbed
 
-    https://www.documentcloud.org/documents/1234-document-name.html#document/p2/a208505
+    https://sourceafrica.net/documents/1234-document-name.html#document/p2/a208505
 
 # Questions?
 
@@ -180,5 +180,5 @@ Still have questions about publishing and embedding? Don't hesitate to [contact 
 [ProPublica]: http://www.propublica.org/documents/item/magnetars-responses-to-our-questions
 [this document from the Commercial Appeal]: http://www.commercialappeal.com/data/documents/bass-pro-lease/
 [this ballot from WNYC]: http://www.wnyc.org/story/93440-new-nyc-ballot-could-cause-confusion/
-[oEmbed API]: https://www.documentcloud.org/help/api#oembed
+[oEmbed API]: https://sourceafrica.net/help/api#oembed
 [contact us]: javascript:dc.ui.Dialog.contact()

@@ -48,9 +48,9 @@ class DocumentTest < ActiveSupport::TestCase
   end
 
   def test_document_viewer_url
-    assert_equal "http://dev.dcloud.org/documents/368941146-tv.html", doc.document_viewer_url
-    assert_equal "http://dev.dcloud.org/documents/368941146-tv.html#document/p2", doc.document_viewer_url(:page=>2)
-    assert_equal "http://dev.dcloud.org/documents/368941146-tv.html#entity/p2/Mr%20Rogers/2:16",
+    assert_equal "http://dev.sourceafrica.net/documents/368941146-tv.html", doc.document_viewer_url
+    assert_equal "http://dev.sourceafrica.net/documents/368941146-tv.html#document/p2", doc.document_viewer_url(:page=>2)
+    assert_equal "http://dev.sourceafrica.net/documents/368941146-tv.html#entity/p2/Mr%20Rogers/2:16",
                  doc.document_viewer_url(:page=>2,:entity=>doc.entities.first,:offset=>2)
   end
 

@@ -1,4 +1,4 @@
-// DocumentCloud workspace hotkeys. To tell if a key is currently being pressed,
+// sourceAFRICA workspace hotkeys. To tell if a key is currently being pressed,
 // just ask `VS.app.hotkeys.[key]` on `keypress`, or ask `VS.app.hotkeys.key(e)`
 // on `keydown`.
 // 

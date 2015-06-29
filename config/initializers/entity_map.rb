@@ -1,9 +1,9 @@
-# This file, which is the canonical mapping between Calais and DocumentCloud
+# This file, which is the canonical mapping between Calais and sourceAFRICA
 # Entity kinds, is used by both the Rails and Javascript Entity models.
 
 module DC
 
-  # The normalized (ordered) list of entity types that DocumentCloud supports.
+  # The normalized (ordered) list of entity types that sourceAFRICA supports.
   ENTITY_KINDS = [
     :person, :organization, :place, :term, :email, :phone, :city, :state, :country
   ]
@@ -24,7 +24,7 @@ module DC
   # Supported entity kinds as strings for Rails validation.
   VALID_KINDS = ENTITY_KINDS.map(&:to_s)
 
-  # Mapping from OpenCalais entity kinds into DocumentCloud entity kinds.
+  # Mapping from OpenCalais entity kinds into sourceAFRICA entity kinds.
   # OpenCalais types not on this list don't make the cut.
   CALAIS_MAP = {
     :company            => :organization,

@@ -151,9 +151,9 @@
   - collaboration: Collaboration
   - collaborators: Collaborator
   - confirm_remove_all_data: Are you sure you want to remove all data from %s?
-  - contact_documentcloud: Contact DocumentCloud
+  - contact_documentcloud: Contact sourceAFRICA
   - contact_reviewer: Contact %s at %s if you need any help, or visit %s for more
-      information about DocumentCloud.
+      information about sourceAFRICA.
   - contact_us: Contact Us
   - contributed_by: Contributed by
   - contributor: Contributor
@@ -196,7 +196,7 @@
       to your readers until you make it public. Change the %saccess level%s now or
       %s publication date
   - document_publish_public_help: This document is public. It is currently available
-      to users who search DocumentCloud's catalog and will be visible to the public
+      to users who search sourceAFRICA's catalog and will be visible to the public
       when you embed it on your website. Change the %saccess level%s.
   - document_tools: Document Tools
   - document_viewer_size: Document viewer size
@@ -239,7 +239,7 @@
   - edit_x: Edit %s
   - editing_notes_sections: Editing Notes and Sections
   - email: Email address
-  - email_for_assistance: If you need assistance, please email us at support@documentcloud.org.
+  - email_for_assistance: If you need assistance, please email us at support@codeforafrica.org.
   - email_when_complete: Email me when %sdocuments have%s finished processing.
   - embed_a_note: Embed a Note
   - embed_document: Embed this Document
@@ -284,12 +284,12 @@
       that match your search. Select an entity to filter your search results.
   - entities_unavailable: Entities are temporarily unavailable.
   - error: Error
-  - explain_disable_account: "%1$s will not be able to log in to DocumentCloud. Public
+  - explain_disable_account: "%1$s will not be able to log in to sourceAFRICA. Public
       documents and annotations provided by %1$s will remain available. %2$sContact
       support%3$s to completely purge %1$s's account."
   - export: Export
   - export_to_overview_explain: You are about to export to Overview. You must create
-      an Overview account, and you must provide Overview with your DocumentCloud username
+      an Overview account, and you must provide Overview with your sourceAFRICA username
       and password.
   - featured_examples_documents_list: You can find plenty of examples of embedded
       documents on our list of %sfeatured reporting%s.
@@ -424,7 +424,7 @@
   - pages_are_being_removed: The pages are being removed. Please close this document.
   - paragraph_description_of_document: Paragraph description of this document
   - password_no_blank: Your password can't be blank
-  - password_reset: DocumentCloud password reset
+  - password_reset: sourceAFRICA password reset
   - password_updated: Password updated
   - pending: Pending
   - person: People
@@ -438,7 +438,7 @@
   - preview_email: preview the email message
   - preview_search_embed_help: Before continuing, please take a moment to %spreview
       the document set%s Published documents will open at the URL where they were
-      originally published, while other public documents will open on DocumentCloud.
+      originally published, while other public documents will open on sourceAFRICA.
   - preview_viewer: Before continuing, please take a moment to %spreview the document
       viewer%s.
   - print_notes: Print Notes
@@ -450,10 +450,10 @@
       have access.
   - private_documents_visible_instructions:
     - This document is private. You must make it public before it will be visible
-      on your website or in searches of DocumentCloud's catalog. You can choose to
+      on your website or in searches of sourceAFRICA's catalog. You can choose to
       make it public at a future date or you can %2$schange it now%3$s.
     - These documents are private.  You must make them public before they will be
-      visible on your website or in searches of DocumentCloud's catalog. You can choose
+      visible on your website or in searches of sourceAFRICA's catalog. You can choose
       to make them public at a future date or you can %2$schange them now%3$s.
   - private_note: Private note
   - private_note_visible: This private note is only visible to you.
@@ -538,14 +538,14 @@
   - resend_welcome_email: Resend Welcome Email
   - restricted: Restricted
   - review_x_documents:
-    - Review "%2$s" on DocumentCloud
-    - Review %d documents on DocumentCloud
+    - Review "%2$s" on sourceAFRICA
+    - Review %d documents on sourceAFRICA
   - reviewer: Reviewer
   - reviewer_add_permission_denied: You are not allowed to add reviewers.
   - reviewer_email_instructions:
     - Email Instructions to %2$s
     - Email Instructions to %d Reviewers
-  - reviewer_email_message: DocumentCloud will email reviewing instructions to %s
+  - reviewer_email_message: sourceAFRICA will email reviewing instructions to %s
       If you wish, you may add a personal message.
   - reviewer_enter_email: 'Enter the email address of the first reviewer to invite:'
   - reviewer_name: Please provide the reviewer's name
@@ -621,7 +621,7 @@
       The document will close while it''s being rebuilt. Are you sure you want to
       proceed?'
   - text_tools: Text Tools
-  - the_api: The DocumentCloud API
+  - the_api: The sourceAFRICA API
   - timeline_for_doc: Timeline for "%s"
   - timeline_for_x_docs: Timeline for %d documents
   - timeline_max_documents: You can only view a timeline for ten documents at a time.
@@ -650,7 +650,7 @@
   - view_pages: View Pages
   - view_timeline: View Timeline
   - welcome_message_sent_to: A welcome message has been sent to %s.
-  - welcome_to_document_cloud: Welcome to DocumentCloud
+  - welcome_to_document_cloud: Welcome to sourceAFRICA
   - width: Width
   - workspace: Workspace
   - wp_shortcode_plugin_docs_link: "%sPlugin required%s."

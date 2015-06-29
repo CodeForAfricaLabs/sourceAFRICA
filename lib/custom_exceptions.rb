@@ -1,4 +1,4 @@
-# Our DocumentCloud-specific exception classes belong in here.
+# Our sourceAFRICA-specific exception classes belong in here.
 
 module DC
   

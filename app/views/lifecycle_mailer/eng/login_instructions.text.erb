@@ -1,9 +1,9 @@
 <%= @account.full_name %>,
 
 <% if @admin -%>
-Hello! <%= @admin.full_name %> has added you to <%= @account.organization.name %>'s DocumentCloud account.
+Hello! <%= @admin.full_name %> has added you to <%= @account.organization_name %>'s sourceAFRICA account.
 <% else -%>
-Hello! A DocumentCloud account has been created for you and <%= @account.organization.name %>.
+Hello! A sourceAFRICA account has been created for you and <%= @account.organization.name %>.
 <% end -%>
 
 Set your password and get started at:
@@ -12,12 +12,12 @@ Set your password and get started at:
 
 Once you've set your password, you can login at <%= DC.server_root(:ssl => false) %>/login using <%= @account.email %> as your username.
 
-We're always adding features and listening to your requests. Keep an eye on our blog for updates and let us know what you need from DocumentCloud: http://documentcloud.uservoice.com
+We're always adding features and listening to your requests. Keep an eye on our blog for updates and let us know what you need from sourceAFRICA: https://github.com/CodeForAfrica/sourceAFRICA/issues.
 
 Once you're logged in, you'll find information about using the workspace, creating accounts, searching the repository and more on the help tab.
 
 Enjoy,
 
-The DocumentCloud Team
+ANCIR & Code for Africa Team
 
-P.S. We're always looking for great stories about how DocumentCloud is helping your reporting, so don't forget to tell us if you run a story that DocumentCloud played a role in!
+P.S. We're always looking for great stories about how sourceAFRICA is helping your reporting, so don't forget to tell us if you run a story that sourceAFRICA played a role in!

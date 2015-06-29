@@ -12,15 +12,15 @@ To add an account, click "New Account" and fill in the user's first and last nam
 
 <img src="/images/help/accounts_manage.jpg" class="full_line" />
 
-DocumentCloud supports three categories of users in any organization: **administrators**, **contributors**, and **freelancers**.
+sourceAFRICA supports three categories of users in any organization: **administrators**, **contributors**, and **freelancers**.
 
- * **Administrators** can create new DocumentCloud accounts and disable old ones. Assign administrative privileges to as many users as appropriate.
+ * **Administrators** can create new sourceAFRICA accounts and disable old ones. Assign administrative privileges to as many users as appropriate.
 
  * **Contributors** can upload, annotate and edit documents, and they can access documents shared across the organization.
 
  * **Freelancers** can upload, annotate, and edit their own documents and any documents that have been explicitly shared with them. Freelancers do not have access to the rest of your organization's documents.
 
-You may also wish to learn more about reviewers and other [collaboration][] tools or read up on DocumentCloud [privacy][].
+You may also wish to learn more about reviewers and other [collaboration][] tools or read up on sourceAFRICA [privacy][].
 
 Still have questions about accounts? Don't hesitate to [contact us][].
 

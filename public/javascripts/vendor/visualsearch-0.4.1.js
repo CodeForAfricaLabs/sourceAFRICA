@@ -6,7 +6,7 @@
 // [Docco](http://jashkenas.github.com/docco/).
 
 /** @license VisualSearch.js 0.4.1
- *  (c) 2011 Samuel Clay, @samuelclay, DocumentCloud Inc.
+ *  (c) 2011 Samuel Clay, @samuelclay, sourceAFRICA Inc.
  *  VisualSearch.js may be freely distributed under the MIT license.
  *  For all details and documentation:
  *  http://documentcloud.github.com/visualsearch
@@ -1395,7 +1395,7 @@ VS.ui.SearchInput = Backbone.View.extend({
 
 var $ = jQuery; // Handle namespaced jQuery
 
-// DocumentCloud workspace hotkeys. To tell if a key is currently being pressed,
+// sourceAFRICA workspace hotkeys. To tell if a key is currently being pressed,
 // just ask `VS.app.hotkeys.[key]` on `keypress`, or ask `VS.app.hotkeys.key(e)`
 // on `keydown`.
 //

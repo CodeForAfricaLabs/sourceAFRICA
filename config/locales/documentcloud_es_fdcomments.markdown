@@ -1,4 +1,4 @@
-Comments, questions and doubts on DocumentCloud translation from English to Spanish
+Comments, questions and doubts on sourceAFRICA translation from English to Spanish
 Fernando Diaz, 301-204-7300, fediaz@vivelohoy.com, fdiazreporting@gmail.com
 
 I've kept all manner of speech informal in this translation, opting against the deferential formal tone that can be used in Spanish. It would be rather simple to switch, but formal is a bit old school and not necessary in this environment. There is no "usted" in this translation. Also, conjugating verbs has been done in the informal tone to maintain consistency. I did keep all of the pleases.
@@ -28,7 +28,7 @@ Email is Email, but in some cases I translated to correo electrónico. As in sen
 In the "Contact us" form I would recommend adding a country code for US.
 
 Was confused here about the extra characters in beginning of this section, but translated as though they were simple %s
-explain_disable_account: '%1$s will not be able to log in to DocumentCloud. Public documents and annotations provided by %1$s will remain available. %2$sContact support%3$s to completely purge %1$s''s account.'
+explain_disable_account: '%1$s will not be able to log in to sourceAFRICA. Public documents and annotations provided by %1$s will remain available. %2$sContact support%3$s to completely purge %1$s''s account.'
 
 Quotes go outside of punctuation like periods and commas in Spanish, I modified in almost all cases. Will review to see if I missed any.
 
@@ -56,7 +56,7 @@ for_example_data: 'Por ejemplo: &ldquo;birth: 1935-01-08&rdquo;, or &ldquo;statu
 document_public_on: This document will be public on %s
  if %s is an amount of TIME it would be preceded by "en", if it's a DATE, would be "el". 
 
-374 - log in to DocumentCloud to understand context of this set_the: set the, designar el?
+374 - log in to sourceAFRICA to understand context of this set_the: set the, designar el?
 
 I used "filtrar" for "Sort".
 

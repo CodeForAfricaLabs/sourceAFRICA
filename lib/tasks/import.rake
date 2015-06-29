@@ -16,7 +16,7 @@ namespace :import do
         CSV.foreach( args[:csv] ) do | fname, lname, email, is_admin |
 
 
-          email += "@documentcloud.org" unless email.include?('@')
+          email += "@codeforafrica.org" unless email.include?('@')
 
           account = Account.new({ :email             => email.strip,
                                   :first_name        => fname.strip,

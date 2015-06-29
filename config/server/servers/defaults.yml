@@ -7,7 +7,7 @@ security_groups: default
 size: c1.medium
 image: ami-e76ac58e
 availability_zone: us-east-1c
-key_name: documentcloud
+key_name: sourceafrica
 cloud:
   provider: AWS
   aws_access_key_id: <=% ENV[AWS_ACCESS_KEY] %>

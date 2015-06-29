@@ -1,15 +1,39 @@
-    ______                                      _   _____ _                 _
-    |  _  \                                    | | /  __ \ |               | |
-    | | | |___   ___ _   _ _ __ ___   ___ _ __ | |_| /  \/ | ___  _   _  __| |
-    | | | / _ \ / __| | | | '_ ` _ \ / _ \ '_ \| __| |   | |/ _ \| | | |/ _` |
-    | |/ / (_) | (__| |_| | | | | | |  __/ | | | |_| \__/\ | (_) | |_| | (_| |
-    |___/ \___/ \___|\__,_|_| |_| |_|\___|_| |_|\__|\____/_|\___/ \__,_|\__,_|
+```
+                                 _    _____ ____  ___ ____    _    
+ ___  ___  _   _ _ __ ___ ___   / \  |  ___|  _ \|_ _/ ___|  / \   
+/ __|/ _ \| | | | '__/ __/ _ \ / _ \ | |_  | |_) || | |     / _ \  
+\__ \ (_) | |_| | | | (_|  __// ___ \|  _| |  _ < | | |___ / ___ \ 
+|___/\___/ \__,_|_|  \___\___/_/   \_\_|   |_| \_\___\____/_/   \_\
+```
 
+[sourceAFRICA](https://sourceafrica.net/) is Africa's premier repository for "actionable documents".
 
-DocumentCloud is a catalog of primary source documents and a tool for annotating, organizing and publishing them on the web. Documents are contributed by journalists, researchers and archivists.
+What do we mean by *actionable documents*? Documents that the public need to help make more informed decisions, or that help civic watchdogs such as the media or social justice NGOs substantiate their reportage, or documents that have been suppressed or censored elsewhere.
+ 
+[sourceAFRICA](https://sourceafrica.net/) is powered by [DocumentCloud](https://github.com/documentcloud/documentcloud), and allows you to turn your documents into machine readable data, for better analysis. It also makes it easier for you to share documents and/or collaborate with your audience and colleagues.
 
-This codebase contains the entirety of DocumentCloud.org, and pulls together the rest of our open-source projects: Docsplit is used to extract data from incoming documents; that work is parallelized across CloudCrowd; data on the client-side is modeled by Backbone.js, which depends on Underscore.js for all of its abilities; Jammit concatenates and compresses the dozens of CSS and JS files into a single asset package; the NYTimes' Document Viewer displays the documents, while Pixel Ping records the traffic.
+*sourceAFRICA is offered as a service by [ANCIR (the African Network of Centers for Investigative Reporting)](http://investigativecenters.org) with support from [Code for Africa](http://www.codeforafrica.org).*
 
-If you find a security issue while browsing the source, please email support@documentcloud.org to inform us of the problem.
+### Contributing
 
-Code contributed to this project is provided under the MIT license (see the LICENSE file). Some components of the project are subject to their own licenses as indicated (see /vendor and /public/javascripts/vendor directories).
+If you're interested in contributing patches to [sourceAFRICA](https://sourceafrica.net/), installation instructions to get up and running are available in the [`INSTALL`](./INSTALL.md) file.
+
+---
+
+### Security Vulnerabilities
+
+If you find a security issue while browsing the source code, please email [support@codeforafrica.org](mailto:support@codeforafrica.org) to inform us of the problem. All security issues will be addressed promptly.
+
+---
+
+### License
+
+Code contributed to this project is provided under the GPL v3 license.
+
+The GPL (V2 or V3) is a copyleft license that requires anyone who distributes your code or a derivative work to make the source available under the same terms. V3 is similar to V2, but further restricts use in hardware that forbids software alterations.
+
+**Linux**, **Git**, and **WordPress** use the GPL.
+
+See the [`LICENSE`](./LICENSE) file for more information.
+
+Some components of the project are subject to their own licenses as indicated (see `/vendor` and `/public/javascripts/vendor directories`).

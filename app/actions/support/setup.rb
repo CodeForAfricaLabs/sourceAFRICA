@@ -2,7 +2,7 @@
 RAILS_ROOT = File.expand_path("../../../../", __FILE__)
 RAILS_ENV = ENV['RAILS_ENV'] = ENV['RACK_ENV']
 
-# Load the DocumentCloud environment if we're in a Node context.
+# Load the sourceAFRICA environment if we're in a Node context.
 if CloudCrowd.node?
   $LOAD_PATH.unshift( RAILS_ROOT ) unless $LOAD_PATH.include?( RAILS_ROOT )
   require 'logger'

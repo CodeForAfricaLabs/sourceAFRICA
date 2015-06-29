@@ -38,7 +38,7 @@ end
 rule(/^ssh:/) do |t|
   conf = configuration
   host = t.name.split(':').last
-  host += ".documentcloud.org" if host !~ /\./
+  host += ".sourceafrica.net" if host !~ /\./
   exec "ssh -A -i #{conf[:key]} #{conf[:user]}@#{host}"
 end
 
@@ -62,36 +62,36 @@ end
 
 def app_servers
   case RAILS_ENV
-  when 'staging'    then ['staging.documentcloud.org']
-  when 'production' then ['app01.documentcloud.org']
+  when 'staging'    then ['staging.sourceafrica.net']
+  when 'production' then ['app01.sourceafrica.net']
   end
 end
 
 def central_servers
   case RAILS_ENV
-  when 'staging'    then ['staging.documentcloud.org']
-  when 'production' then ['db01.documentcloud.org']
+  when 'staging'    then ['staging.sourceafrica.net']
+  when 'production' then ['db01.sourceafrica.net']
   end
 end
 
 def search_servers
   case RAILS_ENV
-  when 'staging'    then ['staging.documentcloud.org']
-  when 'production' then ['solr01.documentcloud.org']
+  when 'staging'    then ['staging.sourceafrica.net']
+  when 'production' then ['solr01.sourceafrica.net']
   end
 end
 
 def worker_servers
   case RAILS_ENV
-  when 'staging'    then ['staging.documentcloud.org']
-  when 'production' then ['worker01.documentcloud.org', 'worker02.documentcloud.org', 'worker03.documentcloud.org', 'worker04.documentcloud.org']
+  when 'staging'    then ['staging.sourceafrica.net']
+  when 'production' then ['worker01.sourceafrica.net', 'worker02.sourceafrica.net', 'worker03.sourceafrica.net', 'worker04.sourceafrica.net']
   end
 end
 
 def configuration
   case RAILS_ENV
-  when 'staging'    then {:user => 'ubuntu', :dir => '~/documentcloud', :key => 'secrets/keys/documentcloud.pem'}
-  when 'production' then {:user => 'ubuntu', :dir => '~/documentcloud', :key => 'secrets/keys/documentcloud.pem'}
+  when 'staging'    then {:user => 'ubuntu', :dir => '~/sourceAFRICA', :key => 'secrets/keys/sourceafrica.pem'}
+  when 'production' then {:user => 'ubuntu', :dir => '~/sourceAFRICA', :key => 'secrets/keys/sourceafrica.pem'}
   end
 end
 

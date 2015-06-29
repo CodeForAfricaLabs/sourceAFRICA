@@ -169,7 +169,7 @@ dc.model.AccountSet = Backbone.Collection.extend({
   // If the contributor has logged-out of the workspace in a different tab,
   // force the logout here.
   forceLogout : function() {
-    dc.ui.Dialog.alert('You are no longer logged in to DocumentCloud.', {onClose : function() {
+    dc.ui.Dialog.alert('You are no longer logged in to sourceAFRICA.', {onClose : function() {
       window.location = '/logout';
     }});
   }

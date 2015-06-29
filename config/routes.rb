@@ -154,7 +154,7 @@ DC::Application.routes.draw do
   get '/p3p.:format' => 'home#p3p', :as => :p3p
   get '/home' => 'home#index', :as => :home
   get '/news' => 'home#news', :as => :news
-  get '/opensource' => 'home#opensource', :as => :opensource
+  get '/opensource' => redirect("https://github.com/CodeForAfrica/sourceAFRICA"), :as => :opensource
   get '/about' => 'home#about', :as => :about
   get '/contact' => 'home#contact', :as => :contact
   get '/help' => 'home#help'
@@ -167,9 +167,9 @@ DC::Application.routes.draw do
   get '/who-we-are' => 'redirect#index', :as => :who_we_are, :url => '/about'
   get '/partner.php' => 'redirect#index', :as => :partner, :url => '/contributors'
   get '/clips.php' => 'redirect#index', :as => :clips, :url => '/news'
-  get '/blog/feed' => 'redirect#index', :as => :feed, :url => 'http://blog.documentcloud.org/feed'
-  get '/feed' => 'redirect#index', :as => :root_feed, :url => 'http://blog.documentcloud.org/feed'
-  get '/blog/*parts' => 'redirect#index', :as => :blog, :url => 'http://blog.documentcloud.org/'
+  get '/blog/feed' => 'redirect#index', :as => :feed, :url => 'http://investigativecenters.org/feed'
+  get '/feed' => 'redirect#index', :as => :root_feed, :url => 'http://investigativecenters.org/feed'
+  get '/blog/*parts' => 'redirect#index', :as => :blog, :url => 'http://investigativecenters.org/'
 
   get '/admin' => 'admin#index'
   

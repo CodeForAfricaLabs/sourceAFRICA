@@ -120,7 +120,7 @@ dc.ui.Document = Backbone.View.extend({
   },
 
   // If the document is published, open the remote url, otherwise open
-  // the local DocumentCloud viewer.
+  // the local sourceAFRICA viewer.
   viewDocument : function(e) {
     this.model.openAppropriateVersion();
     return false;

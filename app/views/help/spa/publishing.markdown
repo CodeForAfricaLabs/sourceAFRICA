@@ -20,7 +20,7 @@ Antes de publicar una nota, un documento o conjunto de documentos, usted querrá
 <a name="embed-document"></a>
 # Publicando documentos individuales
 
-Para publicar cualquier documento de DocumentCloud, puede descargar una copia independiente del visor, o generar, copiar, y pegar un código de inserción sencillo para ese documento. Le recomendamos incrustar un código que vincule a DocumentCloud en la mayoría de los documentos. Las siguientes instrucciones asumen que tiene conocimiento básico de HTML, pero hemos tratado que el proceso de incorporación/incrustación sea lo sencillo posible. 
+Para publicar cualquier documento de sourceAFRICA, puede descargar una copia independiente del visor, o generar, copiar, y pegar un código de inserción sencillo para ese documento. Le recomendamos incrustar un código que vincule a sourceAFRICA en la mayoría de los documentos. Las siguientes instrucciones asumen que tiene conocimiento básico de HTML, pero hemos tratado que el proceso de incorporación/incrustación sea lo sencillo posible. 
 
 Nosotros mantenemos una lista de algunos de nuestros documentos incrustados favoritos como ejemplos de cómo podrían incrustar documentos las salas de redacción.
 
@@ -32,9 +32,9 @@ Antes de incrustar un documento en su sitio, le recomendamos que complete un par
 
 Seleccione un documento, abra el menú "Publicar" y haga clic en "Incrustar Marco de Revisión" o haga clic en el documento con el botón derecho del ratón y seleccione "Incrustar Marco de Revisión".
 
-Aparecerá un cuadro de diálogo que le pedirá que complete dos datos adicionales: **URL de Artículo Relaciónado**, **URL Publicado**. El URL del reportaje relacionado es la ubicación del reportaje que utiliza el documento como material de fuente –  añadir este URL significa que los lectores que encuentren primero el documento también podrán encontrar sus reportajes. El URL publicado es la página donde se ha insertado el documento. La mayoría de los usuarios no tendrán que proporcionar esta información –  [Pixel Ping](http://www.propublica.org/nerds/item/pixel-ping-a-nodejs-stats-tracker) por lo general nos puede decir donde está incrustado el documento. Sin embargo, si un documento podría  encontrarse por medio de varios URLs, usted puede especificar cual URL debemos enviar a los usuarios si encuentran el documento por medio de una búsqueda de DocumentCloud.
+Aparecerá un cuadro de diálogo que le pedirá que complete dos datos adicionales: **URL de Artículo Relaciónado**, **URL Publicado**. El URL del reportaje relacionado es la ubicación del reportaje que utiliza el documento como material de fuente –  añadir este URL significa que los lectores que encuentren primero el documento también podrán encontrar sus reportajes. El URL publicado es la página donde se ha insertado el documento. La mayoría de los usuarios no tendrán que proporcionar esta información –  [Pixel Ping](http://www.propublica.org/nerds/item/pixel-ping-a-nodejs-stats-tracker) por lo general nos puede decir donde está incrustado el documento. Sin embargo, si un documento podría  encontrarse por medio de varios URLs, usted puede especificar cual URL debemos enviar a los usuarios si encuentran el documento por medio de una búsqueda de sourceAFRICA.
 
-En el primer paso, usted también verá una casilla de verificación con la opción de que el documento sea público, si es que no lo es todavía. Mientras que es posible pegar el código de inserción antes de que el documento se haga público, no comenzará a funcionar hasta que el documento se haya publicado en DocumentCloud. 
+En el primer paso, usted también verá una casilla de verificación con la opción de que el documento sea público, si es que no lo es todavía. Mientras que es posible pegar el código de inserción antes de que el documento se haga público, no comenzará a funcionar hasta que el documento se haya publicado en sourceAFRICA. 
 
 Si aún no está listo para hacer el documento público, puede programarlo para que se publique en una fecha futura. Haga clic en "Set Publication Date" en el menú "Publish" y seleccione la fecha y la hora que desea que el documento se haga público. Esto es útil si usted ya sabe cuándo se publicará su artículo, o si se publicará en la madrugada.
 
@@ -61,7 +61,7 @@ Haga clic en el botón "Next" para continuar con el paso 3, y veráx el código 
     <div id="viewer-10-general-report"></div>
     <script src="//s3.amazonaws.com/s3.documentcloud.org/viewer/loader.js"></script>
     <script>
-      DV.load('http://www.documentcloud.org/documents/10-general-report.js', {
+      DV.load('https://sourceafrica.net/documents/10-general-report.js', {
         container : '#viewer-10-general-report'
       });
     </script>
@@ -89,17 +89,17 @@ Se le pedirá que seleccione la nota a insertar, y podrá revisar la nota incrus
     <div id="DC-note-237"></div>
     <script src="//s3.amazonaws.com/s3.documentcloud.org/notes/loader.js"></script>
     <script>
-      dc.embed.loadNote('http://www.documentcloud.org/documents/223/annotations/237.js');
+      dc.embed.loadNote('https://sourceafrica.net/documents/223/annotations/237.js');
     </script>
 
-Copie y pegue el código HTML en su propio sitio. Al hacer clic en el título o la imagen, se abrirá el documento. Los documentos se abrirán en DocumentCloud a menos que los haya publicado en otra parte. Utilizamos pixel ping de adivinar el URL publicado de un documento, de manera que si los usuarios no pueden encuentran el documento de otra manera, puede que usted tenga que añadir el URL publicado manualmente.
+Copie y pegue el código HTML en su propio sitio. Al hacer clic en el título o la imagen, se abrirá el documento. Los documentos se abrirán en sourceAFRICA a menos que los haya publicado en otra parte. Utilizamos pixel ping de adivinar el URL publicado de un documento, de manera que si los usuarios no pueden encuentran el documento de otra manera, puede que usted tenga que añadir el URL publicado manualmente.
 
 <a name="embed-set"></a>
 # <span id="docset">Incrustando un conjunto de documentos</span>
 
 ![Embed Search Menu](/images/help/embed_search_menu.png)
 
-Si prefieres incrustar un conjunto de documentos, DocumentCloud puede proporcionarle el código HTML para este propósito también. Los lectores serán capaces de buscar o filtrar a través de tantos documentos como desee compartir con ellos. 
+Si prefieres incrustar un conjunto de documentos, sourceAFRICA puede proporcionarle el código HTML para este propósito también. Los lectores serán capaces de buscar o filtrar a través de tantos documentos como desee compartir con ellos. 
 
 Puede incrustar cualquier conjunto de documentos, ya sea que usted los haya subido o no: cualquier documento que ya ha sido publicado por su aportador se abrirá usando el URL con el que se publicó originalmente. 
 
@@ -115,7 +115,7 @@ Una vez que usted se sienta cómodo con la configuración, revise el conjunto de
     <div id="DC-search-projectid-8-epa-flouride"></div>
     <script src="//s3.amazonaws.com/s3.documentcloud.org/embed/loader.js"></script>
     <script>
-      dc.embed.load('http://www.documentcloud.org/search/embed/', {
+      dc.embed.load('https://sourceafrica.net/search/embed/', {
         q: "projectid: 8-epa-flouride",
         container: "#DC-search-projectid-8-epa-flouride",
         order: "title",
@@ -129,40 +129,40 @@ Pegue el código en su página web, y el conjunto de documentos aparecerá.
 
 <img src="/images/help/search_embed.png" class="full_line" />
 
-Haga clic en cualquier documento para abrirlo. Si ha publicado el documento en su página web previamente,  deberíamos haber detectado su URL automáticamente, y se abrirá con ese URL. Si el documento es público, pero aún no se ha publicado, se abrirá en DocumentCloud.org. Si está seguro de que usted ha publicado un documento, pero aun así se abre en DocumentCloud.org, abra el menú "Edit", haga clic en "URL Publicado", y establezca manualmente el URL con el que se ha publicado el documento.
+Haga clic en cualquier documento para abrirlo. Si ha publicado el documento en su página web previamente,  deberíamos haber detectado su URL automáticamente, y se abrirá con ese URL. Si el documento es público, pero aún no se ha publicado, se abrirá en sourceAFRICA.org. Si está seguro de que usted ha publicado un documento, pero aun así se abre en sourceAFRICA.org, abra el menú "Edit", haga clic en "URL Publicado", y establezca manualmente el URL con el que se ha publicado el documento.
 
 <a name="wordpress"></a>
 # <span id="docset">WordPress Shortcodes</span>
 
-Los usuarios que publican a través de WordPress pueden instalar un plugin que permite incorporar recursos DocumentCloud utilizando [shortcodes](https://codex.wordpress.org/Shortcode_API).
+Los usuarios que publican a través de WordPress pueden instalar un plugin que permite incorporar recursos sourceAFRICA utilizando [shortcodes](https://codex.wordpress.org/Shortcode_API).
 
-Descargue el plugin DocumentCloud en su [página de plugin para WordPress](https://wordpress.org/plugins/documentcloud/). Instalar y activar de acuerdo a las instrucciones.
+Descargue el plugin sourceAFRICA en su [página de plugin para WordPress](https://wordpress.org/plugins/sourceafrica/). Instalar y activar de acuerdo a las instrucciones.
 
 Una vez activado, puede incrustar recursos con un simple shortcode. También puede pasar parámetros adicionales para controlar el tamaño y los atributos del embed. Por ejemplo, si desea incrustar un documento a 800px de ancho, pre-desplazado a la página 3:
 
-    [documentcloud url="https://www.documentcloud.org/documents/282753-lefler-thesis.html" width="800" default_page="3"]
+    [sourceafrica url="https://sourceafrica.net/documents/282753-lefler-thesis.html" width="800" default_page="3"]
 
 Para una nota, utilice cualquier URL-nota específica:
 
-    [documentcloud url="https://www.documentcloud.org/documents/282753-lefler-thesis.html#document/p1/a53674"]
+    [sourceafrica url="https://sourceafrica.net/documents/282753-lefler-thesis.html#document/p1/a53674"]
 
-Una lista de todos los parámetros que puede utilizar con el código corto está disponible en [la página del plugin](https://wordpress.org/plugins/documentcloud/).
+Una lista de todos los parámetros que puede utilizar con el código corto está disponible en [la página del plugin](https://wordpress.org/plugins/sourceafrica/).
 
 <a name="oembed"></a>
 # <span id="docset">oEmbed Service</span>
 
-oEmbed es un estándar Web para proporcionar el contenido embebido en un sitio a través de una petición a la URL del recurso. Si un sistema de gestión de contenidos apoya oEmbed, sólo tiene que pegar en la URL de un recurso DocumentCloud, y el CMS se ha podido ir a través de nuestro [oEmbed API] [] e incrustarlo. Consulte con el administrador de sistemas de la organización acerca de si su CMS apoya oEmbed.
+oEmbed es un estándar Web para proporcionar el contenido embebido en un sitio a través de una petición a la URL del recurso. Si un sistema de gestión de contenidos apoya oEmbed, sólo tiene que pegar en la URL de un recurso sourceAFRICA, y el CMS se ha podido ir a través de nuestro [oEmbed API] [] e incrustarlo. Consulte con el administrador de sistemas de la organización acerca de si su CMS apoya oEmbed.
 
 ### Ejemplo URL documento para oEmbed
 
-    https://www.documentcloud.org/documents/1234-document-name.html
+    https://sourceafrica.net/documents/1234-document-name.html
 
 ### Ejemplo URL nota para oEmbed
 
-    https://www.documentcloud.org/documents/1234-document-name.html#document/p2/a208505
+    https://sourceafrica.net/documents/1234-document-name.html#document/p2/a208505
 
 # Preguntas?
 
 ¿Aún tiene preguntas acerca de la publicación e incrustación? No dude en [comunicarse con nosotros](javascript:dc.ui.Dialog.contact(\)).
 
-[oEmbed API]: https://www.documentcloud.org/help/api#oembed
+[oEmbed API]: https://sourceafrica.net/help/api#oembed

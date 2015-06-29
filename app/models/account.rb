@@ -1,4 +1,4 @@
-# An Account on DocumentCloud can be used to access the workspace and upload
+# An Account on sourceAFRICA can be used to access the workspace and upload
 # documents. Accounts have full priviledges for the entire organization, at the
 # moment.
 
@@ -250,7 +250,7 @@ class Account < ActiveRecord::Base
       Collaboration.owned_by(self).pluck(:project_id)
   end
 
-  # is the account considered an DocumentCloud Administrator?
+  # is the account considered an sourceAFRICA Administrator?
   def dcloud_admin?
     organization.id == 1 && ! reviewer?
   end

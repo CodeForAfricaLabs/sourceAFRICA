@@ -1,6 +1,6 @@
 # Guided Tour
 
-DocumentCloud is a tool for organizing and working with large documents and document collections, a document viewer that makes it easier for reporters to share source material with readers and a publicly accessible repository of primary source documents that were used in journalists' investigations. If you're new to DocumentCloud, here's a walkthrough to help you get your bearings. 
+sourceAFRICA is a tool for organizing and working with large documents and document collections, a document viewer that makes it easier for reporters to share source material with readers and a publicly accessible repository of primary source documents that were used in journalists' investigations. If you're new to sourceAFRICA, here's a walkthrough to help you get your bearings. 
 
 ## Create your first project.
 
@@ -10,7 +10,7 @@ Use the "New Project" button on the left to create a project called "Demo Docume
 
 Search for [gulf oil spill][].
 
-This will search all documents made public by any DocumentCloud user for any with "gulf," "oil" and "spill" in the text or title. You can [refine your search by special criteria][], as well. Your results should include a number of documents relating to the British Petroleum oil spill in the Gulf of Mexico. Drag one or two of these documents into your "Demo Documents" project. 
+This will search all documents made public by any sourceAFRICA user for any with "gulf," "oil" and "spill" in the text or title. You can [refine your search by special criteria][], as well. Your results should include a number of documents relating to the British Petroleum oil spill in the Gulf of Mexico. Drag one or two of these documents into your "Demo Documents" project. 
 
 Click on "Demo Documents" to open your project. You should see your documents listed there.
 
@@ -20,7 +20,7 @@ Double-click one of your documents to open it. If the contributing reporter made
 
 ## <span id="analytic_tools">Try our analytic tools.</span>
 
-DocumentCloud gives journalists a great set of analytic tools for working with large and small documents. When a document is uploaded, we run it through OCR, which extracts letters and words from each document's image. But that's not all. 
+sourceAFRICA gives journalists a great set of analytic tools for working with large and small documents. When a document is uploaded, we run it through OCR, which extracts letters and words from each document's image. But that's not all. 
  
 Search for [source: "House Committee on the Judiciary"][].
  
@@ -39,5 +39,5 @@ Make sure you understand document [privacy][] and get started [uploading][], [an
 Questions? Don't hesitate to [contact us][]. And as you go, feel free to [request features and report bugs][].
 
 
-[request features and report bugs]: http://documentcloud.uservoice.com
+[request features and report bugs]: https://github.com/CodeForAfrica/sourceAFRICA/issues
 [contact us]: javascript:dc.ui.Dialog.contact()

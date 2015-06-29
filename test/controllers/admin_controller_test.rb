@@ -6,17 +6,17 @@ class AdminControllerTest < ActionController::TestCase
     login_account! :admin
     assert accounts(:admin).dcloud_admin?
     params = {
-      "organization"=>{"name"=>"nathan",
+      "organization"=>{"name"=>"david",
                        "slug"=>"testing",
                        "language"=>"eng",
                        "document_language"=>"eng"},
-      "account"=>{"email"=>"foo+nathan@documentcloud.org",
+      "account"=>{"email"=>"foo+david@codeforafrica.org",
                   "first_name"=>"test",
                   "last_name"=>"bob"}}
     post :signup, params
     assert_response :success
     assert Organization.where( :slug=>'testing' ).first
-    assert Account.where( "email"=>"foo+nathan@documentcloud.org" ).first
+    assert Account.where( "email"=>"foo+david@codeforafrica.org" ).first
   end
 
   def test_it_checks_for_existing_accounts

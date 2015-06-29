@@ -21,8 +21,8 @@ sudo mount /srv/pg
 
 # Checkout source
 sudo apt-get install git
-git clone https://github.com/documentcloud/documentcloud.git
-cd ~/documentcloud
+git clone https://github.com/CodeForAfrica/sourceAFRICA.git
+cd ~/sourceAFRICA
 
 # Run configuration scripts
 sudo sh ./config/server/scripts/setup_common_dependencies.sh
@@ -48,8 +48,8 @@ export AWS_DEFAULT_REGION=us-east-1
 export DATE=2014-12-28
 
 # Download the backups, takes around 10 minutes
-aws s3 cp s3://s3.documentcloud.org/backups/dcloud_production/$DATE.dump /srv/pg/$DATE-production.dump
-aws s3 cp s3://s3.documentcloud.org/backups/dcloud_analytics_production/$DATE.dump /srv/pg/$DATE-analytics.dump
+aws s3 cp s3://s3.sourceafrica.net/backups/dcloud_production/$DATE.dump /srv/pg/$DATE-production.dump
+aws s3 cp s3://s3.sourceafrica.net/backups/dcloud_analytics_production/$DATE.dump /srv/pg/$DATE-analytics.dump
 
 # restoring takes considerably longer.
 # As of Jan 3rd, 2015 - 92 mins for production, 28 for analytics

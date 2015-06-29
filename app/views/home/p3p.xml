@@ -7,23 +7,23 @@
 
 <POLICY
     name="PrivacyPolicy"
-    discuri="http://www.documentcloud.org/privacy"
+    discuri="https://sourceafrica.net/privacy"
     xml:lang="en">
     <!-- Description of the entity making this policy statement. -->
     <ENTITY>
     <DATA-GROUP>
-<DATA ref="#business.contact-info.telecom.telephone.number">(202) 505-1010</DATA>
-<DATA ref="#business.contact-info.online.email">support@documentcloud.org</DATA>
-<DATA ref="#business.contact-info.online.uri">http://www.documentcloud.org/</DATA>
-<DATA ref="#business.contact-info.postal.organization">DocumentCloud</DATA>
-<DATA ref="#business.contact-info.postal.street">Investigative Reporters and Editors
-141 Neff Annex
-University of Missouri</DATA>
-<DATA ref="#business.contact-info.postal.city">Columbia</DATA>
-<DATA ref="#business.contact-info.postal.stateprov">Missouri</DATA>
-<DATA ref="#business.contact-info.postal.postalcode">65211</DATA>
-<DATA ref="#business.contact-info.postal.country">United States of America</DATA>
-<DATA ref="#business.name">DocumentCloud</DATA>
+<DATA ref="#business.contact-info.telecom.telephone.number">TBD</DATA>
+<DATA ref="#business.contact-info.online.email">support@codeforafirca.org</DATA>
+<DATA ref="#business.contact-info.online.uri">http://www.codeforafrica.org/</DATA>
+<DATA ref="#business.contact-info.postal.organization">Code for Africa</DATA>
+<DATA ref="#business.contact-info.postal.street">Nairobi Startup Garage
+Ngong Road
+Piedmont Plaza</DATA>
+<DATA ref="#business.contact-info.postal.city">Nairobi</DATA>
+<DATA ref="#business.contact-info.postal.stateprov">Nairobi</DATA>
+<DATA ref="#business.contact-info.postal.postalcode">00100</DATA>
+<DATA ref="#business.contact-info.postal.country">Kenya</DATA>
+<DATA ref="#business.name">Code for Africa</DATA>
     </DATA-GROUP>
     </ENTITY>
 
