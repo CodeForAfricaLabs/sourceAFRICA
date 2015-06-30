@@ -13,7 +13,7 @@ RAILS_ENV=production
 rm -rf /etc/apt/sources.list.d/passenger.list
 
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 561F9B9CAC40B2F7
-apt-get install apt-transport-https ca-certificates
+apt-get install apt-transport-https ca-certificates -y
 
 apt-get update
 
