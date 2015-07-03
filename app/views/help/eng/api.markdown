@@ -140,13 +140,14 @@ Retrieve the canonical JSON representation of a particular document, as specifie
       "source":"http://www.dtic.mil/cgi-bin/GetTRDoc?AD=ADA602402",
       "created_at":"Wed, 11 Feb 2015 18:30:58 +0000",
       "updated_at":"Sun, 08 Mar 2015 15:23:02 +0000",
-      "canonical_url":"https://www.documentcloud.org/documents/1659580-economic-analysis-of-the-south-pole-traverse.html",
+      "canonical_url":"https://sourceafrica.net/documents/1659580-economic-analysis-of-the-south-pole-traverse.html",
       "language":"eng",
       "file_hash":"c07f7b640c4df2132bacb8dbfac1dcb65f978418",
       "contributor":"Ted Han",
-      "contributor_organization":"DocumentCloud",
+      "contributor_organization":"sourceAFRICA",
       "display_language":"eng",
       "resources":{
+<<<<<<< HEAD
 <<<<<<< HEAD
         "pdf":"https://s3.amazonaws.com/s3.documentcloud.org/documents/1659580/economic-analysis-of-the-south-pole-traverse.pdf",
         "text":"https://s3.amazonaws.com/s3.documentcloud.org/documents/1659580/economic-analysis-of-the-south-pole-traverse.txt",
@@ -170,6 +171,19 @@ Retrieve the canonical JSON representation of a particular document, as specifie
         },
         "related_article":"http://example.com/article.html"
 >>>>>>> master
+=======
+        "pdf":"https://s3.amazonaws.com/s3.sourceafrica.net/documents/1659580/economic-analysis-of-the-south-pole-traverse.pdf",
+        "text":"https://s3.amazonaws.com/s3.sourceafrica.net/documents/1659580/economic-analysis-of-the-south-pole-traverse.txt",
+        "thumbnail":"https://s3.amazonaws.com/s3.sourceafrica.net/documents/1659580/pages/economic-analysis-of-the-south-pole-traverse-p1-thumbnail.gif",
+        "search":"https://sourceafrica.net/documents/1659580/search.json?q={query}",
+        "print_annotations":"https://sourceafrica.net/notes/print?docs[]=1659580",
+        "translations_url":"https://sourceafrica.net/translations/{realm}/{language}",
+        "page":{
+          "image":"https://s3.amazonaws.com/s3.sourceafrica.net/documents/1659580/pages/economic-analysis-of-the-south-pole-traverse-p{page}-{size}.gif",
+          "text":"https://sourceafrica.net/documents/1659580/pages/economic-analysis-of-the-south-pole-traverse-p{page}.txt"
+          },
+        "annotations_url":"https://sourceafrica.net/documents/1659580/annotations"
+>>>>>>> fe359dd19458d4b7670a73933af94b2c34d0f725
       },
       "sections":[],
       "data":{},

@@ -159,9 +159,9 @@ ActionController::Routing::Routes.draw do |map|
     move.who_we_are       '/who-we-are',    :url => '/about'
     move.partner          '/partner.php',   :url => '/contributors'
     move.clips            '/clips.php',     :url => '/news'
-    move.feed             '/blog/feed',     :url => 'http://blog.documentcloud.org/feed'
-    move.root_feed        '/feed',          :url => 'http://blog.documentcloud.org/feed'
-    move.blog             '/blog/*parts',   :url => 'http://blog.documentcloud.org/'
+    move.feed             '/blog/feed',     :url => 'https://medium.com/feed/code-for-africa/'
+    move.root_feed        '/feed',          :url => 'https://medium.com/feed/code-for-africa/'
+    move.blog             '/blog/*parts',   :url => 'https://medium.com/code-for-africa'
   end
 
   # Asset packages.

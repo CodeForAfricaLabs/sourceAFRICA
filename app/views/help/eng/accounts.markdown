@@ -1,6 +1,6 @@
 # How to Add Accounts
 
-If you have an administrator-level account, you can manage your organization's DocumentCloud accounts and settings by clicking the "Accounts" tab at the top of the workspace:
+If you have an administrator-level account, you can manage your organization's sourceAFRICA accounts and settings by clicking the "Accounts" tab at the top of the workspace:
 
 <img src="/images/help/accounts_tab.jpg" class="full_line" />
 
