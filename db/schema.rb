@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150629210433) do
+=======
+ActiveRecord::Schema.define(version: 20150713194717) do
+>>>>>>> 55689e3838b9432ae0b6134514829d8d7627c674
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,7 +25,7 @@ ActiveRecord::Schema.define(version: 20150629210433) do
     t.string   "first_name",        limit: 40
     t.string   "last_name",         limit: 40
     t.string   "email",             limit: 100
-    t.string   "hashed_password"
+    t.string   "hashed_password",   limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
     t.hstore   "identities"
@@ -49,10 +53,24 @@ ActiveRecord::Schema.define(version: 20150629210433) do
   add_index "annotations", ["document_id"], name: "index_annotations_on_document_id", using: :btree
 
   create_table "app_constants", force: :cascade do |t|
+<<<<<<< HEAD
     t.string "key"
     t.string "value"
   end
 
+=======
+    t.string "key",   limit: 255
+    t.string "value", limit: 255
+  end
+
+  create_table "cloud_crowd_stats", force: :cascade do |t|
+    t.tsrange "period"
+    t.integer "pending_count"
+    t.integer "average_wait"
+    t.integer "processing_count"
+  end
+
+>>>>>>> 55689e3838b9432ae0b6134514829d8d7627c674
   create_table "collaborations", force: :cascade do |t|
     t.integer "project_id", null: false
     t.integer "account_id", null: false
@@ -79,7 +97,7 @@ ActiveRecord::Schema.define(version: 20150629210433) do
     t.integer  "access",                                           null: false
     t.integer  "page_count",                       default: 0,     null: false
     t.string   "title",               limit: 1000,                 null: false
-    t.string   "slug",                                             null: false
+    t.string   "slug",                limit: 255,                  null: false
     t.string   "source",              limit: 1000
     t.string   "language",            limit: 3
     t.text     "description"
@@ -97,7 +115,7 @@ ActiveRecord::Schema.define(version: 20150629210433) do
     t.integer  "reviewer_count",                   default: 0,     null: false
     t.integer  "file_size",                        default: 0,     null: false
     t.integer  "char_count",                       default: 0,     null: false
-    t.string   "original_extension"
+    t.string   "original_extension",  limit: 255
     t.text     "file_hash"
   end
 
@@ -105,9 +123,11 @@ ActiveRecord::Schema.define(version: 20150629210433) do
   add_index "documents", ["account_id"], name: "index_documents_on_account_id", using: :btree
   add_index "documents", ["file_hash"], name: "index_documents_on_file_hash", using: :btree
   add_index "documents", ["hit_count"], name: "index_documents_on_hit_count", using: :btree
+  add_index "documents", ["organization_id"], name: "foo2", using: :btree
   add_index "documents", ["public_note_count"], name: "index_documents_on_public_note_count", using: :btree
 
   create_table "entities", force: :cascade do |t|
+<<<<<<< HEAD
     t.integer "organization_id",                          null: false
     t.integer "account_id",                               null: false
     t.integer "document_id",                              null: false
@@ -115,6 +135,15 @@ ActiveRecord::Schema.define(version: 20150629210433) do
     t.string  "kind",            limit: 40,               null: false
     t.string  "value",                                    null: false
     t.float   "relevance",                  default: 0.0, null: false
+=======
+    t.integer "organization_id",                           null: false
+    t.integer "account_id",                                null: false
+    t.integer "document_id",                               null: false
+    t.integer "access",                                    null: false
+    t.string  "kind",            limit: 40,                null: false
+    t.string  "value",           limit: 255,               null: false
+    t.float   "relevance",                   default: 0.0, null: false
+>>>>>>> 55689e3838b9432ae0b6134514829d8d7627c674
     t.string  "calais_id",       limit: 40
     t.text    "occurrences"
   end
@@ -134,12 +163,21 @@ ActiveRecord::Schema.define(version: 20150629210433) do
   add_index "entity_dates", ["document_id", "date"], name: "index_metadata_dates_on_document_id_and_date", unique: true, using: :btree
 
   create_table "featured_reports", force: :cascade do |t|
+<<<<<<< HEAD
     t.string   "url",                       null: false
     t.string   "title",                     null: false
     t.string   "organization",              null: false
     t.date     "article_date",              null: false
     t.text     "writeup",                   null: false
     t.integer  "present_order", default: 0
+=======
+    t.string   "url",           limit: 255,             null: false
+    t.string   "title",         limit: 255,             null: false
+    t.string   "organization",  limit: 255,             null: false
+    t.date     "article_date",                          null: false
+    t.text     "writeup",                               null: false
+    t.integer  "present_order",             default: 0
+>>>>>>> 55689e3838b9432ae0b6134514829d8d7627c674
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -184,6 +222,7 @@ ActiveRecord::Schema.define(version: 20150629210433) do
   add_index "pages", ["start_offset", "end_offset"], name: "index_pages_on_start_offset_and_end_offset", using: :btree
 
   create_table "pending_memberships", force: :cascade do |t|
+<<<<<<< HEAD
     t.string   "first_name",                        null: false
     t.string   "last_name",                         null: false
     t.string   "email",                             null: false
@@ -192,6 +231,16 @@ ActiveRecord::Schema.define(version: 20150629210433) do
     t.string   "editor"
     t.string   "website"
     t.boolean  "validated",         default: false, null: false
+=======
+    t.string   "first_name",        limit: 255,                 null: false
+    t.string   "last_name",         limit: 255,                 null: false
+    t.string   "email",             limit: 255,                 null: false
+    t.string   "organization_name", limit: 255,                 null: false
+    t.string   "usage",             limit: 255,                 null: false
+    t.string   "editor",            limit: 255
+    t.string   "website",           limit: 255
+    t.boolean  "validated",                     default: false, null: false
+>>>>>>> 55689e3838b9432ae0b6134514829d8d7627c674
     t.text     "notes"
     t.integer  "organization_id"
     t.hstore   "fields"
@@ -200,9 +249,15 @@ ActiveRecord::Schema.define(version: 20150629210433) do
   end
 
   create_table "processing_jobs", force: :cascade do |t|
+<<<<<<< HEAD
     t.integer "account_id",     null: false
     t.integer "cloud_crowd_id", null: false
     t.string  "title",          null: false
+=======
+    t.integer "account_id",                 null: false
+    t.integer "cloud_crowd_id",             null: false
+    t.string  "title",          limit: 255, null: false
+>>>>>>> 55689e3838b9432ae0b6134514829d8d7627c674
     t.integer "document_id"
   end
 
@@ -218,17 +273,23 @@ ActiveRecord::Schema.define(version: 20150629210433) do
 
   create_table "projects", force: :cascade do |t|
     t.integer "account_id"
-    t.string  "title"
+    t.string  "title",       limit: 255
     t.text    "description"
-    t.boolean "hidden",      default: false, null: false
+    t.boolean "hidden",                  default: false, null: false
   end
 
   add_index "projects", ["account_id"], name: "index_labels_on_account_id", using: :btree
 
   create_table "remote_urls", force: :cascade do |t|
+<<<<<<< HEAD
     t.integer "document_id",             null: false
     t.string  "url",                     null: false
     t.integer "hits",        default: 0, null: false
+=======
+    t.integer "document_id",                         null: false
+    t.string  "url",         limit: 255,             null: false
+    t.integer "hits",                    default: 0, null: false
+>>>>>>> 55689e3838b9432ae0b6134514829d8d7627c674
   end
 
   create_table "sections", force: :cascade do |t|
@@ -272,6 +333,10 @@ ActiveRecord::Schema.define(version: 20150629210433) do
     t.text     "reference_links"
     t.boolean  "marketing_optin",      default: false
     t.boolean  "in_market",            default: false
+<<<<<<< HEAD
+=======
+    t.string   "requester_position"
+>>>>>>> 55689e3838b9432ae0b6134514829d8d7627c674
   end
 
 end

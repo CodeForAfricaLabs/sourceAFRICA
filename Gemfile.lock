@@ -1,4 +1,18 @@
 GIT
+  remote: git://github.com/documentcloud/cloud-crowd.git
+  revision: ddb0dabf467a6bd713bcc9f3c1f0b61fe4df3142
+  branch: blacklist
+  specs:
+    cloud-crowd (0.7.5)
+      active_model_serializers
+      activerecord (>= 3.0)
+      json (>= 1.1.7)
+      rake
+      rest-client (>= 1.4)
+      sinatra
+      thin (>= 1.2.4)
+
+GIT
   remote: git://github.com/documentcloud/jammit.git
   revision: b3e17e12e57a0d639762e819d5e33f8f9395dd8d
   specs:
@@ -7,22 +21,31 @@ GIT
       jsmin (>= 1.0.1)
 
 GIT
-  remote: git://github.com/nathanstitt/calais.git
-  revision: 6c292c405387195f09b583f22ac1816e8de99170
-  branch: newer_nokogiri
+  remote: git://github.com/documentcloud/open_calais.git
+  revision: 38db0d9c12b125f969e9bdb1a3368b4ccaca6df9
+  branch: fuzziness
   specs:
-    calais (0.0.13)
-      json (>= 1.1.3)
-      nokogiri (>= 1.3.3)
+    open_calais (0.3.2)
+      activesupport
+      excon
+      faraday
+      faraday_middleware
+      hashie
+      multi_json
+      multi_xml
 
 GEM
   remote: https://rubygems.org/
   specs:
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 55689e3838b9432ae0b6134514829d8d7627c674
     actionmailer (4.2.3)
       actionpack (= 4.2.3)
       actionview (= 4.2.3)
       activejob (= 4.2.3)
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     actionmailer (4.1.11)
@@ -39,6 +62,8 @@ GEM
       actionview (= 4.2.2)
       activejob (= 4.2.2)
 >>>>>>> 9fa4e6b56150463eac882a4a59358ed233d04398
+=======
+>>>>>>> 55689e3838b9432ae0b6134514829d8d7627c674
       mail (~> 2.5, >= 2.5.4)
       rails-dom-testing (~> 1.0, >= 1.0.5)
     actionpack (4.2.3)
@@ -52,6 +77,7 @@ GEM
     actionpack-page_caching (1.0.2)
       actionpack (>= 4.0.0, < 5)
 <<<<<<< HEAD
+<<<<<<< HEAD
     actionview (4.2.3)
       activesupport (= 4.2.3)
 =======
@@ -63,12 +89,17 @@ GEM
       activesupport (= 4.2.2)
 >>>>>>> fe359dd19458d4b7670a73933af94b2c34d0f725
 >>>>>>> 9fa4e6b56150463eac882a4a59358ed233d04398
+=======
+    actionview (4.2.3)
+      activesupport (= 4.2.3)
+>>>>>>> 55689e3838b9432ae0b6134514829d8d7627c674
       builder (~> 3.1)
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
     active_model_serializers (0.9.3)
       activemodel (>= 3.2)
+<<<<<<< HEAD
 <<<<<<< HEAD
     activejob (4.2.3)
       activesupport (= 4.2.3)
@@ -87,6 +118,10 @@ GEM
     activejob (4.2.2)
       activesupport (= 4.2.2)
 >>>>>>> 9fa4e6b56150463eac882a4a59358ed233d04398
+=======
+    activejob (4.2.3)
+      activesupport (= 4.2.3)
+>>>>>>> 55689e3838b9432ae0b6134514829d8d7627c674
       globalid (>= 0.3.0)
     activemodel (4.2.3)
       activesupport (= 4.2.3)
@@ -104,6 +139,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.3.8)
 <<<<<<< HEAD
+<<<<<<< HEAD
     arel (6.0.2)
 =======
 <<<<<<< HEAD
@@ -112,6 +148,9 @@ GEM
     arel (6.0.0)
 >>>>>>> fe359dd19458d4b7670a73933af94b2c34d0f725
 >>>>>>> 9fa4e6b56150463eac882a4a59358ed233d04398
+=======
+    arel (6.0.2)
+>>>>>>> 55689e3838b9432ae0b6134514829d8d7627c674
     autoparse (0.3.3)
       addressable (>= 2.3.1)
       extlib (>= 0.9.15)
@@ -123,16 +162,17 @@ GEM
       nokogiri (>= 1.4.4)
     bcrypt (3.1.10)
     builder (3.2.2)
+<<<<<<< HEAD
+=======
+    byebug (5.0.0)
+      columnize (= 0.9.0)
+>>>>>>> 55689e3838b9432ae0b6134514829d8d7627c674
     closure-compiler (1.1.11)
-    cloud-crowd (0.7.5)
-      active_model_serializers
-      activerecord (>= 3.0)
-      json (>= 1.1.7)
-      rake
-      rest-client (>= 1.4)
-      sinatra
-      thin (>= 1.2.4)
     coderay (1.1.0)
+<<<<<<< HEAD
+=======
+    columnize (0.9.0)
+>>>>>>> 55689e3838b9432ae0b6134514829d8d7627c674
     countries (0.11.5)
       currencies (~> 0.4.2)
       i18n_data (~> 0.7.0)
@@ -145,19 +185,34 @@ GEM
 =======
     currencies (0.4.2)
 <<<<<<< HEAD
+<<<<<<< HEAD
     daemons (1.2.3)
 =======
 >>>>>>> fe359dd19458d4b7670a73933af94b2c34d0f725
     daemons (1.2.2)
 >>>>>>> 9fa4e6b56150463eac882a4a59358ed233d04398
+=======
+    daemons (1.2.3)
+>>>>>>> 55689e3838b9432ae0b6134514829d8d7627c674
     docsplit (0.8.0.alpha1)
     domain_name (0.5.24)
       unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
-    eventmachine (1.0.7)
+    eventmachine (1.0.8)
+    excon (0.45.4)
     extlib (0.9.16)
+    factory_girl (4.5.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.5.0)
+      factory_girl (~> 4.5.0)
+      railties (>= 3.0.0)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
+<<<<<<< HEAD
+=======
+    faraday_middleware (0.10.0)
+      faraday (>= 0.7.4, < 0.10)
+>>>>>>> 55689e3838b9432ae0b6134514829d8d7627c674
     ffi (1.9.10)
     formatador (0.2.5)
 <<<<<<< HEAD
@@ -189,7 +244,11 @@ GEM
       multi_json (= 1.11)
       signet (~> 0.6)
     growl (1.0.3)
+<<<<<<< HEAD
     guard (2.12.9)
+=======
+    guard (2.13.0)
+>>>>>>> 55689e3838b9432ae0b6134514829d8d7627c674
       formatador (>= 0.2.4)
       listen (>= 2.7, <= 4.0)
       lumberjack (~> 1.0)
@@ -255,7 +314,7 @@ GEM
     netrc (0.10.3)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
-    notiffany (0.0.6)
+    notiffany (0.0.7)
       nenv (~> 0.1)
       shellany (~> 0.0)
     oauth (0.4.7)
@@ -308,6 +367,9 @@ GEM
     rack-test (0.6.3)
       rack (>= 1.0)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 55689e3838b9432ae0b6134514829d8d7627c674
     rails (4.2.3)
       actionmailer (= 4.2.3)
       actionpack (= 4.2.3)
@@ -316,6 +378,7 @@ GEM
       activemodel (= 4.2.3)
       activerecord (= 4.2.3)
       activesupport (= 4.2.3)
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     rails (4.1.11)
@@ -341,6 +404,8 @@ GEM
       activerecord (= 4.2.2)
       activesupport (= 4.2.2)
 >>>>>>> 9fa4e6b56150463eac882a4a59358ed233d04398
+=======
+>>>>>>> 55689e3838b9432ae0b6134514829d8d7627c674
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.2.3)
       sprockets-rails
@@ -353,6 +418,7 @@ GEM
     rails-html-sanitizer (1.0.2)
       loofah (~> 2.0)
 <<<<<<< HEAD
+<<<<<<< HEAD
     railties (4.2.3)
       actionpack (= 4.2.3)
       activesupport (= 4.2.3)
@@ -362,6 +428,11 @@ GEM
       activesupport (= 4.2.2)
 >>>>>>> fe359dd19458d4b7670a73933af94b2c34d0f725
 >>>>>>> 9fa4e6b56150463eac882a4a59358ed233d04398
+=======
+    railties (4.2.3)
+      actionpack (= 4.2.3)
+      activesupport (= 4.2.3)
+>>>>>>> 55689e3838b9432ae0b6134514829d8d7627c674
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
@@ -381,6 +452,7 @@ GEM
     retriable (1.4.1)
     rsolr (1.0.12)
       builder (>= 2.1.2)
+    ruby-debug-passenger (0.2.0)
     rubyzip (1.1.7)
     sanitize (2.0.6)
       nokogiri (>= 1.4.4)
@@ -415,7 +487,7 @@ GEM
     sunspot (2.1.1)
       pr_geohash (~> 1.0)
       rsolr (~> 1.0.7)
-    sunspot_matchers (2.2.0.1)
+    sunspot_matchers (2.2.0.2)
     sunspot_rails (2.1.1)
       nokogiri
       rails (>= 3)
@@ -442,12 +514,13 @@ DEPENDENCIES
   actionpack-page_caching
   aws-sdk (~> 1.30)
   bcrypt (~> 3.1.1)
-  calais (~> 0.0.13)!
+  byebug
   closure-compiler
-  cloud-crowd (~> 0.7.3)
+  cloud-crowd!
   country_select (~> 2.2.0)
   curb (~> 0.8.4)
   docsplit (= 0.8.0.alpha1)
+  factory_girl_rails
   google_drive (~> 1.0.0)
   growl
   guard-bundler
@@ -463,6 +536,7 @@ DEPENDENCIES
   omniauth-facebook (~> 1.6)
   omniauth-google-oauth2 (~> 0.2)
   omniauth-twitter (~> 1.0)
+  open_calais!
   pdfshaver
   pdftailor
   pg
@@ -472,6 +546,7 @@ DEPENDENCIES
   rake
   rdiscount (~> 2.1.6)
   rest-client (~> 1.8.0)
+  ruby-debug-passenger
   rubyzip (~> 1.1.0)
   sanitize (~> 2.0.6)
   spring

@@ -64,8 +64,8 @@ grep -q github .ssh/known_hosts 2>/dev/null || ssh-keyscan -t rsa github.com > .
 # [copy over the secrets directory].
 
 chown -R $USERNAME .
-test -e documentcloud || sudo -u $USERNAME git clone git@github.com:documentcloud/documentcloud.git documentcloud
-cd /home/$USERNAME/documentcloud
+test -e documentcloud || sudo -u $USERNAME git clone git@github.com:CodeForAfrica/sourceAFRICA.git sourceAFRICA
+cd /home/$USERNAME/sourceAFRICA
 cp config/server/gitconfig.conf .gitconfig
 rake gems:install
 
@@ -77,12 +77,11 @@ grep -q '^UseDNS no' /etc/ssh/sshd_config || echo 'UseDNS no' >> /etc/ssh/sshd_c
 rm /etc/motd
 cat >/etc/motd <<'EOF'
 
-______                                      _   _____ _                 _
-|  _  \                                    | | /  __ \ |               | |
-| | | |___   ___ _   _ _ __ ___   ___ _ __ | |_| /  \/ | ___  _   _  __| |
-| | | / _ \ / __| | | | '_ ` _ \ / _ \ '_ \| __| |   | |/ _ \| | | |/ _` |
-| |/ / (_) | (__| |_| | | | | | |  __/ | | | |_| \__/\ | (_) | |_| | (_| |
-|___/ \___/ \___|\__,_|_| |_| |_|\___|_| |_|\__|\____/_|\___/ \__,_|\__,_|
+                                 _    _____ ____  ___ ____    _
+ ___  ___  _   _ _ __ ___ ___   / \  |  ___|  _ \|_ _/ ___|  / \
+/ __|/ _ \| | | | '__/ __/ _ \ / _ \ | |_  | |_) || | |     / _ \
+\__ \ (_) | |_| | | | (_|  __// ___ \|  _| |  _ < | | |___ / ___ \
+|___/\___/ \__,_|_|  \___\___/_/   \_\_|   |_| \_\___\____/_/   \_\
 
 EOF
 uname -a | tee -a /etc/motd

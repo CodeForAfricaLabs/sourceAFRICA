@@ -84,7 +84,7 @@ end
 def worker_servers
   case RAILS_ENV
   when 'staging'    then ['staging.sourceafrica.net']
-  when 'production' then ['worker01.sourceafrica.net', 'worker02.sourceafrica.net', 'worker03.sourceafrica.net', 'worker04.sourceafrica.net']
+  when 'production' then ['worker01.sourceafrica.net', 'worker02.sourceafrica.net', 'worker03.sourceafrica.net', 'worker04.sourceafrica.net', 'worker05.sourceafrica.net', 'worker06.sourceafrica.net']
   end
 end
 
