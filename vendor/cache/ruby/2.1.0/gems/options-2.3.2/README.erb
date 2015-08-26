@@ -1,0 +1,35 @@
+NAME
+  options.rb
+
+DESCRIPTION
+  options.rb simplifies the common idiom of dealing with keyword options in
+  ruby functions.  it also deals correctly with symbol vs string keywords and
+  prevents many subtle programming errors that can arise from doing so
+  incorrectly.  options.rb doesn't hack ruby's core with one exception: the
+  method Array#options.
+
+SYNOPSIS
+  require 'options'
+
+  def method(*args, &block)
+    args, options = Options.parse(args)
+
+    a = args.shift
+    b = args.shift
+
+    force = options.getopt(:force, default = false)
+    verbose = options.getopt([:verbose, :VERBOSE])
+    foo, bar = options.getopt(:foo, :bar)
+  end
+
+INSTALL
+  gem install options
+
+HISTORY
+  2.1.0:
+    - 1.9 compatibility
+    - Validation of passed options
+
+SAMPLES
+
+  <%= samples %>

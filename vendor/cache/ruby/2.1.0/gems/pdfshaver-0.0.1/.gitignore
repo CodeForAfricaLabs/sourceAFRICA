@@ -1,0 +1,8 @@
+tmp
+pkg
+mkmf.log
+*.bundle
+*.so
+test/output
+.DS_Store
+output

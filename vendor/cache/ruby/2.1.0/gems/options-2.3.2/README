@@ -1,0 +1,186 @@
+NAME
+  options.rb
+
+DESCRIPTION
+  options.rb simplifies the common idiom of dealing with keyword options in
+  ruby functions.  it also deals correctly with symbol vs string keywords and
+  prevents many subtle programming errors that can arise from doing so
+  incorrectly.  options.rb doesn't hack ruby's core with one exception: the
+  method Array#options.
+
+SYNOPSIS
+  require 'options'
+
+  def method(*args, &block)
+    args, options = Options.parse(args)
+
+    a = args.shift
+    b = args.shift
+
+    force = options.getopt(:force, default = false)
+    verbose = options.getopt([:verbose, :VERBOSE])
+    foo, bar = options.getopt(:foo, :bar)
+  end
+
+INSTALL
+  gem install options
+
+HISTORY
+  2.1.0:
+    - 1.9 compatibility
+    - Validation of passed options
+
+SAMPLES
+
+  
+  <========< samples/a.rb >========>
+
+  ~ > cat samples/a.rb
+
+    require 'options'
+    
+    # options.rb makes it super easy to deal with keyword options in a safe and
+    # easy way.
+    #
+    
+      def method(*args)
+        args, options = Options.parse(args)
+    
+        force = options.getopt(:force, default=false)
+        p force
+      end
+    
+      method(:foo, :bar, :force => true)
+      method('force' => true)
+
+  ~ > ruby samples/a.rb
+
+    true
+    true
+
+
+  <========< samples/b.rb >========>
+
+  ~ > cat samples/b.rb
+
+    require 'options'
+    
+    # options.rb avoids common mistakes made handling keyword arguments
+    #
+    
+      def broken(*args)
+        options = args.last.is_a?(Hash) ? args.pop : {}
+        if options[:force]
+          puts 'forcing'
+        else
+          puts 'broken'
+        end
+      end
+    
+      def nonbroken(*args)
+        args, options = Options.parse(args)
+        if options.getopt(:force)
+          puts 'nonbroken'
+        end
+      end
+    
+      broken('force' => true)
+      nonbroken('force' => true)
+    
+    
+    
+      def fubar(*args)
+        options = args.last.is_a?(Hash) ? args.pop : {}
+        verbose = options[:verbose] || true
+        if verbose 
+          if options[:verbose]
+            puts 'verbosely'
+          else
+            puts 'fubar'
+          end
+        end
+      end
+    
+      def nonfubar(*args)
+        args, options = Options.parse(args)
+        verbose = options.getopt(:verbose)
+        if verbose 
+          puts 'verbosely'
+        else
+          puts 'nonfubar'
+        end
+      end
+    
+      fubar(:verbose => false)
+      nonfubar(:verbose => false)
+
+  ~ > ruby samples/b.rb
+
+    broken
+    nonbroken
+    fubar
+    nonfubar
+
+
+  <========< samples/c.rb >========>
+
+  ~ > cat samples/c.rb
+
+    require 'options'
+    
+    # options.rb hacks ruby core in exactly one way - the method Array#options
+    #
+    
+      def method(*args)
+        options = args.options
+        p :args => args
+        p :options => options
+      end
+    
+      method(:a, :b, :k => :v)
+    
+      def method2(*args)
+        options = args.options.pop
+        p :args => args
+        p :options => options
+      end
+    
+      method2(:a, :b, :k => :v)
+
+  ~ > ruby samples/c.rb
+
+    {:args=>[:a, :b, {:k=>:v}]}
+    {:options=>{:k=>:v}}
+    {:args=>[:a, :b]}
+    {:options=>{:k=>:v}}
+
+
+  <========< samples/d.rb >========>
+
+  ~ > cat samples/d.rb
+
+    require 'options'
+    
+    # options.rb makes it easy to provide good error messages when people
+    # misuse a method.
+    #
+    
+      def method(*args)
+        args, options = Options.parse(args)
+        options.validate(:force)
+    
+        force = options.getopt(:force, default=false)
+        p force
+      end
+    
+      method(:foo, :bar, :misspelled_option => true)
+    
+    
+
+  ~ > ruby samples/d.rb
+
+    ./lib/options.rb:180:in `validate': Unrecognized options: misspelled_option (ArgumentError)
+    	from samples/d.rb:9:in `method'
+    	from samples/d.rb:15
+
+

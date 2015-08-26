@@ -1,0 +1,68 @@
+/home/ubuntu/.rvm/rubies/ruby-2.1.5/bin/ruby -r ./siteconf20150715-20224-19gf5cw.rb extconf.rb
+checking for main() in -ljavascript... yes
+checking for main() in -lbigint... yes
+checking for main() in -lfreetype... yes
+checking for main() in -lfpdfdoc... yes
+checking for main() in -lfpdftext... yes
+checking for main() in -lformfiller... yes
+checking for main() in -licudata... yes
+checking for main() in -licuuc... yes
+checking for main() in -licui18n... yes
+checking for main() in -lv8_libbase... yes
+checking for main() in -lv8_base... yes
+checking for main() in -lv8_snapshot... yes
+checking for main() in -lv8_libplatform... yes
+checking for main() in -ljsapi... yes
+checking for main() in -lpdfwindow... yes
+checking for main() in -lfxedit... yes
+checking for main() in -lfxcrt... yes
+checking for main() in -lfxcodec... yes
+checking for main() in -lfpdfdoc... yes
+checking for main() in -lfdrm... yes
+checking for main() in -lfxge... yes
+checking for main() in -lfpdfapi... yes
+checking for main() in -lfreetype... yes
+checking for main() in -lpdfium... yes
+checking for main() in -lpthread... yes
+checking for main() in -lfreeimage... yes
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling document.cpp
+document.cpp: In function ‘VALUE initialize_document_internals(int, VALUE*, VALUE)’:
+document.cpp:81:7: warning: unused variable ‘number_of_args’ [-Wunused-variable]
+   int number_of_args = rb_scan_args(arg_count, args, "11", &path, &options);
+       ^
+In file included from document.h:9:0,
+                 from document.cpp:1:
+page.h: At global scope:
+page.h:38:13: warning: ‘void destroy_page(Page*)’ declared ‘static’ but never defined [-Wunused-function]
+ static void destroy_page(Page* page);
+             ^
+compiling pdfium_ruby.cpp
+pdfium_ruby.cpp: In function ‘void Init_pdfium_ruby()’:
+pdfium_ruby.cpp:11:9: warning: unused variable ‘rb_PDFShaver’ [-Wunused-variable]
+   VALUE rb_PDFShaver = rb_define_module("PDFShaver");
+         ^
+compiling page.cpp
+page.cpp: In function ‘VALUE initialize_page_internals(int, VALUE*, VALUE)’:
+page.cpp:173:7: warning: unused variable ‘number_of_args’ [-Wunused-variable]
+   int number_of_args = rb_scan_args(arg_count, args, "21", &rb_document, &page_index, &options);
+       ^
+page.cpp: In function ‘VALUE page_render(int, VALUE*, VALUE)’:
+page.cpp:210:7: warning: unused variable ‘number_of_args’ [-Wunused-variable]
+   int number_of_args = rb_scan_args(arg_count, args, "1:", &path, &options);
+       ^
+In file included from page.h:7:0,
+                 from page.cpp:1:
+document.h: At global scope:
+document.h:48:13: warning: ‘void destroy_document_when_safe(Document*)’ declared ‘static’ but never defined [-Wunused-function]
+ static void destroy_document_when_safe(Document* document);
+             ^
+linking shared-object pdfium_ruby.so
+
+make "DESTDIR=" install
+/usr/bin/install -m 0755 pdfium_ruby.so ./.gem.20150715-20224-em47nw
+installing default pdfium_ruby libraries

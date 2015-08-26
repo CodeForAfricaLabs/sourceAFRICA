@@ -1,0 +1,86 @@
+# ProgressBar
+
+[![Build Status](https://travis-ci.org/paul/progress_bar.png?branch=master)](https://travis-ci.org/paul/progress_bar)
+
+*ProgressBar* is a simple Ruby library for displaying progress of
+long-running tasks on the console. It is intended to be as simple to use
+as possible.
+
+**NOTE:** This project isn't dead! It's just feature complete, and I don't want
+to keep adding things to it. If you find bugs, please open an Issue, or even
+better, a Pull Request, and I'll take a look. We at ProgressBar know you have
+lots of progress bar alternatives, and we thank you for using ProgressBar!
+
+
+# Installation
+
+    gem install progress_bar
+
+# Examples
+
+## The Easy Way
+
+
+    require 'progress_bar'
+    bar = ProgressBar.new
+
+    100.times do
+      sleep 0.1
+      bar.increment!
+    end
+
+Produces output like:
+
+    [#######################################                           ] [ 59.00%] [00:06]
+
+*Note: It may not be exactly like this. I might have changed the default
+meters between now and when I wrote this readme, and forgotten to update
+it.*
+
+## Setting the Max
+
+Usually, the defaults should be fine, the only thing you'll need to
+tweak is the max.
+
+    bar = ProgressBar.new(1000)
+
+## Larger Steps
+
+If you want to process several things, and update less often, you can
+pass a number to `#increment!`
+
+    bar.increment! 42
+
+
+## Picking the meters
+
+By default, ProgressBar will use all available meters (this will
+probably change). To select which meters you want, and in which order,
+pass them to the constructor:
+
+    bar = ProgressBar.new(100, :bar, :rate, :eta)
+
+
+### Available Meters
+
+ * `:bar` -- The bar itself, fills empty space with "#"s. Ex: `[###
+   ]`.
+ * `:counter` -- Number of items complete, over the max. Ex: `[ 20/100]`
+ * `:percentage` -- Percentage of items in the maximum. Ex: `[ 42%]`
+ * `:elapsed` -- Time elapsed (since the ProgressBar was initialized.
+   Ex: `[00:42]`
+ * `:eta` -- Estimated Time remaining. Given the rate that items are
+   completed, a guess at how long the rest will take. Ex: `[01:30]`
+ * `:rate` -- The rate at which items are being completed. Ex: `[
+   42.42/s]`
+
+Run the tests to see examples of all the formats, with different values
+and maximums.
+```
+gem install --development progress_bar
+rspec spec/*_spec.rb
+```
+
+
+
+

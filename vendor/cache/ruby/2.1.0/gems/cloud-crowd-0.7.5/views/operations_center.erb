@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>Operations Center | CloudCrowd</title>
+  <link href="css/reset.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/admin_console.css" media="screen" rel="stylesheet" type="text/css" />
+  <script src="js/jquery.js" type="text/javascript"></script>
+  <!--[if IE]><script src="js/excanvas.js" type="text/javascript"></script><![endif]-->
+  <script src="js/flot.js" type="text/javascript"></script>
+  <script src="js/admin_console.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <div id="container">
+
+    <div id="header">
+      <div id="logo"></div>
+    </div>
+
+    <div id="disconnected" class="small_caps" style="display:none;">
+      <div class="server_error"></div>
+      Disconnected. Attempting to reconnect&hellip;
+    </div>
+
+    <div id="stats">
+      <table width="100%">
+        <thead></thead>
+        <tbody>
+          <tr class="data">
+            <td><div id="job_count"></div></td>
+            <td><div id="work_unit_count"></div></td>
+            <td><div id="node_count"></div></td>
+            <td class="last"><div id="worker_count"></div></td>
+          </tr>
+          <tr class="labels">
+            <td>Jobs</td>
+            <td>Work Units</td>
+            <td>Nodes</td>
+            <td>Workers</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="sidebar">
+      <div id="sidebar_top" class="sidebar_back"></div>
+      <div id="sidebar_background"></div>
+      <div id="sidebar_bottom" class="sidebar_back"></div>
+      <div id="sidebar_header" class="small_caps">
+        <span id="tail_log">Check Server Log</span>
+        <span class="has_nodes"></span>
+        <span class="no_nodes">No Nodes Online&hellip;</span>
+      </div>
+      <div id="nodes">
+        <%# Render target for nodes and workers. %>
+      </div>
+    </div>
+
+    <div id="graphs">
+      <div class="graph_container">
+        <div class="graph_title">Work Units in Queue</div>
+        <div id="work_units_graph" class="graph"></div>
+      </div>
+      <div class="graph_container">
+        <div class="graph_title">Jobs in Queue</div>
+        <div id="jobs_graph" class="graph"></div>
+      </div>
+      <div class="graph_container">
+        <div class="graph_title">
+          Active Nodes
+          (<span id="nodes_legend" class="legend_box"></span>)
+          and Workers
+          (<span id="workers_legend" class="legend_box"></span>)
+        </div>
+        <div id="workers_graph" class="graph"></div>
+      </div>
+    </div>
+
+    <div id="worker_info" style="display:none;">
+      <div id="worker_info_inner" class="small_caps">
+        <div id="worker_details">
+          <div id="worker_status">status: <span class="status"></span></div>
+          <div id="worker_action">action:&nbsp;<span class="action"></span></div>
+          <div id="worker_job_id">job #<span class="job_id"></span> / unit #<span class="work_unit_id"></span></div>
+        </div>
+        <div id="worker_sleeping">
+          worker exiting&hellip;
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

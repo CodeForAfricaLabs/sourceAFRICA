@@ -1,0 +1,9 @@
+--title 'AWS SDK for Ruby'
+--output-dir api-docs
+--template-path doc-src/templates
+--markup markdown
+--markup-provider rdiscount
+--hide-api private
+--plugin sitemap
+-e doc-src/api_docs_plugin.rb
+lib/**/*.rb

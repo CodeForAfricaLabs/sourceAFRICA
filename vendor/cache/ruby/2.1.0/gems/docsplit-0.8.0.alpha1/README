@@ -1,0 +1,22 @@
+==
+         __                      ___ __ 
+    ____/ /___  ______________  / (_) /_
+   / __  / __ \/ ___/ ___/ __ \/ / / __/
+  / /_/ / /_/ / /__(__  ) /_/ / / / /_  
+  \____/\____/\___/____/ .___/_/_/\__/  
+                      /_/
+                      
+  Docsplit is a command-line utility and Ruby library for splitting apart
+  documents into their component parts: searchable UTF-8 plain text, page 
+  images or thumbnails in any format, PDFs, single pages, and document 
+  metadata (title, author, number of pages...)
+  
+  Installation:
+  gem install docsplit
+  
+  For documentation, usage, and examples, see:
+  http://documentcloud.github.com/docsplit/
+  
+  To suggest a feature or report a bug: 
+  http://github.com/documentcloud/docsplit/issues/
+

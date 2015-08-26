@@ -1,0 +1,254 @@
+have_func: checking for rb_enc_get() in ruby/encoding.h... -------------------- yes
+
+"gcc -o conftest -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/x86_64-linux -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/ruby/backward -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC conftest.c  -L. -L/home/ubuntu/.rvm/rubies/ruby-2.1.5/lib -Wl,-R/home/ubuntu/.rvm/rubies/ruby-2.1.5/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-rpath,'/../lib' -Wl,-R -Wl,'/../lib' -L'/../lib' -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+"gcc -o conftest -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/x86_64-linux -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/ruby/backward -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC conftest.c  -L. -L/home/ubuntu/.rvm/rubies/ruby-2.1.5/lib -Wl,-R/home/ubuntu/.rvm/rubies/ruby-2.1.5/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-rpath,'/../lib' -Wl,-R -Wl,'/../lib' -L'/../lib' -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:15:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_enc_get; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <ruby/encoding.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+15: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_enc_get; return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_sys_fail_str() in ruby.h... -------------------- yes
+
+"gcc -o conftest -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/x86_64-linux -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/ruby/backward -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC conftest.c  -L. -L/home/ubuntu/.rvm/rubies/ruby-2.1.5/lib -Wl,-R/home/ubuntu/.rvm/rubies/ruby-2.1.5/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-rpath,'/../lib' -Wl,-R -Wl,'/../lib' -L'/../lib' -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:15:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_sys_fail_str; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <ruby.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+15: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_sys_fail_str; return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for iconv() in iconv.h... -------------------- yes
+
+"gcc -o conftest -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/x86_64-linux -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/ruby/backward -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC conftest.c  -L. -L/home/ubuntu/.rvm/rubies/ruby-2.1.5/lib -Wl,-R/home/ubuntu/.rvm/rubies/ruby-2.1.5/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-rpath,'/../lib' -Wl,-R -Wl,'/../lib' -L'/../lib' -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:15:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))iconv; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <iconv.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+15: int t(void) { void ((*volatile p)()); p = (void ((*)()))iconv; return 0; }
+/* end */
+
+--------------------
+
+check_signedness: checking signedness of size_t... -------------------- unsigned
+
+"gcc -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/x86_64-linux -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/ruby/backward -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC   -c conftest.c"
+conftest.c:6:39: warning: comparison of unsigned expression < 0 is always false [-Wtype-limits]
+ int conftest_const[((rbcv_typedef_)-1 < 0) ? 1 : -1];
+                                       ^
+conftest.c:6:5: error: size of array ‘conftest_const’ is negative
+ int conftest_const[((rbcv_typedef_)-1 < 0) ? 1 : -1];
+     ^
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: typedef size_t rbcv_typedef_;
+4: 
+5: /*top*/
+6: int conftest_const[((rbcv_typedef_)-1 < 0) ? 1 : -1];
+/* end */
+
+"gcc -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/x86_64-linux -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/ruby/backward -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC   -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: typedef size_t rbcv_typedef_;
+4: 
+5: /*top*/
+6: int conftest_const[((rbcv_typedef_)-1 > 0) ? 1 : -1];
+/* end */
+
+--------------------
+
+checking for const of iconv() 2nd argument... -------------------- no
+
+gcc -E -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/x86_64-linux -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/ruby/backward -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC  conftest.c  |
+iconv (iconv_t __cd, char **__restrict __inbuf,
+       size_t *__restrict __inbytesleft,
+       char **__restrict __outbuf,
+       size_t *__restrict __outbytesleft);
+--------------------
+
+have_func: checking for iconvlist() in iconv.h... -------------------- no
+
+"gcc -o conftest -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/x86_64-linux -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/ruby/backward -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC conftest.c  -L. -L/home/ubuntu/.rvm/rubies/ruby-2.1.5/lib -Wl,-R/home/ubuntu/.rvm/rubies/ruby-2.1.5/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-rpath,'/../lib' -Wl,-R -Wl,'/../lib' -L'/../lib' -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:15:57: error: ‘iconvlist’ undeclared (first use in this function)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))iconvlist; return 0; }
+                                                         ^
+conftest.c:15:57: note: each undeclared identifier is reported only once for each function it appears in
+conftest.c:15:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))iconvlist; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <iconv.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+15: int t(void) { void ((*volatile p)()); p = (void ((*)()))iconvlist; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/x86_64-linux -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/ruby/backward -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC conftest.c  -L. -L/home/ubuntu/.rvm/rubies/ruby-2.1.5/lib -Wl,-R/home/ubuntu/.rvm/rubies/ruby-2.1.5/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-rpath,'/../lib' -Wl,-R -Wl,'/../lib' -L'/../lib' -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:15:1: warning: implicit declaration of function ‘iconvlist’ [-Wimplicit-function-declaration]
+ int t(void) { iconvlist(); return 0; }
+ ^
+/tmp/cck1zwuF.o: In function `t':
+/home/ubuntu/home/sourceAFRICA/vendor/cache/ruby/2.1.0/gems/iconv-1.0.4/ext/iconv/conftest.c:15: undefined reference to `iconvlist'
+collect2: error: ld returned 1 exit status
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <iconv.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+15: int t(void) { iconvlist(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for __iconv_free_list() in iconv.h... -------------------- no
+
+"gcc -o conftest -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/x86_64-linux -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/ruby/backward -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC conftest.c  -L. -L/home/ubuntu/.rvm/rubies/ruby-2.1.5/lib -Wl,-R/home/ubuntu/.rvm/rubies/ruby-2.1.5/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-rpath,'/../lib' -Wl,-R -Wl,'/../lib' -L'/../lib' -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:15:57: error: ‘__iconv_free_list’ undeclared (first use in this function)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))__iconv_free_list; return 0; }
+                                                         ^
+conftest.c:15:57: note: each undeclared identifier is reported only once for each function it appears in
+conftest.c:15:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))__iconv_free_list; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <iconv.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+15: int t(void) { void ((*volatile p)()); p = (void ((*)()))__iconv_free_list; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/x86_64-linux -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/ruby/backward -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC conftest.c  -L. -L/home/ubuntu/.rvm/rubies/ruby-2.1.5/lib -Wl,-R/home/ubuntu/.rvm/rubies/ruby-2.1.5/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-rpath,'/../lib' -Wl,-R -Wl,'/../lib' -L'/../lib' -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:15:1: warning: implicit declaration of function ‘__iconv_free_list’ [-Wimplicit-function-declaration]
+ int t(void) { __iconv_free_list(); return 0; }
+ ^
+/tmp/ccr54DGS.o: In function `t':
+/home/ubuntu/home/sourceAFRICA/vendor/cache/ruby/2.1.0/gems/iconv-1.0.4/ext/iconv/conftest.c:15: undefined reference to `__iconv_free_list'
+collect2: error: ld returned 1 exit status
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <iconv.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+15: int t(void) { __iconv_free_list(); return 0; }
+/* end */
+
+--------------------
+
