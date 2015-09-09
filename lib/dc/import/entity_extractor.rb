@@ -19,14 +19,17 @@ module DC
       # attached.
       def extract(document, text)
         @entities = {}
-        chunks = CalaisFetcher.new.fetch_rdf(text)
-        chunks.each_with_index do |chunk, i|
-          next if chunk.nil?
-          extract_information(document, chunks.first) if document.calais_id.blank?
-          extract_entities(document, chunk, i)
+        if chunks = CalaisFetcher.new.fetch_rdf(text)
+          chunks.each_with_index do |chunk, i|
+            next unless chunk
+            extract_information(document, chunks.first) if document.calais_id.blank?
+            extract_entities(document, chunk, i)
+          end
+          document.entities = @entities.values
+          document.save
+        else
+          # push an entity extraction job onto the queue.
         end
-        document.entities = @entities.values
-        document.save
       end
 
 
@@ -35,7 +38,7 @@ module DC
       # Pull out all of the standard, top-level entities, and add it to our
       # document if it hasn't already been set.
       def extract_information(document, calais)
-        if calais.raw.body.doc
+        if calais and calais.raw and calais.raw.body.doc
           info_elements               = calais.raw.body.doc.info
           document.title              = info_elements.docTitle unless document.titled?
           document.language         ||= 'en' # TODO: Convert calais.language into an ISO language code.
