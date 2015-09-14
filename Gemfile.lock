@@ -388,7 +388,8 @@ DEPENDENCIES
   sunspot_matchers
   sunspot_rails (~> 2.1.0)
   sunspot_solr (~> 2.2.0)
-BUNDLED WITH
-   1.10.5
   vcr
   webmock
+
+BUNDLED WITH
+   1.10.5
