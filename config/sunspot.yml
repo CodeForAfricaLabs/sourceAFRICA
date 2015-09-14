@@ -1,6 +1,6 @@
 production:
   solr:
-    hostname: ec2-52-16-133-220.eu-west-1.compute.amazonaws.com
+    hostname: 52.16.133.220
     port: 7377
     path: /solr/collection1
     read_timeout: 5
