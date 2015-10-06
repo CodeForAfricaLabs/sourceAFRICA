@@ -39,4 +39,6 @@ bower install --no-interactive
 #./bin/rails runner -e production 'puts "You already have #{Document.count} documents"'
 
 # if you would like to use git hooks to automatically bundle the app's gem dependencies:
+
 # sudo ln -s /home/$USERNAME/sourceAFRICA/config/server/files/git-post-merge.sh /home/$USERNAME/sourceAFRICA/.git/hooks/post-merge
+echo APP SETUP COMPLETED SUCCESSFULLY
