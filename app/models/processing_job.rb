@@ -37,10 +37,8 @@ class ProcessingJob < ActiveRecord::Base
       case object.action
       when "update_access"
         "#{DC.server_root(:ssl => false)}/import/update_access"
-      when /^(large_)?document_import|redact_pages|document_insert_pages|document_reorder_pages|document_remove_pages|reindex_document$/
-        "#{DC.server_root(:ssl => false)}/import/cloud_crowd"
       else
-        ""
+        "#{DC.server_root(:ssl => false)}/import/cloud_crowd"
       end
     end
   end
@@ -50,14 +48,13 @@ class ProcessingJob < ActiveRecord::Base
     # If a Document is associated with this ProcessingJob, determine
     # whether the Document is available to be worked on, and if it's not
     # use ActiveRecord's error system to indicate it's unavailability.
-    errors.clear
-    if document and document.has_running_jobs?
-      errors.add(:document, "This document is already being processed") and (return false)
-
-      # in future we'll actually lock the document
-      # Lock the document & contact CloudCrowd to start the job
-      #document.update :status => UNAVAILABLE
-    end
+    #if document and document.has_running_jobs?
+    #  errors.add(:document, "This document is already being processed") and (return false)
+    #
+    #  # in future we'll actually lock the document
+    #  # Lock the document & contact CloudCrowd to start the job
+    #  #document.update :status => UNAVAILABLE
+    #end
     
     begin
       # Note the job id once CloudCrowd has recorded the job.

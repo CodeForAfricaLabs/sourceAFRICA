@@ -2,6 +2,8 @@
 
 # exit the script if any of the commands fail.
 # further discussion: http://www.davidpashley.com/articles/writing-robust-shell-scripts/
+echo BEGINNING SETUP APP
+
 set -e
 
 # Do not run script as root.  Will fail installing pdfium if you do...
@@ -41,4 +43,4 @@ bower install --no-interactive
 # if you would like to use git hooks to automatically bundle the app's gem dependencies:
 
 # sudo ln -s /home/$USERNAME/sourceAFRICA/config/server/files/git-post-merge.sh /home/$USERNAME/sourceAFRICA/.git/hooks/post-merge
-echo APP SETUP COMPLETED SUCCESSFULLY
+echo SETUP APP COMPLETED SUCCESSFULLY
