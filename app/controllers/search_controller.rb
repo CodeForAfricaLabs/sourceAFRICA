@@ -1,7 +1,7 @@
 class SearchController < ApplicationController
   include DC::Search::Controller
 
-  before_action :bouncer if Rails.env.staging?
+  before_action :bouncer if exclusive_access?
 
   FIELD_STRIP = /\S+:\s*/
 
@@ -55,12 +55,6 @@ class SearchController < ApplicationController
     @query   = params[:query]
     @slug    = params[:slug]
     @options = params[:options]
-  end
-
-  def loader
-    respond_to do |format|
-      format.js { render :template => 'search_embed/loader' }
-    end
   end
 
 end

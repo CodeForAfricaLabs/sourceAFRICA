@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150812163030) do
+ActiveRecord::Schema.define(version: 20151111214857) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -230,12 +230,15 @@ ActiveRecord::Schema.define(version: 20150812163030) do
 
   add_index "projects", ["account_id"], name: "index_labels_on_account_id", using: :btree
 
+<<<<<<< HEAD
   create_table "remote_urls", force: :cascade do |t|
     t.integer "document_id",             null: false
     t.string  "url",                     null: false
     t.integer "hits",        default: 0, null: false
   end
 
+=======
+>>>>>>> 58c1b797936817fe42ceca45cffdad662f686164
   create_table "sections", force: :cascade do |t|
     t.integer "organization_id", null: false
     t.integer "account_id",      null: false

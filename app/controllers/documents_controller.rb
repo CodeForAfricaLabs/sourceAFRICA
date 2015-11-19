@@ -1,7 +1,7 @@
 class DocumentsController < ApplicationController
   layout nil
 
-  before_action :bouncer,             :only => [:show] if Rails.env.staging?
+  before_action :bouncer,             :only => [:show] if exclusive_access?
   before_action :login_required,      :only => [:update, :destroy]
   before_action :prefer_secure,       :only => [:show]
   before_action :api_login_optional,  :only => [:send_full_text, :send_pdf, :send_page_text, :send_page_image]
@@ -28,7 +28,8 @@ class DocumentsController < ApplicationController
       format.text { redirect_to(doc.full_text_url) }
       format.json do
         @response = doc.canonical
-        cache_page @response.to_json if doc.cacheable?
+        # TODO: https://github.com/documentcloud/documentcloud/issues/291
+        # cache_page @response.to_json if doc.cacheable?
         json_response
       end
       format.js do
@@ -119,7 +120,7 @@ class DocumentsController < ApplicationController
   end
 
   def loader
-    render :action => 'loader.js.erb', :content_type => :js
+    render :action => 'embed_loader.js.erb', :content_type => :js
   end
 
   def entities
