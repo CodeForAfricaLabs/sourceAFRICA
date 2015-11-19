@@ -1,6 +1,6 @@
 production:
   solr:
-    hostname: 52.16.133.220
+    hostname: ec2-52-16-133-220.eu-west-1.compute.amazonaws.com
     port: 7377
     path: /solr/collection1
     read_timeout: 5
@@ -9,6 +9,7 @@ production:
     min_memory: 1G
     max_memory: 2G
     pid_dir: tmp/pids
+    solr_home: solr
 
 development:
   solr:
