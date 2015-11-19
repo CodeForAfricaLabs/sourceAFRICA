@@ -109,7 +109,7 @@
   - added_to_x_documents:
     - Se agregó un documento a %2$s
     - Se agregaron %1$d documentos a %2$s
-  - adding_accounts: Añadir Cuentas
+  - adding_accounts: Administrar Cuentas
   - administrator: Administrador
   - all_documents: Todos los Documentos
   - allow_readers_to_search: Permitir que lectores busquen esta colección de documentos
@@ -265,7 +265,7 @@
       %saquí%s.
   - embed_note_step_one: 'Primer Paso: Seleccionar una nota para incrustar'
   - embed_note_step_two: 'Segundo Paso: Copia y pega el código para incrustar'
-  - embed_page: Incrustar una Página [BETA]
+  - embed_page: Incrustar una Página
   - embed_page_choose: Seleccione una página...
   - embed_page_private_error: 'Este documento es privado: la inserción no será visible
       para el público hasta que el documento es público. Cambiar el %snivel de%s acceso

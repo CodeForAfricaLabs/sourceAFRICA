@@ -1,7 +1,7 @@
 # STEPS
 
 # 1) get AMI from https://cloud.ubuntu.com/ami and follow the link.
-#    as of right now (2014-11-14) the link is here: https://console.aws.amazon.com/ec2/home?region=us-east-1#launchAmi=ami-a88c0bc0
+#    as of right now (2015-10-26) the link is here: https://console.aws.amazon.com/ec2/home?region=us-east-1#launchAmi=ami-11f9aa74
 #    we're using us-east-1 instance-store amd64 instances
 #    Launch the instance as desired.
 
@@ -28,7 +28,7 @@ gem install bundler
 pushd sourceAFRICA
 git clone git@github.com:CodeForAfrica/sourceAFRICA-secrets secrets
 bundle install
-rails runner -e production "puts Organization.count"
+rails runner -e production "puts Organization.count" # check for human eyeballs
 sudo mkdir /mnt/cloud_crowd
 sudo chown ubuntu:ubuntu /mnt/cloud_crowd
 
@@ -46,6 +46,7 @@ sudo apt-get install ec2-ami-tools ec2-api-tools
 ACCESS_KEY=$(egrep "aws_access_key"  ~/sourceAFRICA/secrets/secrets.yml | awk '{print $NF}')
 SECRET_KEY=$(egrep "aws_secret_key"  ~/sourceAFRICA/secrets/secrets.yml | awk '{print $NF}')
 
+# check for human eyeballs
 ec2-describe-regions --aws-access-key $ACCESS_KEY --aws-secret-key $SECRET_KEY
 
 # use the --no-filter flag so that /etc/ssl/certs/*.pem don't get deleted.

@@ -2,6 +2,7 @@
 defaults: &defaults
   cloud_crowd_server:   http://52.16.133.220:8080
   server_root:          ec2-52-16-133-220.eu-west-1.compute.amazonaws.com
+  cloud_crowd_console:  http://52.16.133.220:8080
   large_file_storage:   /mnt/large_files
   aws_region:           us-east-1
   aws_zone:             us-east-1b
@@ -13,16 +14,17 @@ development:
 
 staging:
   <<: *defaults
-  cloud_crowd_server: <%= secrets['db_host'] %>:8080
-  server_root:        staging.sourceafrica.net
-  asset_root:         s3.amazonaws.com/dcloud_staging
+  cloud_crowd_server:  <%= secrets['db_host'] %>:8080
+  cloud_crowd_console: staging.sourceafrica.net:8080
+  server_root:         staging.sourceafrica.net
+  asset_root:          s3.amazonaws.com/sourceafrica_staging
 
 production:
   <<: *defaults
-  cloud_crowd_server: <%= secrets['db_host'] %>:8080
-  server_root:        ec2-52-16-133-220.eu-west-1.compute.amazonaws.com
-  asset_root:         s3-us-east-1.amazonaws.com/dcloud-cfafrica
-  db_volume_id:       vol-d4c305bd
-
+  cloud_crowd_server:  <%= secrets['db_host'] %>:8080
+  cloud_crowd_console: sourceafrica.net:8080
+  server_root:         sourceafrica.net
+  asset_root:          s3-eu-west-1.amazonaws.com/s3.sourceafrica.net
+  db_volume_id:        vol-3248332d
 test:
   <<: *defaults

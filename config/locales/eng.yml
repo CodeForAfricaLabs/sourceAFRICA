@@ -106,7 +106,7 @@
   - added_to_x_documents:
     - Added a document to %2$s
     - Added %1$d documents to %2$s
-  - adding_accounts: Adding Accounts
+  - adding_accounts: Manage Accounts
   - administrator: Administrator
   - all_documents: All Documents
   - allow_readers_to_search: Allow readers to search this set of documents
@@ -255,7 +255,7 @@
       %shere%s.
   - embed_note_step_one: 'Step One: Select a Note to Embed'
   - embed_note_step_two: 'Step Two: Copy and Paste the Embed Code'
-  - embed_page: Embed a Page [BETA]
+  - embed_page: Embed a Page
   - embed_page_choose: Choose a page...
   - embed_page_private_error: 'This document is private: the embed will not be visible
       to the public until the document is public. Change the %saccess level%s now
@@ -324,7 +324,7 @@
   - future_documents_w_appear: Future documents %s will appear in your embed.
   - group: Group
   - guided_tour: Guided Tour
-  - guides_howtos: Guides & Howto's
+  - guides_howtos: Guides & How-to's
   - has_no_entities: "%s has no entities to display."
   - height: Height
   - help: Help
