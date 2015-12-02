@@ -8,7 +8,7 @@
 
 require 'rubygems'
 
-version = ">= 0"
+version = ">= 0.a"
 
 if ARGV.first
   str = ARGV.first
