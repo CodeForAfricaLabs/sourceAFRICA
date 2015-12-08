@@ -1,4 +1,766 @@
 contributors:
+<<<<<<< HEAD
+<<<<<<< HEAD
+   - - 11Alive (WXIA-TV)
+     - http://www.11alive.com/
+   - - 13WMAZ
+     - http://wmaz.com
+   - - 60 Minutes
+     - http://www.cbsnews.com/sections/60minutes/main3415.shtml
+   - - A.Q. Miller School of Journalism and Mass Communications
+     - http://jmc.ksu.edu/site/
+   - - Accent
+     - http://theaccent.org/
+   - - ACLU Massachusetts
+     - http://aclum.org
+   - - ACLU National Security Project
+     - http://aclu.org/national-security
+   - - Adirondack Daily Enterprise
+     - http://adirondackdailyenterprise.com/
+   - - The Advocate
+     - http://www.stamfordadvocate.com
+   - - Advocate Magazines
+     - http://advocatemag.com/
+   - - Al Jazeera English
+     - http://english.aljazeera.net/
+   - - Albany Times-Union
+     - http://www.timesunion.com
+   - - AllPrinceton
+     - http://allprinceton.com/
+   - - Anchorage Daily News
+     - http://www.adn.com/
+   - - Anderson  Independent Mail
+     - http://www.independentmail.com/
+   - - AnnArbor.com
+     - http://annarbor.com
+   - - Argus Leader of Sioux Falls 
+     - http://www.argusleader.com/
+   - - Arizona Republic
+     - http://azcentral.com
+   - - Arkansas Times
+     - http://www.arktimes.com
+   - - Ars Technica
+     - http://arstechnica.com/
+   - - Asbury Park Press
+     - http://www.app.com
+   - - Aspen Journalism
+     - http://www.aspenjournalism.org/
+   - - Associated Press
+     - http://associatedpress.com/
+   - - ASU State Press
+     - http://www.statepress.com/
+   - - Atlanta Journal-Constitution
+     - http://ajc.com
+   - - The Atlantic
+     - http://theatlantic.com
+   - - Austin American-Statesman
+     - http://www.statesman.com/
+   - - Australian Broadcasting Corporation
+     - http://www.abc.net.au/
+   - - The Baltimore Sun
+     - http://www.baltimoresun.com/
+   - - The Bay Citizen
+     - http://www.baycitizen.org/
+   - - The Bellingham Herald
+     - http://www.bellinghamherald.com/
+   - - Better Government Association
+     - http://www.bettergov.org
+   - - Black Hills Knowledge Network
+     - http://myhills.com/
+   - - Borderzine
+     - http://borderzine.com
+   - - Boston Globe
+     - http://boston.com/bostonglobe
+   - - Boston Review
+     - http://bostonreview.net/
+   - - Bozeman Daily Chronicle
+     - http://www.bozemandailychronicle.com
+   - - British Medical Journal
+     - http://www.bmj.com
+   - - The Bureau of Investigative Journalism
+     - http://www.tbij.com
+   - - Burlington Free Press
+     - http://www.burlingtonfreepress.com/
+   - - The Burrill Report
+     - http://www.burrillreport.com/
+   - - Business Green
+     - http://www.businessgreen.com
+   - - BuzzFeed
+     - http://www.buzzfeed.com/ 
+   - - California Watch
+     - http://californiawatch.org
+   - - Carbon Brief
+     - http://www.carbonbrief.org
+   - - CBC News
+     - http://CBCNews.ca
+   - - Center for Constitutional Rights
+     - http://www.ccrjustice.org
+   - - Center for Democracy and Technology / OpenCRS
+     - http://opencrs.com
+   - - Center for Investigative Reporting
+     - http://centerforinvestigativereporting.org
+   - - Center for Media and Democracy
+     - http://www.prwatch.org/
+   - - Center for Public Integrity
+     - http://publicintegrity.org
+   - - Centre for Investigative Journalism, City University London
+     - http://www.city.ac.uk/study/courses/arts/investigative-journalism-ma-diploma.html
+   - - Charleston Daily Mail
+     - http://dailymail.com/
+   - - The Charleston Gazette
+     - http://wvgazette.com
+   - - Chasing Aphrodite
+     - http://chasingaphrodite.com/
+   - - Chattarati
+     - http://Chattarati.com
+   - - Chicago News Cooperative
+     - http://www.chicagonewscoop.org/
+   - - Chicago Public Radio
+     - http://chicagopublicradio.org
+   - - Chicago Talks
+     - http://www.chicagotalks.org
+   - - Chicago Tribune
+     - http://chicagotribune.com
+   - - ChinaFile
+     - http://ChinaFile.org
+   - - Chronicle of Higher Education
+     - http://chronicle.com
+   - - Chronicle of Philanthropy
+     - http://www.philanthropy.com
+   - - CIINFO
+     - http://ciinfo.net/
+   - - Cincinnati Enquirer
+     - http://news.cincinnati.com
+   - - Circle of Blue
+     - http://circleofblue.org
+   - - Citizens Voice
+     - http://citizensvoice.com/
+   - - Civil.ge
+     - http://civil.ge/eng/
+   - - Clinton Herald
+     - http://clintonherald.com/
+   - - CNN-Money
+     - http://CNNMoney.com
+   - - Co-operative News
+     - http://www.thenews.coop/
+   - - The Coast
+     - http://www.thecoast.ca/
+   - - Coastsider
+     - http://coastsider.com/
+   - - Columbia Daily Tribune
+     - http://www.columbiatribune.com
+   - - Columbia Missourian
+     - http://www.columbiamissourian.com
+   - - Commercial Appeal
+     - http://www.commercialappeal.com
+   - - Connecticut Post
+     - http://www.ctpost.com
+   - - The Courier-Journal
+     - http://www.courier-journal.com/
+   - - CU-Citizen Access
+     - http://CU-CitizenAccess.org
+   - - CueOnline
+     - http://cue.ru.ac.za/
+   - - The Daily Californian
+     - http://www.dailycal.org
+   - - Daily Freeman
+     - http://www.dailyfreeman.com/
+   - - Daily Herald
+     - http://heraldnet.com
+   - - Daily Iowegian
+     - http://dailyiowegian.com/
+   - - Daily Press
+     - http://www.dailypress.com/
+   - - Daily Report
+     - http://www.dailyreportonline.com/
+   - - Daily Telegraph
+     - http://telegraph.co.uk
+   - - Dallas Morning News
+     - http://dallasnews.com
+   - - Danbury News-Times
+     - http://www.newstimes.com
+   - - Dark Acres
+     - http://www.darkacres.com
+   - - Dart Center for Journalism & Trauma
+     - http://dartcenter.org
+   - - Dateline Carolina
+     - http://www.datelinecarolina.org/
+   - - Democrat and Chronicle
+     - http://www.DemocratAndChronicle.com
+   - - The Denver Post
+     - http://www.denverpost.com/
+   - - Derivative Works
+     - http://www.derivativeworks.com/
+   - - Des Moines Register
+     - http://www.dmreg.com
+   - - Detroit News
+     - http://detnews.com/
+   - - Deutsche Presse-Agentur
+     - http://www.dpa.de
+   - - DeWitt Wallace Center for Media and Democracy
+     - http://dewitt.sanford.duke.edu/
+   - - Diamond Bar Patch
+     - http://diamondbar.patch.com
+   - - Digital Advance NZ
+     - http://digitaladvance.co.nz
+   - - Edmonton Journal
+     - http://www.edmontonjournal.com/
+   - - Education Week
+     - http://www.edweek.org
+   - - El Paso Times
+     - http://elpasotimes.com
+   - - Electronic Frontier Foundation
+     - http://www.eff.org
+   - - epiNewswire
+     - http://www.epinews.com/
+   - - Epoch Times
+     - http://www.theepochtimes.com/
+   - - Erie Times-News
+     - http://goerie.com/
+   - - The Erie Wire
+     - http://www.eriewire.org
+   - - Fayetteville Flyer
+     - http://www.fayettevilleflyer.com/
+   - - Financial Times
+     - http://www.ft.com
+   - - Fire Dog Lake
+     - http://firedoglake.com
+   - - Florida Center for Investigative Reporting
+     - http://fcir.org
+   - - The Florida Times-Union
+     - http://jacksonville.com/
+   - - Florida Today
+     - http://www.floridatoday.com/
+   - - American Way of Eating
+     - http://www.americanwayofeating.com/
+   - - Forbes
+     - http://forbes.com
+   - - Fort Collins Coloradoan
+     - http://www.coloradoan.com
+   - - Free Government Information
+     - http://freegovinfo.info/
+   - - The Free Press
+     - http://www.mankatofreepress.com
+   - - The Frontier
+     - http://www.tulsafrontier.com/
+   - - Frontline
+     - http://www.pbs.org/wgbh/pages/frontline
+   - - The Gadsden Times
+     - http://www.gadsdentimes.com/
+   - - The Gainesville Sun
+     - http://www.gainesville.com
+   - - Gapers Block
+     - http://gapersblock.com
+   - - Gawker.com
+     - http://gawker.com/
+   - - The Georgia Straight
+     - http://www.straight.com/
+   - - Gizmodo
+     - http://gizmodo.com/
+   - - Global News
+     - http://www.globalnews.ca/
+   - - The Globe and Mail
+     - http://www.globeandmail.com
+   - - The Golden Gate Xpress
+     - http://www.goldengatexpress.org/
+   - - Gotham Gazette
+     - http://gothamgazette.com
+   - - Great Falls Tribune
+     - http://greatfallstribune.com
+   - - Greenwich Time
+     - http://www.greenwichtime.com
+   - - Greenwire
+     - http://www.eenews.net/gw
+   - - The Guardian 
+     - http://www.guardian.co.uk
+   - - The GW Hatchet
+     - http://www.gwhatchet.com/
+   - - Health News Florida
+     - http://www.healthnewsflorida.org/
+   - - Hearst Papers
+     - http://www.hearst.com/newspapers
+   - - Help Me Investigate
+     - http://helpmeinvestigate.com/
+   - - Herald Sun
+     - http://www.heraldsun.com.au/
+   - - Homicide Watch D.C.
+     - http://homicidewatch.org/    
+   - - Honolulu Civil Beat
+     - http://www.civilbeat.com/
+   - - Houston Chronicle
+     - http://chron.com
+   - - Huffington Post
+     - http://www.huffingtonpost.com
+   - - Huffington Post Investigative Fund
+     - http://huffpostfund.org
+   - - iData
+     - http://www.ahref.eu/en
+   - - Illinois Campaign for Political Reform
+     - http://www.ilcampaign.org/
+   - - Illinois Times
+     - http://www.IllinoisTimes.com
+   - - Independent Mail
+     - http://www.independentmail.com/
+   - - Index on Censorship
+     - http://www.indexoncensorship.org/
+   - - International Herald Tribune
+     - http://global.nytimes.com
+   - - Investigate West
+     - http://invw.org
+   - - Investigative Reporting Workshop at American University
+     - http://investigativereportingworkshop.org
+   - - iPolitics
+     - http://ipolitics.ca/
+   - - Ithaca Independent
+     - http://www.ithacaindy.com/
+   - - The Journal-Standard
+     - http://www.journalstandard.com
+   - - JURIST
+     - http://jurist.org/
+   - - The Justice
+     - http://www.thejustice.org/
+   - - Kampala Dispatch Magazine
+     - http://dispatch.ug/
+   - - Keizertimes
+     - http://keizertimes.com/
+   - - Kenyon Collegian
+     - http://www.kenyoncollegian.com/
+   - - KHI News Service
+     - http://www.khi.org/
+   - - King 5
+     - http://www.king5.com/
+   - - Knoxville News Sentinel
+     - http://www.knoxnews.com/
+   - - The Korea Center for Investigative Journalism
+     - http://welcome.newstapa.org/
+   - - The Komisar Scoop
+     - http://thekomisarscoop.com
+   - - KPTV
+     - http://www.kptv.com
+   - - KRCG 13
+     - http://www.connectmidmissouri.com
+   - - La Nacion
+     - http://www.lanacion.com.ar/
+   - - Las Vegas Sun
+     - http://www.lasvegassun.com
+   - - Lawrence Journal-World
+     - http://www.ljworld.com/
+   - - Legacy Tobacco Documents Library (UCSF)
+     - http://legacy.library.ucsf.edu
+   - - The Lens
+     - http://thelensnola.org
+   - - Liberation newspaper
+     - http://liberationnews.org
+   - - LinkTV
+     - http://linktv.org
+   - - Living on Earth
+     - http://www.loe.org
+   - - Local Government Chronicle
+     - http://www.lgcplus.com/
+   - - Longview News-Journal
+     - http://news-journal.com/
+   - - Los Angeles News Group
+     - http://losangelesnewsgroup.com/
+   - - Los Angeles Times
+     - http://latimes.com
+   - - Los Angeles Times Community News
+     - http://www.latimes.com/services/newspaper/mediacenter/la-mediacenter-factsheet-tcn2,0,1436442.story
+   - - Lost Coast Outpost
+     - http://lostcoastoutpost.com/
+   - - Maine Center for Public Interest Reporting
+     - http://www.pinetreewatchdog.org
+   - - Maisonneuve magazine
+     - http://maisonneuve.org/
+   - - Maryland Reporter
+     - http://marylandreporter.com
+   - - McClatchy Washington Bureau
+     - http://www.mcclatchydc.com
+   - - Media Coop
+     - http://www.mediacoop.ca/
+   - - Media Network of Central Ohio
+     - http://www.centralohio.com/
+   - - Media Shift
+     - http://www.pbs.org/mediashift/
+   - - Miami Herald
+     - http://miamiherald.com
+   - - Military Times
+     - http://militarytimes.com/
+   - - Milwaukee Journal Sentinel
+     - http://www.journalsentinel.com
+   - - Minnesota Public Radio News
+     - http://minnesota.publicradio.org/
+   - - MinnPost
+     - http://minnpost.com
+   - - Monash University Journalism School
+     - http://arts.monash.edu.au/journalism/
+   - - Montana Watchdog
+     - http://montana.watchdog.org/
+   - - Monterey County Weekly
+     - http://mcweekly.com
+   - - Montreal Gazette
+     - http://www.montrealgazette.com/
+   - - Mother Jones
+     - http://motherjones.com
+   - - msnbc.com
+     - http://msnbc.msn.com
+   - - Muck Rock
+     - http://www.muckrock.com
+   - - Naples Daily News
+     - http://www.naplesnews.com/
+   - - National Public Radio
+     - http://npr.org
+   - - National Security Archive
+     - http://gwu.edu/~nsarchiv
+   - - National Security Journalism Initiative (Medill)
+     - http://medillnsj.org/
+   - - NBC 7 San Diego
+     - http://www.nbcsandiego.com/
+   - - NBC 4 Southern California
+     - http://www.nbclosangeles.com/
+   - - NEast Philly
+     - http://neastphilly.com/
+   - - The Nerve (South Carolina Policy Council)
+     - http://www.thenerve.org
+   - - NET Nebraska
+     - http://www.netnebraska.org
+   - - New York Daily News
+     - http://www.nydailynews.com/
+   - - The New York Times
+     - http://nytimes.com
+   - - The New Yorker
+     - http://newyorker.com
+   - - News 21
+     - http://news21.com/
+   - - The News Enterprise
+     - http://newsenterprise.emory.edu
+   - - The News Journal
+     - http://www.delawareonline.com
+   - - News Northwest
+     - http://newsnw.org
+   - - The News Outlet
+     - http://www.thenewsoutlet.org/
+   - - The News Tribune
+     - http://www.thenewstribune.com/
+   - - NewsHour
+     - http://pbs.org/newshour
+   - - North Coast Journal
+     - http://www.northcoastjournal.com/
+   - - Northwest Arkansas Newspapers
+     - http://www.nwaonline.com
+   - - Oakland Local
+     - http://oaklandlocal.com
+   - - Ocala Star-Banner
+     - http://www.ocala.com/
+   - - The Oklahoman
+     - http://www.newsok.com
+   - - Omaha World-Herald
+     - http://www.omaha.com
+   - - OMB Watch
+     - http://ombwatch.org/
+   - - OpenFile
+     - http://openfile.ca
+   - - Oregon Daily Emerald
+     - http://dailyemerald.com
+   - - The Oregonian
+     - http://www.oregonlive.com/oregonian/
+   - - Ottawa Citizen
+     - http://www.ottawacitizen.com
+   - - Ottumwa Courier
+     - http://ottumwacourier.com/
+   - - Outlook India
+     - http://outlookindia.com/
+   - - Ozarks News
+     - http://www.sgfnews.org
+   - - Ozarks Today
+     - http://www.ky3.com/
+   - - Ozarks Unbound
+     - http://www.ozarksunbound.com/
+   - - Pacific Daily News
+     - http://www.guampdn.com/
+   - - Pacific Northwest Inlander
+     - http://www.inlander.com/
+   - - Página/12
+     - http://www.pagina12.com.ar
+   - - The Palm Beach Post
+     - http://www.palmbeachpost.com/
+   - - Pandau Project
+     - http://pandauprojects.com/
+   - - The Patriot Ledger
+     - http://www.wickedlocal.com
+   - - PBS News Navigator
+     - http://pbs.org
+   - - Phawker
+     - http://www.phawker.com
+   - - Philly.com
+     - http://www.philly.com
+   - - Pioneer Press
+     - http://twincities.com
+   - - Pioneer Press/Sun-Times Media
+     - http://www.pioneerlocal.com
+   - - Pittsburg Post-Gazette
+     - http://post-gazette.com
+   - - Poderopedia 
+     - http://www.poderopedia.com/
+   - - Politico.ie
+     - http://politico.ie
+   - - Politifact
+     - http://politifact.com/
+   - - Polk County Enterprise
+     - http://www.easttexasnews.com/Enterprise/News/Main/enterprise_main.htm
+   - - Post Star
+     - http://poststar.com/
+   - - Postimees
+     - http://www.postimees.ee/
+   - - Poughkeepsie Journal
+     - http://www.poughkeepsiejournal.com/
+   - - POV
+     - http://www.pbs.org/pov/
+   - - Pratt Center for Community Development
+     - http://www.picced.org/
+   - - Press & Sun-Bulletin
+     - http://Pressconnects.com
+   - - Press Gazette
+     - http://www.pressgazette.co.uk
+   - - Project on Government Oversight
+     - http://www.pogo.org/
+   - - ProPublica
+     - http://propublica.org
+   - - PsychSearch.net
+     - http://www.psychsearch.net/psych_news/  
+   - - Public Education Center
+     - http://DCBureau.org
+   - - Public Insight Journalism
+     - http://americanpublicmedia.org/cij
+   - - Public Radio International
+     - http://pri.org
+   - - Public.Resource.Org
+     - http://public.resource.org
+   - - Quinnipiac University School of Communications
+     - http://www.quinnipiac.edu/gradjournalism.xml
+   - - Radio-Canada
+     - http://www.radio-canada.ca
+   - - Raleigh Public Record
+     - http://www.raleighpublicrecord.org
+   - - Rapid City Journal
+     - http://www.rapidcityjournal.com
+   - - Reality Blurred 
+     - http://realityblurred.com
+   - - Reese News
+     - http://reesenews.org/
+   - - Reference Tone
+     - http://referencetone.com
+   - - The Regina Leader-Post
+     - http://www.leaderpost.com/index.html
+   - - The Register-Guard
+     - http://registerguard.com
+   - - RegState
+     - http://www.regstate.net/
+   - - Reno Gazette Journal
+     - http://www.rgj.com/
+   - - Reprieve
+     - http://www.reprieve.org.uk
+   - - Richmond Times-Dispatch
+     - http://www.timesdispatch.com
+   - - The Roanoke Times
+     - http://www.roanoke.com/
+   - - Sacramento Bee
+     - http://www.sacbee.com
+   - - San Antonio Express-News
+     - http://www.mysanantonio.com/
+   - - San Diego Reader
+     - http://www.sandiegoreader.com
+   - - San Diego Union-Tribune
+     - http://signonsandiego.com/
+   - - San Francisco Chronicle
+     - http://www.sfgate.com
+   - - San Jose Mercury News
+     - http://www.mercurynews.com
+   - - Santa Fe Reporter
+     - http://sfreporter.com
+   - - Santee Patch
+     - http://santee.patch.com/
+   - - Sarasota Herald-Tribune
+     - http://www.heraldtribune.com
+   - - SCOTXblog
+     - http://www.scotxblog.com/
+   - - Scripps Howard News Service
+     - http://shns.com
+   - - The Seattle Times
+     - http://seattletimes.nwsource.com
+   - - SF Public Press
+     - http://sfpublicpress.org
+   - - Sharesleuth 
+     - http://sharesleuth.com/
+   - - Show-Me Institute
+     - http://showmeinstitute.org/
+   - - The Skanner
+     - http://www.theskanner.com
+   - - Slate
+     - http://www.slate.com/
+   - - SoCal Connected (KCET)
+     - http://www.kcet.org/socalconnected
+   - - Southern California Public Radio
+     - http://www.scpr.org
+   - - Southern Education Desk
+     - http://www.SouthernEducationDesk.org
+   - - Spartanburg Herald-Journal
+     - http://www.goupstate.com/
+   - - Spinwatch
+     - http://spinwatch.org
+   - - The Spokesman-Review
+     - http://www.spokesman.com/
+   - - The St. Augustine Record
+     - http://staugustine.com/
+   - - St. Cloud Times
+     - http://stcloudtimes.com
+   - - St. Louis Post-Dispatch
+     - http://www.stltoday.com
+   - - St. Petersburg Times
+     - http://tampabay.com
+   - - Stabile Center for Investigative Journalism
+     - http://www.stabilecenter.org/
+   - - The Star Ledger
+     - http://www.nj.com/starledger/
+   - - The Star Tribune
+     - http://startribune.com
+   - - StarNews
+     - http://StarNewsOnline.com
+   - - The State Port Pilot
+     - http://stateportpilot.com
+   - - Statesman Journal
+     - http://statesmanjournal.com
+   - - The Story
+     - http://thestory.ie
+   - - Student Press Law Center
+     - http://www.splc.org/
+   - - Sunlight Foundation
+     - http://sunlightfoundation.com
+   - - The Sydney Morning Herald
+     - http://www.smh.com.au/
+   - - Talking Points Memo
+     - http://talkingpointsmemo.com
+   - - Tallahassee Democrat
+     - http://Tallahassee.com
+   - - Tampa Tribune
+     - http://www.tampatrib.com/
+   - - Tavis Smiley Reports
+     - http://www.pbs.org/wnet/tavissmiley/reports/index.html
+   - - TBD
+     - http://www.tbd.com/
+   - - TCU 360
+     - http://www.tcu360.com
+   - - TechPresident
+     - http://techpresident.com/
+   - - Texas Observer
+     - http://www.texasobserver.org
+   - - Texas Tribune
+     - http://www.texastribune.org
+   - - Thomson Reuters
+     - http://thomsonreuters.com
+   - - Time
+     - http://www.time.com
+   - - The Times
+     - http://www.thetimes.co.uk
+   - - The Times Herald
+     - http://www.timesherald.com/
+   - - Times Herald-Record
+     - http://www.recordonline.com
+   - - The Times-Picayune
+     - http://www.nola.com
+   - - Transactional Records Access Clearinghouse
+     - http://trac.syr.edu/
+   - - Treasure Coast
+     - http://www.tcpalm.com/
+   - - Tucson Sentinel
+     - http://www.tucsonsentinel.com/
+   - - Tulsa World
+     - http://www.tulsaworld.com/
+   - - Two Circles
+     - http://www.TwoCircles.net
+   - - UBC School of Journalism
+     - http://journalism.ubc.ca
+   - - The Union
+     - http://www.theunion.com/
+   - - University of King's College Journalism School
+     - http://www.ukings.ns.ca/journalism
+   - - US Local News Network
+     - http://www.uslnn.com
+   - - USA TODAY
+     - http://www.usatoday.com
+   - - Valerie Brown Writer
+     - http://www.valeriebrownwriter.com
+   - - Vancouver Sun
+     - http://vancouversun.com
+   - - Variety
+     - http://www.variety.com
+   - - VentnorBlog
+     - http://ventnorblog.com/
+   - - Veritas New Mexico
+     - http://veritasnm.com
+   - - Voice of OC
+     - http://www.voiceofoc.org/
+   - - Voice of San Diego
+     - http://voiceofsandiego.org
+   - - Voices of Montana
+     - http://www.northernbroadcasting.com
+   - - VTDigger
+     - http://vtdigger.org/
+   - - WA Today
+     - http://www.watoday.com.au
+   - - The Wall Street Journal
+     - http://www.wsj.com/
+   - - Washington Post
+     - http://wpost.com
+   - - The Washington Times
+     - http://www.washingtontimes.com/
+   - - Watchdog Institute
+     - http://www.watchdoginstitute.org
+   - - Watchdog New England
+     - http://northeastern.edu/watchdognewengland/
+   - - Waterloo-Cedar FallsCourier
+     - http://wcfcourier.com/
+   - - Wausau Daily Herald
+     - http://www.wausaudailyherald.com/
+   - - We Love DC
+     - http://www.welovedc.com/
+   - - Western Citizen
+     - http://www.westerncitizen.com
+   - - WFTS-TV, Tampa
+     - http://www.abcactionnews.com/
+   - - What the Farm Bill Really Means
+     - http://www.andreacollier.com/home.html
+   - - Wichita Eagle
+     - http://www.kansas.com/
+   - - Winston-Salem Journal
+     - http://www2.journalnow.com/
+   - - Wired.com
+     - http://www.wired.com
+   - - Wisconsin Center for Investigative Journalism
+     - http://www.wisconsinwatch.org/
+   - - Wisconsin State Journal
+     - http://host.madison.com/wsj/
+   - - WNYC Radio
+     - http://wnyc.org
+   - - WRAL-TV 
+     - http://www.wral.com/
+   - - WSHU Public Radio
+     - http://www.wshunews.org
+   - - WTVF NewsChannel 5
+     - http://www.newschannel5.com/
+   - - WTXF Fox 29
+     - http://www.foxtv.com
+   - - WVUE-TV
+     - http://www.fox8live.com
+   - - WyoFile
+     - http://wyofile.com/
+   - - York Daily Record
+     - http://www.ydr.com
+=======
+   - - A.N.C.I.R
+     - http://investigativecenters.org/
+>>>>>>> master
+
+=======
    - - A.N.C.I.R
      - http://investigativecenters.org/
    - - Oxpeckers
@@ -9,3 +771,4 @@ contributors:
      - http://pmg.org.za
    - - Mail & Guardian
      - http://mg.co.za
+>>>>>>> fe359dd19458d4b7670a73933af94b2c34d0f725

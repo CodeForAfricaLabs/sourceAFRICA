@@ -1,0 +1,32 @@
+#!/usr/bin/env ruby
+
+require "pathname"
+
+default = Pathname(ENV.fetch("BUNDLE_GEMFILE", "Gemfile"))
+relative_to_binstub = Pathname(__FILE__).realpath + "../../Gemfile"
+gemfile = [default, relative_to_binstub].detect(&:exist?)
+
+if gemfile && !ENV["RUBYGEMS_GEMDEPS"]
+  ENV["BUNDLE_GEMFILE"] = gemfile.to_s
+  require "rubygems"
+  require "bundler/setup"
+else
+  require "rubygems"
+end
+
+def ignore_interrupts(*args)
+  args.unshift(RbConfig.ruby) if Gem.win_platform?
+  pid = spawn(*args)
+  begin
+    Process.wait(pid)
+  rescue Interrupt
+    retry
+  end
+  $? == 0
+end
+
+guard_core_path = Gem.bin_path("guard", "_guard-core")
+while !ignore_interrupts(guard_core_path, *ARGV) && $?.exitstatus == 2
+  puts("Restarting guard...")
+end
+exit($?.exitstatus)

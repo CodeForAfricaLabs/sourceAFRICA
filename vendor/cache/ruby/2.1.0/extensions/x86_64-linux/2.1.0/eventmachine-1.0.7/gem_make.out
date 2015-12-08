@@ -1,0 +1,13 @@
+/home/ubuntu/.rvm/rubies/ruby-2.1.5/bin/ruby -r ./siteconf20150715-20224-lsfsnq.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling rubymain.cpp
+compiling mapper.cpp
+linking shared-object fastfilereaderext.so
+
+make "DESTDIR=" install
+/usr/bin/install -m 0755 fastfilereaderext.so ./.gem.20150715-20224-fvyvtj
+installing default fastfilereaderext libraries

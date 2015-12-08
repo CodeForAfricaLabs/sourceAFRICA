@@ -1,0 +1,19 @@
+/home/ubuntu/.rvm/rubies/ruby-2.1.5/bin/ruby -r ./siteconf20150715-20224-mj1mia.rb extconf.rb
+checking for rb_enc_get() in ruby/encoding.h... yes
+checking for rb_sys_fail_str() in ruby.h... yes
+checking for iconv() in iconv.h... yes
+checking signedness of size_t... unsigned
+checking for const of iconv() 2nd argument... no
+checking for iconvlist() in iconv.h... no
+checking for __iconv_free_list() in iconv.h... no
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling iconv.c
+linking shared-object iconv/iconv.so
+
+make "DESTDIR=" install
+/usr/bin/install -m 0755 iconv.so ./.gem.20150715-20224-1qm8ubh/iconv
+installing default iconv libraries

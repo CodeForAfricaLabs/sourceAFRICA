@@ -1,0 +1,32 @@
+/opt/rubies/ruby-2.1.3/bin/ruby -r ./siteconf20151119-31846-psy293.rb extconf.rb
+checking for main() in -lc... yes
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling thin.c
+thin.c: In function ‘Thin_HttpParser_alloc’:
+thin.c:242:3: warning: implicit declaration of function ‘thin_http_parser_init’ [-Wimplicit-function-declaration]
+   thin_http_parser_init(hp);
+   ^
+thin.c: In function ‘Thin_HttpParser_finish’:
+thin.c:294:3: warning: implicit declaration of function ‘thin_http_parser_finish’ [-Wimplicit-function-declaration]
+   thin_http_parser_finish(http);
+   ^
+thin.c:296:3: warning: implicit declaration of function ‘thin_http_parser_is_finished’ [-Wimplicit-function-declaration]
+   return thin_http_parser_is_finished(http) ? Qtrue : Qfalse;
+   ^
+thin.c: In function ‘Thin_HttpParser_execute’:
+thin.c:334:5: warning: implicit declaration of function ‘thin_http_parser_execute’ [-Wimplicit-function-declaration]
+     thin_http_parser_execute(http, dptr, dlen, from);
+     ^
+thin.c:338:5: warning: implicit declaration of function ‘thin_http_parser_has_error’ [-Wimplicit-function-declaration]
+     if(thin_http_parser_has_error(http)) {
+     ^
+compiling parser.c
+linking shared-object thin_parser.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 thin_parser.so ./.gem.20151119-31846-1pbl5bq
+installing default thin_parser libraries

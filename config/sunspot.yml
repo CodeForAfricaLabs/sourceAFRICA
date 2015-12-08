@@ -1,18 +1,19 @@
 production:
   solr:
-    hostname: ip-172-31-4-102.eu-west-1.compute.internal
+    hostname: ec2-52-16-133-220.eu-west-1.compute.amazonaws.com
     port: 7377
     path: /solr/collection1
     read_timeout: 5
     open_timeout: 1.5
     log_level: INFO
-    #min_memory: 0G
-    #max_memory: 7G
+    min_memory: 1G
+    max_memory: 2G
     pid_dir: tmp/pids
+    solr_home: solr
 
 development:
   solr:
-    hostname: localhost
+    hostname: ec2-52-16-133-220.eu-west-1.compute.amazonaws.com
     port: 7377
     log_level: ALL
     path: /solr/collection1
@@ -28,7 +29,7 @@ test:
 
 staging:
   solr:
-    hostname: ip-10-181-70-72.ec2.internal
+    hostname: ec2-52-16-133-220.eu-west-1.compute.amazonaws.com
     port: 7377
     log_level: WARNING
     pid_dir: tmp/pids

@@ -11,10 +11,10 @@ gem 'pg'
 
 gem 'closure-compiler'
 gem 'docsplit',               '0.8.0.alpha1'
-gem 'sunspot_rails'
-gem 'sunspot_solr'
-gem 'progress_bar' # Optional, used by sunspot to show progress while re-indexing
-gem 'cloud-crowd',            '~>0.7.6'
+gem 'sunspot_rails',          '~> 2.1.0'
+gem 'sunspot_solr',           '~> 2.2.0'
+gem 'progress_bar'  # optional, used by sunspot to show progress while re-indexing
+gem 'cloud-crowd',            :github => 'documentcloud/cloud-crowd', :branch => 'blacklist'
 gem 'pdftailor'
 gem 'pdfshaver',              '>=0.0.2'
 

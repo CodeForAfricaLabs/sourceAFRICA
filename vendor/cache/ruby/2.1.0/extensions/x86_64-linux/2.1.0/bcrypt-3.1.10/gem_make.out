@@ -1,0 +1,16 @@
+/home/ubuntu/.rvm/rubies/ruby-2.1.5/bin/ruby -r ./siteconf20150715-20224-fqdr5f.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling crypt_blowfish.c
+compiling crypt.c
+compiling bcrypt_ext.c
+compiling crypt_gensalt.c
+compiling wrapper.c
+linking shared-object bcrypt_ext.so
+
+make "DESTDIR=" install
+/usr/bin/install -m 0755 bcrypt_ext.so ./.gem.20150715-20224-140c93
+installing default bcrypt_ext libraries

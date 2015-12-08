@@ -1,0 +1,244 @@
+have_func: checking for random()... -------------------- yes
+
+"gcc -o conftest -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/x86_64-linux -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/ruby/backward -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC conftest.c  -L. -L/home/ubuntu/.rvm/rubies/ruby-2.1.5/lib -Wl,-R/home/ubuntu/.rvm/rubies/ruby-2.1.5/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-rpath,'/../lib' -Wl,-R -Wl,'/../lib' -L'/../lib' -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+"gcc -o conftest -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/x86_64-linux -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/ruby/backward -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC conftest.c  -L. -L/home/ubuntu/.rvm/rubies/ruby-2.1.5/lib -Wl,-R/home/ubuntu/.rvm/rubies/ruby-2.1.5/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-rpath,'/../lib' -Wl,-R -Wl,'/../lib' -L'/../lib' -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))random; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))random; return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for srandom()... -------------------- yes
+
+"gcc -o conftest -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/x86_64-linux -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/ruby/backward -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC conftest.c  -L. -L/home/ubuntu/.rvm/rubies/ruby-2.1.5/lib -Wl,-R/home/ubuntu/.rvm/rubies/ruby-2.1.5/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-rpath,'/../lib' -Wl,-R -Wl,'/../lib' -L'/../lib' -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))srandom; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))srandom; return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rand()... -------------------- yes
+
+"gcc -o conftest -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/x86_64-linux -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/ruby/backward -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC conftest.c  -L. -L/home/ubuntu/.rvm/rubies/ruby-2.1.5/lib -Wl,-R/home/ubuntu/.rvm/rubies/ruby-2.1.5/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-rpath,'/../lib' -Wl,-R -Wl,'/../lib' -L'/../lib' -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))rand; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))rand; return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for srand()... -------------------- yes
+
+"gcc -o conftest -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/x86_64-linux -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/ruby/backward -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC conftest.c  -L. -L/home/ubuntu/.rvm/rubies/ruby-2.1.5/lib -Wl,-R/home/ubuntu/.rvm/rubies/ruby-2.1.5/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-rpath,'/../lib' -Wl,-R -Wl,'/../lib' -L'/../lib' -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))srand; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))srand; return 0; }
+/* end */
+
+--------------------
+
+check_sizeof: checking size of unsigned long... -------------------- 8
+
+"gcc -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/x86_64-linux -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/ruby/backward -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC   -c conftest.c"
+conftest.c:7:5: error: size of array ‘conftest_const’ is negative
+ int conftest_const[(sizeof((*rbcv_ptr_)) < 0) ? 1 : -1];
+     ^
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: typedef unsigned long rbcv_typedef_;
+4: static rbcv_typedef_ *rbcv_ptr_;
+5: 
+6: /*top*/
+7: int conftest_const[(sizeof((*rbcv_ptr_)) < 0) ? 1 : -1];
+/* end */
+
+"gcc -o conftest -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/x86_64-linux -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/ruby/backward -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC conftest.c  -L. -L/home/ubuntu/.rvm/rubies/ruby-2.1.5/lib -Wl,-R/home/ubuntu/.rvm/rubies/ruby-2.1.5/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-rpath,'/../lib' -Wl,-R -Wl,'/../lib' -L'/../lib' -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: typedef unsigned long rbcv_typedef_;
+ 4: static rbcv_typedef_ *rbcv_ptr_;
+ 5: 
+ 6: #include <stdio.h>
+ 7: /*top*/
+ 8: typedef unsigned
+ 9: #ifdef PRI_LL_PREFIX
+10: #define PRI_CONFTEST_PREFIX PRI_LL_PREFIX
+11: LONG_LONG
+12: #else
+13: #define PRI_CONFTEST_PREFIX "l"
+14: long
+15: #endif
+16: conftest_type;
+17: conftest_type conftest_const = (conftest_type)(sizeof((*rbcv_ptr_)));
+18: int main() {printf("%"PRI_CONFTEST_PREFIX"u\n", conftest_const); return 0;}
+/* end */
+
+./conftest |
+--------------------
+
+check_sizeof: checking size of unsigned int... -------------------- 4
+
+"gcc -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/x86_64-linux -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/ruby/backward -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC   -c conftest.c"
+conftest.c:7:5: error: size of array ‘conftest_const’ is negative
+ int conftest_const[(sizeof((*rbcv_ptr_)) < 0) ? 1 : -1];
+     ^
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: typedef unsigned int rbcv_typedef_;
+4: static rbcv_typedef_ *rbcv_ptr_;
+5: 
+6: /*top*/
+7: int conftest_const[(sizeof((*rbcv_ptr_)) < 0) ? 1 : -1];
+/* end */
+
+"gcc -o conftest -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/x86_64-linux -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/ruby/backward -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC conftest.c  -L. -L/home/ubuntu/.rvm/rubies/ruby-2.1.5/lib -Wl,-R/home/ubuntu/.rvm/rubies/ruby-2.1.5/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-rpath,'/../lib' -Wl,-R -Wl,'/../lib' -L'/../lib' -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: typedef unsigned int rbcv_typedef_;
+ 4: static rbcv_typedef_ *rbcv_ptr_;
+ 5: 
+ 6: #include <stdio.h>
+ 7: /*top*/
+ 8: typedef unsigned
+ 9: #ifdef PRI_LL_PREFIX
+10: #define PRI_CONFTEST_PREFIX PRI_LL_PREFIX
+11: LONG_LONG
+12: #else
+13: #define PRI_CONFTEST_PREFIX "l"
+14: long
+15: #endif
+16: conftest_type;
+17: conftest_type conftest_const = (conftest_type)(sizeof((*rbcv_ptr_)));
+18: int main() {printf("%"PRI_CONFTEST_PREFIX"u\n", conftest_const); return 0;}
+/* end */
+
+./conftest |
+--------------------
+
+check_sizeof: checking size of unsigned int... -------------------- 4
+
+"gcc -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/x86_64-linux -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/ruby/backward -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC   -c conftest.c"
+conftest.c:7:5: error: size of array ‘conftest_const’ is negative
+ int conftest_const[(sizeof((*rbcv_ptr_)) < 0) ? 1 : -1];
+     ^
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: typedef unsigned int rbcv_typedef_;
+4: static rbcv_typedef_ *rbcv_ptr_;
+5: 
+6: /*top*/
+7: int conftest_const[(sizeof((*rbcv_ptr_)) < 0) ? 1 : -1];
+/* end */
+
+"gcc -o conftest -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/x86_64-linux -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0/ruby/backward -I/home/ubuntu/.rvm/rubies/ruby-2.1.5/include/ruby-2.1.0 -I.     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -fPIC conftest.c  -L. -L/home/ubuntu/.rvm/rubies/ruby-2.1.5/lib -Wl,-R/home/ubuntu/.rvm/rubies/ruby-2.1.5/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-rpath,'/../lib' -Wl,-R -Wl,'/../lib' -L'/../lib' -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: typedef unsigned int rbcv_typedef_;
+ 4: static rbcv_typedef_ *rbcv_ptr_;
+ 5: 
+ 6: #include <stdio.h>
+ 7: /*top*/
+ 8: typedef unsigned
+ 9: #ifdef PRI_LL_PREFIX
+10: #define PRI_CONFTEST_PREFIX PRI_LL_PREFIX
+11: LONG_LONG
+12: #else
+13: #define PRI_CONFTEST_PREFIX "l"
+14: long
+15: #endif
+16: conftest_type;
+17: conftest_type conftest_const = (conftest_type)(sizeof((*rbcv_ptr_)));
+18: int main() {printf("%"PRI_CONFTEST_PREFIX"u\n", conftest_const); return 0;}
+/* end */
+
+./conftest |
+--------------------
+

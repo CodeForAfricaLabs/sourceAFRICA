@@ -1,0 +1,4 @@
+[submodule "vendor/cache/ruby/2.1.0/bundler/gems/calais-6c292c405387"]
+	ignore = dirty
+[submodule "vendor/cache/ruby/2.1.0/bundler/gems/jammit-b3e17e12e57a"]
+	ignore = dirty

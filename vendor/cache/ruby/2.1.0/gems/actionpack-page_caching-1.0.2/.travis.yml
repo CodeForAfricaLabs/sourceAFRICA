@@ -1,0 +1,25 @@
+language: ruby
+before_install:
+  - gem install bundler
+rvm:
+  - 1.9.3
+  - 2.0.0
+gemfile:
+  - Gemfile
+  - gemfiles/Gemfile-4-0-stable
+  - gemfiles/Gemfile-edge
+matrix:
+  allow_failures:
+    - gemfile: gemfiles/Gemfile-edge
+notifications:
+  email: false
+  irc:
+    on_success: change
+    on_failure: always
+    channels:
+      - "irc.freenode.org#rails-contrib"
+  campfire:
+    on_success: change
+    on_failure: always
+    rooms:
+      - secure: "eRCx+FMvH50pmLu0GZTF7NN+2X+CesgodYUlHvCr5EXQ0ZO/YUmeW8vAh/N8\njSrLWYpk/4P/JA63JGWsvFor/zpkTnfwzX3LWgw04GV0V3T9jsn9CD2Coiu6\nFll5u4fUCUwpfbB4RlCkjvFdQmW+F9mmbRGMCDO5CmuPHOyyPH0="

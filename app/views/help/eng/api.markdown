@@ -149,6 +149,31 @@ Retrieve the canonical JSON representation of a particular document, as specifie
       "contributor_organization":"sourceAFRICA",
       "display_language":"eng",
       "resources":{
+<<<<<<< HEAD
+<<<<<<< HEAD
+        "pdf":"https://s3.amazonaws.com/s3.documentcloud.org/documents/1659580/economic-analysis-of-the-south-pole-traverse.pdf",
+        "text":"https://s3.amazonaws.com/s3.documentcloud.org/documents/1659580/economic-analysis-of-the-south-pole-traverse.txt",
+        "thumbnail":"https://s3.amazonaws.com/s3.documentcloud.org/documents/1659580/pages/economic-analysis-of-the-south-pole-traverse-p1-thumbnail.gif",
+        "search":"https://www.documentcloud.org/documents/1659580/search.json?q={query}",
+        "print_annotations":"https://www.documentcloud.org/notes/print?docs[]=1659580",
+        "translations_url":"https://www.documentcloud.org/translations/{realm}/{language}",
+        "page":{
+          "image":"https://s3.amazonaws.com/s3.documentcloud.org/documents/1659580/pages/economic-analysis-of-the-south-pole-traverse-p{page}-{size}.gif",
+          "text":"https://www.documentcloud.org/documents/1659580/pages/economic-analysis-of-the-south-pole-traverse-p{page}.txt"
+          },
+        "annotations_url":"https://www.documentcloud.org/documents/1659580/annotations"
+=======
+        "pdf":"http://s3.sourceafrica.net/documents/207/american-academy-v-napolitano.pdf",
+        "text":"http://s3.sourceafrica.net/documents/207/american-academy-v-napolitano.txt",
+        "thumbnail":"http://s3.sourceafrica.net/documents/207/pages/american-academy-v-napolitano-p1-thumbnail.gif",
+        "search":"http://s3.sourceafrica.net/207/search.json?q={query}",
+        "page":{
+          "text":"http://s3.sourceafrica.net/documents/207/pages/american-academy-v-napolitano-p{page}.txt",
+          "image":"http://s3.sourceafrica.net/asset_store/documents/207/pages/american-academy-v-napolitano-p{page}-{size}.gif"
+        },
+        "related_article":"http://example.com/article.html"
+>>>>>>> master
+=======
         "pdf":"https://s3.amazonaws.com/s3.sourceafrica.net/documents/1659580/economic-analysis-of-the-south-pole-traverse.pdf",
         "text":"https://s3.amazonaws.com/s3.sourceafrica.net/documents/1659580/economic-analysis-of-the-south-pole-traverse.txt",
         "thumbnail":"https://s3.amazonaws.com/s3.sourceafrica.net/documents/1659580/pages/economic-analysis-of-the-south-pole-traverse-p1-thumbnail.gif",
@@ -160,6 +185,7 @@ Retrieve the canonical JSON representation of a particular document, as specifie
           "text":"https://sourceafrica.net/documents/1659580/pages/economic-analysis-of-the-south-pole-traverse-p{page}.txt"
           },
         "annotations_url":"https://sourceafrica.net/documents/1659580/annotations"
+>>>>>>> fe359dd19458d4b7670a73933af94b2c34d0f725
       },
       "sections":[],
       "data":{},

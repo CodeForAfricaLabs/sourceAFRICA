@@ -221,8 +221,12 @@ ActiveRecord::Schema.define(version: 20151111214857) do
 
   add_index "projects", ["account_id"], name: "index_labels_on_account_id", using: :btree
 
-  create_table "sections", force: :cascade do |t|
-    t.integer "organization_id", null: false
+  create_table "remote_urls", force: :cascade do |t|
+    t.integer "document_id",             null: false
+    t.string  "url",                     null: false
+    t.integer "hits",        default: 0, null: false
+
+   t.integer "organization_id", null: false
     t.integer "account_id",      null: false
     t.integer "document_id",     null: false
     t.integer "access",          null: false

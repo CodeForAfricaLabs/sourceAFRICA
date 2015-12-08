@@ -9,6 +9,16 @@
   ],
   "description": "Document transparency tools for journalists",
   "dependencies": {
+<<<<<<< HEAD
+    "jquery": "1.11.1",
+    "jquery-ui": "1.11",
+    "flot": "0.8.3",
+    "backbone": "1.1.2",
+    "blueimp-file-upload": "9.8",
+    "documentcloud-notes": "https://github.com/documentcloud/documentcloud-notes.git",
+    "documentcloud-pages": "https://github.com/documentcloud/documentcloud-pages.git",
+    "visualsearch": "0.5.1"
+=======
     "jquery":              "~1.11.3",
     "jquery-ui":           "~1.11.4",
     "flot":                "~0.8.3",
@@ -17,6 +27,7 @@
     "documentcloud-notes": "https://github.com/documentcloud/documentcloud-notes.git#master",
     "documentcloud-pages": "https://github.com/documentcloud/documentcloud-pages.git#master",
     "visualsearch":        "~0.5.1"
+>>>>>>> 58c1b797936817fe42ceca45cffdad662f686164
   },
   "moduleType": [
     "globals"
@@ -31,7 +42,11 @@
     "tests"
   ],
   "resolutions": {
+<<<<<<< HEAD
+    "underscore": "~1.8.3"
+=======
     "underscore": "~1.8.3",
     "jquery":     "~1.11.3"
+>>>>>>> 58c1b797936817fe42ceca45cffdad662f686164
   }
 }
