@@ -3,7 +3,7 @@ require 'pry'
 
 describe DC::Embed::Document do
   
-  let(:resource) { Struct.new(:id, :url, :js_url).new("1235", "https://lol.wat/1235", "https://lol.wat/1235.js") }
+  let(:resource) { Struct.new(:id, :resource_url, :type).new("123", "https://dev.dcloud.org/documents/123-foo.html", :document) }
   
   it "should require a resource" do
     Proc.new{ DC::Embed::Document.new(nil, {}) }.must_raise ArgumentError
@@ -57,7 +57,8 @@ describe DC::Embed::Document do
       :responsive_offset => 12,
       :container         => ".hi"
     }
-    embed = DC::Embed::Document.new(resource, Hash[input_config.map{ |k,v| [k, v.to_s] }])
+    string_config_values = Hash[input_config.map{ |k,v| [k, v.to_s] }]
+    embed = DC::Embed::Document.new(resource, string_config_values)
     
     config = embed.embed_config
     input_config.keys.each do |key|

@@ -9,7 +9,7 @@ Ready to share your documents with readers? Either by embedding our custom viewe
   * [Documents](#embed-document)
   * [Pages](#embed-page)
   * [Notes](#embed-note)
-  * [Document Sets](#embed-set)
+  * [Document Lists](#embed-list)
 * [WordPress Shortcodes](#wordpress)
 * [oEmbed service](#oembed)
 
@@ -89,7 +89,7 @@ In the dialog box that appears next, select the number of the page to embed. A p
 
 Click "Next" to move to Step 2 and generate the HTML embed code. Here is a sample of what it will look like:
 
-    <div class="DC-embed-stub" data-version="1.0" style="font-size:10pt">
+    <div class="DC-embed" data-version="1.0" style="font-size:10pt">
       <p><a class="DC-embed-resource" href="https://www.documentcloud.org/documents/282753-lefler-thesis.html#document/p57" title="View page 57 of Lefler Thesis on DocumentCloud in new window or tab" target="_blank">Page 57 of Lefler Thesis</a></p>
       <img src="//www.documentcloud.org/documents/282753/pages/lefler-thesis-p57-normal.gif" alt="Page 57 of Lefler Thesis" style="border:1px solid #ccc;-webkit-box-sizing:border-box;box-sizing:border-box;width:100%;max-width:700px;">
       <p>Contributed to DocumentCloud by Ted Han of DocumentCloud &bull; <a href="https://www.documentcloud.org/documents/282753/pages/lefler-thesis-p57.txt" title="View text of page 57 of Lefler Thesis in a new window or tab" target="_blank">View page as text</a></p>
@@ -115,16 +115,16 @@ You'll be asked to select the note to embed, and will be able to preview the emb
 
 Copy and paste the HTML onto your own site. Clicking the title or the image will open the document. Documents will open in DocumentCloud unless you've published them elsewhere. We use [pixel ping](http://www.propublica.org/nerds/item/pixel-ping-a-nodejs-stats-tracker) to guess a document's Published URL, so if users won't find the document another way, you may need to add the Published URL manually.
 
-<a name="embed-set"></a>
-# <span id="docset">Embed Codes for a Document Set</span>
+<a name="embed-list"></a>
+# <span id="docset">Embed Codes for a Document List</span>
 
 ![Embed Search Menu][]
 
-If you'd rather embed a complete set of documents, DocumentCloud can provide the HTML to do that as well. Readers will be able to search or filter through as many documents as you'd like to share with them.
+If you'd rather embed a collection of documents, DocumentCloud can provide the HTML to do that as well. Readers will be able to search or filter through as many documents as you'd like to share with them.
 
 You can embed any set of documents, whether or not you uploaded them: any document that has already been published by its contributor will open to the URL at which it originally appeared.
 
-To get started, find a set of documents you wish to embed -- either by selecting a project or by running a search. **Note:** future public documents added to the project or matching the search criteria will be added to your embedded document set. Open the "Publish" menu and select "Embed Document List." You'll see a dialog which allows you to configure the embedded set:
+To get started, find a set of documents you wish to embed -- either by selecting a project or by running a search. **Note:** Future public documents added to the project or matching the search criteria will be added to your embedded document set. Open the "Publish" menu and select "Embed Document List." You'll see a dialog which allows you to configure the embedded set:
 
  * Provide a **title** to be displayed above the embedded set of documents;
  * **Order** documents alphabetically, by date uploaded, or by length;
