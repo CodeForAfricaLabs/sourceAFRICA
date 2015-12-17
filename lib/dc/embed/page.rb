@@ -1,9 +1,8 @@
 module DC
   module Embed
-    class Note < Base
+    class Page < Base
       class Config < Base::Config
         define_attributes do
-          string  :container
           number  :maxheight
           number  :maxwidth
         end
@@ -23,7 +22,7 @@ module DC
         @strategy      = options[:strategy]      || :literal # :oembed is the other option.
         @dom_mechanism = options[:dom_mechanism] || :direct
 
-        @template_path = options[:template_path] || "#{Rails.root}/app/views/annotations/_embed_code.html.erb"
+        @template_path = options[:template_path] || "#{Rails.root}/app/views/pages/_embed_code.html.erb"
         @template      = options[:template]
       end
 
@@ -39,40 +38,46 @@ module DC
         template.result(binding)
       end
 
+      # TODO: Consider how page embed works (HTML + enhancer), and customize 
+      # `content_markup` and `bootstrap_markup` accordingly. See 
+      # `DC::Embed::Base#code`
+
+      # Page embed uses a noscript-style enhancer, which prefers content markup 
+      # before bootstrap markup
+      def code
+        content_markup
+      end
+
       def content_markup
         template_options = {
-          :default_container_id => "DC-note-#{@resource.id}",
-          :resource_url         => @resource.resource_url
+          :resource_url => @resource.resource_url
         }
-        template_options[:generate_default_container] = @embed_config[:container].nil? || @embed_config[:container].empty? || @embed_config[:container] == '#' + template_options[:default_container_id]
 
-        @embed_config[:container] ||= '#' + template_options[:default_container_id]
         render(@embed_config.dump, template_options)
       end
 
       def bootstrap_markup
         @strategy == :oembed ? inline_loader : static_loader
       end
-
+  
       def inline_loader
         <<-SCRIPT
         <script>
-        #{ERB.new(File.read("#{Rails.root}/app/views/annotations/oembed_loader.js.erb")).result(binding)}
+          #{ERB.new(File.read("#{Rails.root}/app/views/embed/enhance.js.erb")).result(binding)}
         </script>
-        <script type="text/javascript" src="#{DC.cdn_root(:agnostic => true)}/note_embed/note_embed.js"></script>
         SCRIPT
       end
   
       def static_loader
-        %(<script type="text/javascript" src="#{DC.cdn_root(:agnostic => true)}/notes/loader.js"></script>)
-      end
-  
-      # intended for use in the static deployment to s3.
-      def self.static_loader(options={})
-        template_path = "#{Rails.root}/app/views/annotations/embed_loader.js.erb"
-        ERB.new(File.read(template_path)).result(binding)
+        %(<script type="text/javascript" src="#{DC.cdn_root(:agnostic => true)}/embed/loader/enhance.js"></script>)
       end
 
+      # intended for use in the static deployment to s3.
+      def self.static_loader(options={})
+        template_path = "#{Rails.root}/app/views/embed/enhance.js.erb"
+        ERB.new(File.read(template_path)).result(binding)
+      end
+  
       def as_json
         if @strategy == :oembed
           {

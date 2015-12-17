@@ -35,7 +35,7 @@ class ApiController < ApplicationController
           q:        params[:q],
           documents: @documents.map {|d| d.canonical(opts) }
         }
-        json_response
+        render_cross_origin_json
       end
     end
   end
@@ -62,7 +62,7 @@ class ApiController < ApplicationController
       end
       params[:url] = params[:file] unless is_file
       @response = Document.upload(params, current_account, current_organization).canonical
-      json_response
+      render_cross_origin_json
     end
   end
 
@@ -83,15 +83,15 @@ class ApiController < ApplicationController
         direct = [PRIVATE, ORGANIZATION, EXCLUSIVE].include? current_document.access
         redirect_to(current_document.full_text_url(direct))
       end
-      format.json { json_response }
-      format.js { json_response }
+      format.json { render_cross_origin_json }
+      format.js { render_cross_origin_json }
     end
   end
 
   def pending
     @response = { :total_documents => Document.pending.count }
     @response[:your_documents] = current_account.documents.pending.count if logged_in?
-    json_response
+    render_cross_origin_json
   end
 
   # Retrieve a note's canonical JSON.
@@ -99,7 +99,7 @@ class ApiController < ApplicationController
     return bad_request unless params[:note_id] and request.format.json? || request.format.js?
     return not_found unless current_note
     @response = {'annotation' => current_note.canonical}
-    json_response
+    render_cross_origin_json
   end
 
   # Retrieve the entities for a document.
@@ -107,7 +107,7 @@ class ApiController < ApplicationController
     return bad_request unless params[:id] and request.format.json? || request.format.js?
     return not_found unless current_document
     @response = {'entities' => current_document.ordered_entity_hash}
-    json_response
+    render_cross_origin_json
   end
 
   def update
@@ -119,7 +119,7 @@ class ApiController < ApplicationController
     return json(doc, 403) unless success
     expire_pages doc.cache_paths if doc.cacheable?
     @response = {'document' => doc.canonical(:access => true, :sections => true, :annotations => true)}
-    json_response
+    render_cross_origin_json
   end
 
   def destroy
@@ -137,7 +137,7 @@ class ApiController < ApplicationController
     return not_found unless project
     opts = { :include_document_ids => params[:include_document_ids] != 'false' }
     @response = {'project' => project.canonical(opts)}
-    json_response
+    render_cross_origin_json
   end
 
   # Retrieve a listing of your projects, including document id.
@@ -145,14 +145,14 @@ class ApiController < ApplicationController
     return forbidden unless current_account # already returns a 401 if credentials aren't supplied
     opts = { :include_document_ids => params[:include_document_ids] != 'false' }
     @response = {'projects' => Project.accessible(current_account).map {|p| p.canonical(opts) } }
-    json_response
+    render_cross_origin_json
   end
 
   def create_project
     attrs = pick(params, :title, :description)
     attrs[:document_ids] = (params[:document_ids] || []).map(&:to_i)
     @response = {'project' => current_account.projects.create(attrs).canonical}
-    json_response
+    render_cross_origin_json
   end
 
   def update_project
@@ -162,7 +162,7 @@ class ApiController < ApplicationController
     current_project.set_documents( doc_ids )
     current_project.update_attributes data
     @response = {'project' => current_project.reload.canonical}
-    json_response
+    render_cross_origin_json
   end
 
   def destroy_project
@@ -179,18 +179,24 @@ class ApiController < ApplicationController
     resource_params = Rails.application.routes.recognize_path(url.path) rescue nil
     return not_found unless url.host == DC::CONFIG['server_root'] and resource_embeddable?(resource_params)
 
-    # create a serializer mock/class/struct for temporary use
-    resource_serializer_klass = Struct.new(:id, :js_url, :type)
-    # The JS URL should match the protocol used for the request, but
-    # the "canonical" resource URL can be our preferred one (HTTPS).
-    resource_js_url = url_for(resource_params.merge(:format => 'js'))
-
     controller_embed_map = {
       'annotations' => :note,
       'documents'   => :document,
+      'pages'       => :page
     }
 
-    resource = resource_serializer_klass.new(resource_params[:id], resource_js_url, controller_embed_map[resource_params[:controller]])
+    canonical_format_map = {
+      'annotations' => :js,
+      'documents'   => :js,
+      'pages'       => :html
+    }
+
+    resource_controller = resource_params[:controller]
+    resource_url = url_for(resource_params.merge(:format => canonical_format_map[resource_controller]))
+
+    # create a serializer mock/class/struct for temporary use
+    resource_serializer_klass = Struct.new(:id, :resource_url, :type)
+    resource = resource_serializer_klass.new(resource_params[:id], resource_url, controller_embed_map[resource_controller])
     
     config = pick(params, *DC::Embed.embed_klass(resource.type).config_keys)
     embed = DC::Embed.embed_for(resource, config, {:strategy => :oembed})
@@ -198,7 +204,7 @@ class ApiController < ApplicationController
     respond_to do |format|
       format.json do
         @response = embed.as_json.to_json
-        json_response
+        render_cross_origin_json
       end
       format.all do
         # Per the oEmbed spec, unrecognized formats should trigger a 501
@@ -225,7 +231,7 @@ class ApiController < ApplicationController
     resource_params[:id] and
     (
       (
-        resource_params[:controller] == "documents" and
+        %w[documents pages].include?(resource_params[:controller]) and
         resource_params[:id] =~ DC::Validators::SLUG # and
         # Document.accessible(nil, nil).exists?(params[:id].to_i) 
       ) or

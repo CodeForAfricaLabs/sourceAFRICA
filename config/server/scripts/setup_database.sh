@@ -49,9 +49,9 @@ cp /home/$USERNAME/sourceAFRICA/config/server/files/postgres/postgresql.conf /et
 /etc/init.d/postgresql reload
 sudo -u postgres createuser -s documentcloud
 sudo -u postgres psql -c "alter user documentcloud password '$PASSWORD_ARG' "
-sudo -u postgres createdb dcloud_$RAILS_ENVIRONMENT
-sudo -u postgres createdb dcloud_analytics_$RAILS_ENVIRONMENT
-sudo -u postgres createdb dcloud_crowd_$RAILS_ENVIRONMENT
+sudo -u postgres createdb -O documentcloud dcloud_$RAILS_ENVIRONMENT
+sudo -u postgres createdb -O documentcloud dcloud_analytics_$RAILS_ENVIRONMENT
+sudo -u postgres createdb -O documentcloud dcloud_crowd_$RAILS_ENVIRONMENT
 
 sudo -u postgres psql -f /home/$USERNAME/sourceAFRICA/db/analytics_structure.sql dcloud_analytics_$RAILS_ENVIRONMENT #2>&1|grep ERROR
 sudo su -l $USERNAME <<RAILS

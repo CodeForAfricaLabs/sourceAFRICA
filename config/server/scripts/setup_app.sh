@@ -27,17 +27,10 @@ bundle
 sudo npm install -g bower
 bower install --config.interactive=false
 
-# # Set password in environment.
-# sudo su -l ubuntu <<EOF
-# cd /home/ubuntu/sourceAFRICA && rails runner "ENV['PASSWORD']='hi'"
-# EOF
-
-
-# Don't forget to download your secrets file into sourceAFRICA/secrets!
+# Don't forget to download your secrets file into documentcloud/secrets!
 
 #./bin/rails runner -e production 'puts "You already have #{Document.count} documents"'
 
 # if you would like to use git hooks to automatically bundle the app's gem dependencies:
-
-# sudo ln -s /home/$USERNAME/sourceAFRICA/config/server/files/git-post-merge.sh /home/$USERNAME/sourceAFRICA/.git/hooks/post-merge
+sudo ln -s /home/$USERNAME/sourceaAFRICA/config/server/files/git-post-merge.sh /home/$USERNAME/sourceaAFRICA/.git/hooks/post-merge
 echo SETUP APP COMPLETED SUCCESSFULLY

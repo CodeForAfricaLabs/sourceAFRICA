@@ -16,13 +16,14 @@ class DocumentsController < ApplicationController
     Account.login_reviewer(params[:key], session, cookies) if params[:key]
     doc = current_document(true)
     return forbidden if doc.nil? && Document.exists?(params[:id].to_i)
-    return render :file => "#{Rails.root}/public/doc_404.html", :status => 404 unless doc
+    return not_found(:template => "#{Rails.root}/public/doc_404.html") unless doc
     respond_to do |format|
       format.html do
         @no_sidebar = (params[:sidebar] || '').match /no|false/
         populate_editor_data if current_account && current_organization
         return if date_requested?
         return if entity_requested?
+        make_oembeddable(doc)
       end
       format.pdf  { redirect_to(doc.pdf_url) }
       format.text { redirect_to(doc.full_text_url) }
@@ -30,7 +31,7 @@ class DocumentsController < ApplicationController
         @response = doc.canonical
         # TODO: https://github.com/documentcloud/documentcloud/issues/291
         # cache_page @response.to_json if doc.cacheable?
-        json_response
+        render_cross_origin_json
       end
       format.js do
         js = "DV.loadJSON(#{doc.canonical.to_json});"
@@ -117,10 +118,6 @@ class DocumentsController < ApplicationController
     modified_pages = JSON.parse(params[:modified_pages])
     doc.save_page_text(modified_pages) unless modified_pages.empty?
     json doc
-  end
-
-  def loader
-    render :action => 'embed_loader.js.erb', :content_type => Mime::Type.lookup_by_extension('js')
   end
 
   def entities
@@ -212,7 +209,7 @@ class DocumentsController < ApplicationController
     maybe_set_cors_headers
     return not_found unless current_page
     @response = current_page.text
-    return if jsonp_request?
+    return render_as_jsonp(@response) if has_callback?
     render :plain => @response
   end
 
@@ -227,7 +224,7 @@ class DocumentsController < ApplicationController
     return not_found unless doc
     pages     = Page.search_for_page_numbers(params[:q], doc)
     @response = {'query' => params[:q], 'results' => pages}
-    json_response
+    render_cross_origin_json
   end
 
   def preview

@@ -38,7 +38,7 @@ namespace :translations do
     SPREADSHEET_KEY = '1niK_gv0wsFPF2l3WvXprb6JVs6fZzFSERhTtrk42Ys4'
 
     client = Google::APIClient.new(
-      :application_name => 'DocumentCloud Translations',
+      :application_name => 'sourceAFRICA Translations',
       :application_version => '0.1',
     )
     auth = client.authorization
@@ -48,7 +48,7 @@ namespace :translations do
       "https://www.googleapis.com/auth/drive",
       "https://spreadsheets.google.com/feeds/"
     ]
-    auth.redirect_uri = "https://dev.dcloud.org/util/google_oauth_code"
+    auth.redirect_uri = "https://dev.sourceafrica.net/util/google_oauth_code"
     puts "For us to download translations, you have to:\n\n"
     puts "1. Go to a special Google authorization page\n"
     puts "2. Log in  if not already logged in\n"
