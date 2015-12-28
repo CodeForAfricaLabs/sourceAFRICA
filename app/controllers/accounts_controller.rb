@@ -7,6 +7,11 @@ class AccountsController < ApplicationController
   before_action :login_required, :except => [:enable, :reset, :logged_in]
   before_action :bouncer, :only => [:enable, :reset] if exclusive_access?
 
+  READONLY_ACTIONS = [
+    :index, :logged_in, :resend_welcome
+  ]
+  before_action :read_only_error, :except => READONLY_ACTIONS if read_only?
+
   # Enabling an account continues the second half of the signup process,
   # allowing the journalist to set their password, and logging them in.
   def enable
@@ -80,10 +85,10 @@ class AccountsController < ApplicationController
         :document_language=>current_organization.document_language
     })
     account = Account.lookup(account_attributes[:email]) || Account.create(account_attributes)
-    return json({:errors => account.errors.full_messages}, 409) unless account.valid?
+    return json(account) unless account.valid?
     # Find role for account in organization if it exists.
     membership_attributes = pick(params, :role, :concealed)
-    return json({:errors => "Role is required" }, 400) unless Account::ROLES.include? membership_attributes[:role]
+    return bad_request(:error => 'Role is required') unless Account::ROLES.include? membership_attributes[:role]
     membership = current_organization.role_of(account)
 
     # Create a membership if account has no existing role
@@ -93,9 +98,9 @@ class AccountsController < ApplicationController
     elsif membership.role == Account::REVIEWER # or if account is a reviewer in this organization
       account.upgrade_reviewer_to_real(current_organization, membership_attributes[:role])
     elsif membership.role == Account::DISABLED
-      return json({:errors => ['That email address belongs to an inactive account.']}, 409)
+      return bad_request(:error => 'That email address belongs to an inactive account.')
     else
-      return json({:errors => ['That email address is already part of this organization']}, 409)
+      return conflict(:error => 'That email address is already part of this organization.')
     end
 
     if account.pending?
@@ -110,10 +115,8 @@ class AccountsController < ApplicationController
   # Think about what the desired level of access control is.
   def update
     account = current_organization.accounts.find(params[:id])
-    return json(nil, 403) unless account && current_account.allowed_to_edit_account?(account, current_organization)
-    unless account.update_attributes pick(params, :first_name, :last_name, :email,:language, :document_language)
-      return json({ "errors" => account.errors.to_a.map{ |field, error| "#{field} #{error}" } }, 409)
-    end
+    return forbidden unless account && current_account.allowed_to_edit_account?(account, current_organization)
+    return json(account) unless account.update_attributes pick(params, :first_name, :last_name, :email,:language, :document_language)
     role = pick(params, :role)
     #account.update_attributes(role) if !role.empty? && current_account.admin?
     membership = current_organization.role_of(account)

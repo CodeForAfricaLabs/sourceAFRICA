@@ -1,6 +1,6 @@
 # Publicando Documentos, Páginas, Notas y Conjuntos de Documentos
 
-¿Esta listo para hacer que sus documentos sean públicos? Publique documentos individuales, incruste un conjunto de documentos que sus lectores puedan navegar, o integre una sola nota en cualquier documento.
+Listo para compartir sus documentos con los lectores? Ya sea por la incorporación de nuestro visor personalizado o usar oEmbed, puede publicar documentos individuales, integrar un conjunto de documentos que los lectores pueden navegar, o incrustar una sola página o una nota de cualquier documento.
 
 ## Contents
 
@@ -157,9 +157,17 @@ Los usuarios que publican a través de WordPress pueden instalar un plugin que p
 
 Descargue el plugin sourceAFRICA en su [página de plugin para WordPress](https://wordpress.org/plugins/sourceafrica/). Instalar y activar de acuerdo a las instrucciones.
 
-Una vez activado, puede incrustar recursos con un simple shortcode. También puede pasar parámetros adicionales para controlar el tamaño y los atributos del embed. Por ejemplo, si desea incrustar un documento a 800px de ancho, pre-desplazado a la página 3:
+Una vez activado, puede incrustar recursos con un shortcode, que se puede agarrar de la última etapa de nuestro asistente de embed. También puede pasar parámetros adicionales para controlar el tamaño y los atributos del embed.
+
+Por ejemplo, si desea incrustar un documento a 800px de ancho, pre-desplazado a la página 3:
 
     [sourceafrica url="https://sourceafrica.net/documents/282753-lefler-thesis.html" width="800" default_page="3"]
+
+Si usted no indica una anchura (o manualmente deshabilitar anchos de respuesta con `responsive="false"`), el documento automáticamente estrecho y ampliar para llenar el ancho disponible.
+
+Para una página, utilice cualquier URL específica de la página:
+
+    [sourceafrica url="https://sourceafrica.net/documents/282753-lefler-thesis.html#document/p22"]
 
 Para una nota, utilice cualquier URL-nota específica:
 
@@ -176,9 +184,13 @@ oEmbed es un estándar Web para proporcionar el contenido embebido en un sitio a
 
     https://sourceafrica.net/documents/1234-document-name.html
 
+### Ejemplo página URL para oEmbed
+
+    https://sourceafrica.net/documents/1234-document-name/pages/2.html
+
 ### Ejemplo URL nota para oEmbed
 
-    https://sourceafrica.net/documents/1234-document-name.html#document/p2/a208505
+    https://sourceafrica.net/documents/1234-document-name/annotations/220666.html
 
 # Preguntas?
 

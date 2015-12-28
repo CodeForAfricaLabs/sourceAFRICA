@@ -1,6 +1,6 @@
 # The sourceAFRICA API
 
-sourceAFRICA's API allows users to search, upload, edit, and organize documents. In addition, an oEmbed service provides easy embedding of documents.
+sourceAFRICA's API allows users to search, upload, edit, and organize documents. In addition, an oEmbed service provides easy integration of embedding documents, pages and notes.
 
 ## Contents
 
@@ -20,6 +20,7 @@ sourceAFRICA's API allows users to search, upload, edit, and organize documents.
   * [Delete](#delete-project)
 * [oEmbed](#oembed):
   * [Documents](#oembed-documents)
+  * [Pages](#oembed-pages)
   * [Notes](#oembed-notes)
 * [API Wrappers](#api-wrappers)
 
@@ -298,7 +299,7 @@ Generate an embed code for a resource (a document or a note) using our [oEmbed](
 
 Parameter        | Description           |  Example
 -----------------|-----------------------|--------------
-url              | **(required)** URL-escaped document to embed     | https%3A//sourceafrica.net/ documents/doc-name.html
+url              | **(required)** URL-escaped document to embed     | https%3A%2F%2Fsourceafrica.net%2Fdocuments%2Fdoc-name.html
 maxheight        | (optional) The viewer's height (pixels)    | 750
 maxwidth         | (optional) The viewer's width (pixels)     | 600
 container        | (optional) Specify the DOM container in which to embed the viewer | #my-document-div
@@ -313,22 +314,33 @@ responsive_offset| (optional) Specify header height (pixels)    | 4
 default_note     | (optional) Open the document to a specific note. An integer representing the note ID | 214279
 default_page     | (optional) Open the document to a specific page   | 3
 
+<a name="oembed-pages"></a>
+### Example pages request
+
+    /api/oembed.json?url=https%3A%2F%2Fsourceafrica.net%2Fdocuments%2Fdoc-name%2Fpages%2F5.html
+
+### Parameters for pages
+
+Parameter        | Description           |  Example
+-----------------|-----------------------|--------------
+url              | **(required)** URL-escaped document page to embed     | https%3A%2F%2Fsourceafrica.net%2Fdocuments%2Fdoc-name%2Fpages%2F5.html
+
 <a name="oembed-notes"></a>
 ### Example note request
 
-    /api/oembed.json?url=https%3A%2F%2Fsourceafrica.net%2Fdocuments%2Fdoc-name%2Fannotations%2F123.js
+    /api/oembed.json?url=https%3A%2F%2Fsourceafrica.net%2Fdocuments%2Fdoc-name%2Fannotations%2F220666.html
 
 ### Parameters for notes
 
 Parameter        | Description           |  Example
 -----------------|-----------------------|--------------
-url              | **(required)** URL-escaped document to embed     | https%3A//sourceafrica.net/ documents/doc-name.html
+url              | **(required)** URL-escaped document to embed     | https%3A%2F%2Fsourceafrica.net%2Fdocuments%2Fdoc-name%2Fannotations%2F220666.html
 container        | (optional) Specify the DOM container in which to embed the viewer | #my-document-div
 
 <a name="api-wrappers"></a>
 # API Wrappers
 
-The open-source community has contributed several helpful libraries for interacting with DocumentCloud's API. See their documentation for examples and more information:
+The open-source community has contributed several helpful libraries for interacting with sourceAFRICA's/DocumentCloud's API. See their documentation for examples and more information:
 
 **Python:** [python-documentcloud](http://python-documentcloud.readthedocs.org/en/latest/)
 

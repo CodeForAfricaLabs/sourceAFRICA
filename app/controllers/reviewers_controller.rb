@@ -3,6 +3,11 @@ class ReviewersController < ApplicationController
 
   before_action :login_required, :load_documents
 
+  READONLY_ACTIONS = [
+    :index, :preview_email, :send_email
+  ]
+  before_action :read_only_error, :except => READONLY_ACTIONS if read_only?
+
   def index
     reviewers = {}
     @documents.each {|doc| reviewers[doc.id] = doc.reviewers }
@@ -12,8 +17,8 @@ class ReviewersController < ApplicationController
   def create
     account = Account.lookup(params[:email])
     if account
-      return json(nil, 409) if account.id == current_account.id
-      return json({:errors => ['The account associated with that email address has been disabled.']}, 409) if account.disabled?( current_organization )
+      return conflict if account.id == current_account.id
+      return bad_request(:error => 'The account associated with that email address has been disabled.') if account.disabled?( current_organization )
     else
       account = Account.create( pick(params, :first_name, :last_name, :email) )
       unless account.new_record?
@@ -57,10 +62,7 @@ class ReviewersController < ApplicationController
 
   def load_documents
     @documents = Document.accessible(current_account, current_organization).find(params[:document_ids])
-    if @documents.any? {|d| !current_account.allowed_to_edit?(d) }
-      json nil, 403
-      false
-    end
+    return forbidden if @documents.any? {|d| !current_account.allowed_to_edit?(d) }
   end
 
 end

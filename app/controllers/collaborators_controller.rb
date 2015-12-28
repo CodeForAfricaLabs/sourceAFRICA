@@ -1,13 +1,16 @@
 class CollaboratorsController < ApplicationController
 
   before_action :login_required
+  before_action :read_only_error if read_only?
 
   def create
     account = Account.lookup(pick(params, :email)[:email])
-    return json(nil, 404) if !account || account.id == current_account.id
-    return json({:errors => ['That account has been disabled.']}, 409) if account.role == Account::DISABLED
-    success = current_project.add_collaborator account
-    return json(account, 409) unless success
+    return not_found if !account
+    return conflict if account.id == current_account.id
+    return bad_request(:error => 'That account has been disabled.') if account.role == Account::DISABLED
+    # TODO: If we're not using `account.errors`, can be reduced to 
+    # `bad_request` [JR]
+    return json(account, 400) unless current_project.add_collaborator account
     json account.to_json(:include_organization => true)
   end
 

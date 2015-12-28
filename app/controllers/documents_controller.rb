@@ -11,12 +11,18 @@ class DocumentsController < ApplicationController
 
   SIZE_EXTRACTOR        = /-(\w+)\Z/
   PAGE_NUMBER_EXTRACTOR = /.*-p(\d+)/
+  
+  READONLY_ACTIONS = [
+    :show, :entities, :entity, :dates, :occurence, :mentions, :status, :per_page_note_counts, :queue_length,
+    :send_pdf, :send_page_image, :send_full_text, :send_page_text, :search, :preview
+  ]
+  before_action :read_only_error, :except => READONLY_ACTIONS if read_only?
 
   def show
     Account.login_reviewer(params[:key], session, cookies) if params[:key]
     doc = current_document(true)
     return forbidden if doc.nil? && Document.exists?(params[:id].to_i)
-    return not_found(:template => "#{Rails.root}/public/doc_404.html") unless doc
+    return not_found(:template => "doc_404") unless doc
     respond_to do |format|
       format.html do
         @no_sidebar = (params[:sidebar] || '').match /no|false/
@@ -51,8 +57,7 @@ class DocumentsController < ApplicationController
     return not_found unless doc = current_document(true)
     attrs = pick(params, :access, :title, :description, :source,
                          :related_article, :remote_url, :publish_at, :data, :language)
-    success = doc.secure_update attrs, current_account
-    return json(doc, 403) unless success
+    return json(doc, 403) unless doc.secure_update attrs, current_account
 
     clear_current_document_cache
     Document.populate_annotation_counts(current_account, [doc])
@@ -61,11 +66,7 @@ class DocumentsController < ApplicationController
 
   def destroy
     return not_found unless doc = current_document(true)
-    if !current_account.owns_or_collaborates?(doc)
-      doc.errors.add(:base, "You don't have permission to delete the document." )
-      return json(doc, 403)
-    end
-
+    return forbidden(:error => "You don't have permission to delete the document.") unless current_account.owns_or_collaborates?(doc)
     clear_current_document_cache
     doc.destroy
     json nil
@@ -85,14 +86,14 @@ class DocumentsController < ApplicationController
 
   def reorder_pages
     return not_found unless doc = current_document(true)
-    return json(nil, 409) if params[:page_order].length != doc.page_count
+    return conflict if params[:page_order].length != doc.page_count
     doc.reorder_pages params[:page_order].map {|p| p.to_i }
     json doc
   end
 
   def upload_insert_document
     return not_found unless doc = current_document(true)
-    return json(nil, 409) unless params[:file] && params[:document_number] && (params[:insert_page_at] || params[:replace_pages_start])
+    return conflict unless params[:file] && params[:document_number] && (params[:insert_page_at] || params[:replace_pages_start])
 
     DC::Import::PDFWrangler.new.ensure_pdf(params[:file], params[:Filename]) do |path|
       DC::Store::AssetStore.new.save_insert_pdf(doc, path, params[:document_number]+'.pdf')
@@ -182,7 +183,7 @@ class DocumentsController < ApplicationController
 
   def reprocess_text
     return not_found unless doc = current_document(true)
-    return json(nil, 403) unless current_account.allowed_to_edit?(doc)
+    return forbidden unless current_account.allowed_to_edit?(doc)
     doc.reprocess_text(params[:ocr])
     json nil
   end

@@ -6,6 +6,11 @@ class AnnotationsController < ApplicationController
   before_action :login_required, :except => [:index, :show, :print, :cors_options]
   skip_before_action :verify_authenticity_token
 
+  READONLY_ACTIONS = [
+    :index, :show, :print, :cors_options
+  ]
+  before_action :read_only_error, :except => READONLY_ACTIONS if read_only?
+
   # In the workspace, request a listing of annotations.
   def index
     annotations = current_document.annotations_with_authors(current_account)
@@ -65,10 +70,7 @@ class AnnotationsController < ApplicationController
   def update
     maybe_set_cors_headers
     return not_found unless anno = current_annotation
-    if !current_account.allowed_to_edit?(anno)
-      anno.errors.add(:base, "You don't have permission to update the note.")
-      return json(anno, 403)
-    end
+    return forbidden(:error => "You don't have permission to update the note.") unless current_account.allowed_to_edit?(anno)
     attrs = pick(params, :title, :content, :access)
     attrs[:access] = DC::Access::ACCESS_MAP[attrs[:access].to_sym]
     anno.update_attributes(attrs)
@@ -81,10 +83,7 @@ class AnnotationsController < ApplicationController
   def destroy
     maybe_set_cors_headers
     return not_found unless anno = current_annotation
-    if ! current_account.allowed_to_edit?(anno)
-      anno.errors.add(:base, "You don't have permission to delete the note.")
-      return json(anno, 403)
-    end
+    return forbidden(:error => "You don't have permission to delete the note.") unless current_account.allowed_to_edit?(anno)
     anno.destroy
     expire_pages current_document.cache_paths if current_document.cacheable?
     json nil

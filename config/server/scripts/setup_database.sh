@@ -55,7 +55,7 @@ sudo -u postgres createdb -O documentcloud dcloud_crowd_$RAILS_ENVIRONMENT
 
 sudo -u postgres psql -f /home/$USERNAME/sourceAFRICA/db/analytics_structure.sql dcloud_analytics_$RAILS_ENVIRONMENT #2>&1|grep ERROR
 sudo su -l $USERNAME <<RAILS
-cd /home/$USERNAME/documentcloud
+cd /home/$USERNAME/sourceAFRICA
 RAILS_ENV=$RAILS_ENVIRONMENT rake db:structure:load
 RAILS_ENV=$RAILS_ENVIRONMENT rake db:migrate
 RAILS

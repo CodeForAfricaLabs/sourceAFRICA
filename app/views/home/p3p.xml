@@ -13,7 +13,7 @@
     <ENTITY>
     <DATA-GROUP>
 <DATA ref="#business.contact-info.telecom.telephone.number">TBD</DATA>
-<DATA ref="#business.contact-info.online.email">support@codeforafirca.org</DATA>
+<DATA ref="#business.contact-info.online.email">support@codeforafrica.org</DATA>
 <DATA ref="#business.contact-info.online.uri">http://www.codeforafrica.org/</DATA>
 <DATA ref="#business.contact-info.postal.organization">Code for Africa</DATA>
 <DATA ref="#business.contact-info.postal.street">Nairobi Startup Garage
@@ -70,7 +70,7 @@ Data collected from all Web users: access logs, and search strings (if entered).
 
     <!-- Consequence -->
     <CONSEQUENCE>
-Cookies are used to track visitors to our site, 
+Cookies are used to track visitors to our site,
 so we can better understand what portions of our site best serve you.</CONSEQUENCE>
 
     <!-- Use (purpose) -->

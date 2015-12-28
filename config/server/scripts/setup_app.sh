@@ -27,7 +27,7 @@ bundle
 sudo npm install -g bower
 bower install --config.interactive=false
 
-# Don't forget to download your secrets file into documentcloud/secrets!
+# Don't forget to download your secrets file into sourceAFRICA/secrets!
 
 #./bin/rails runner -e production 'puts "You already have #{Document.count} documents"'
 

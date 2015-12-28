@@ -17,15 +17,14 @@ staging:
   cloud_crowd_server:  <%= secrets['db_host'] %>:8080
   cloud_crowd_console: staging.sourceafrica.net:8080
   server_root:         staging.sourceafrica.net
-  asset_root:          s3.amazonaws.com/sourceafrica_staging
+  asset_root:          s3-eu-west-1.amazonaws.com/s3.staging.sourceafrica.net
 
 production:
   <<: *defaults
   cloud_crowd_server:  <%= secrets['db_host'] %>:8080
   cloud_crowd_console: ec2-52-16-133-220.eu-west-1.compute.amazonaws.com:8080
   server_root:         ec2-52-16-133-220.eu-west-1.compute.amazonaws.com
-  asset_root:          s3-us-east-1.amazonaws.com/dcloud-cfafrica
+  asset_root:          s3.amazonaws.com/dcloud-cfafrica
   db_volume_id:        vol-3248332d
-
 test:
   <<: *defaults

@@ -4,6 +4,12 @@ class ApiController < ApplicationController
   include DC::Search::Controller
 
   layout 'workspace'
+  
+  READONLY_ACTIONS = [
+    :index, :search, :documents, :pending, :notes, :entities, :project, :projects, :oembed,
+    :cors_options, :logger
+  ]
+  before_action :read_only_error, :except => READONLY_ACTIONS if read_only?
 
   before_action :bouncer if exclusive_access?
   before_action :prefer_secure, :only => [:index]
@@ -48,17 +54,11 @@ class ApiController < ApplicationController
       return bad_request unless params[:file] && params[:title] && current_account
       is_file = params[:file].respond_to?(:path)
       if !is_file && !(URI.parse(params[:file]) rescue nil)
-        return render({
-          :json => {:message => "The 'file' parameter must be the contents of a file or a URL."},
-          :status => 400
-        })
+        return bad_request(:error => "The 'file' parameter must be the contents of a file or a URL.")
       end
       
       if params[:file_hash] && Document.accessible(current_account, current_organization).exists?(:file_hash=>params[:file_hash])
-        return render({ 
-          :status=>409, 
-          :json => "This file is a duplicate of an existing one you have access to" 
-        })
+        return conflict(:error => "This file is a duplicate of an existing one you have access to.")
       end
       params[:url] = params[:file] unless is_file
       @response = Document.upload(params, current_account, current_organization).canonical
@@ -115,8 +115,7 @@ class ApiController < ApplicationController
     return not_found unless doc = current_document
     attrs = pick(params, :access, :title, :description, :source, :related_article, :published_url, :data)
     attrs[:access] = ACCESS_MAP[attrs[:access].to_sym] if attrs[:access]
-    success = doc.secure_update attrs, current_account
-    return json(doc, 403) unless success
+    return json(doc, 403) unless doc.secure_update attrs, current_account
     expire_pages doc.cache_paths if doc.cacheable?
     @response = {'document' => doc.canonical(:access => true, :sections => true, :annotations => true)}
     render_cross_origin_json
