@@ -54,7 +54,7 @@ aws s3 cp s3://s3.sourceafrica.net/backups/dcloud_analytics_production/$DATE.dum
 # restoring takes considerably longer.
 # As of Jan 3rd, 2015 - 92 mins for production, 28 for analytics
 pg_restore -Udocumentcloud -d dcloud_production /srv/pg/$DATE-production.dump
-pg_restore -Udocumentcloud -d dcloud_analytics_production /srv/pg/$DATE-production.dump
+pg_restore -Udocumentcloud -d dcloud_analytics_production /srv/pg/$DATE-analytics.dump
 
 # cleanup the backup dumps
 rm /srv/pg/*dump
