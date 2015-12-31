@@ -1,0 +1,21 @@
+current directory: /home/ubuntu/sourceAFRICA/vendor/cache/gems/unf_ext-0.0.7.1/ext/unf_ext
+/opt/rubies/ruby-2.1.3/bin/ruby -r ./siteconf20151210-3328-1qaabym.rb extconf.rb
+checking for main() in -lstdc++... yes
+creating Makefile
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /home/ubuntu/sourceAFRICA/vendor/cache/extensions/x86_64-linux/2.1.0-static/unf_ext-0.0.7.1/mkmf.log
+
+current directory: /home/ubuntu/sourceAFRICA/vendor/cache/gems/unf_ext-0.0.7.1/ext/unf_ext
+make "DESTDIR=" clean
+
+current directory: /home/ubuntu/sourceAFRICA/vendor/cache/gems/unf_ext-0.0.7.1/ext/unf_ext
+make "DESTDIR="
+compiling unf.cc
+linking shared-object unf_ext.so
+
+current directory: /home/ubuntu/sourceAFRICA/vendor/cache/gems/unf_ext-0.0.7.1/ext/unf_ext
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 unf_ext.so ./.gem.20151210-3328-1h42qpd
+installing default unf_ext libraries
