@@ -1,6 +1,6 @@
 production:
   solr:
-    hostname: ec2-52-16-133-220.eu-west-1.compute.amazonaws.com 
+    hostname: ip-172-31-0-170.eu-west-1.compute.internal
     port: 7377
     path: /solr/collection1
     read_timeout: 5
@@ -28,7 +28,7 @@ test:
 
 staging:
   solr:
-    hostname: ip-10-181-70-72.ec2.internal
+    hostname: ip-172-31-0-170.eu-west-1.compute.internal
     port: 7377
     log_level: WARNING
     pid_dir: tmp/pids
