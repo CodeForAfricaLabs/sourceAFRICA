@@ -1,6 +1,7 @@
+<% secrets = YAML.load_file('./secrets/secrets.yml')[ENV['RAILS_ENV'] || "development"] %>
 production:
   solr:
-    hostname: ip-172-31-0-170.eu-west-1.compute.internal
+    hostname: <%= secrets['solr_host'] %>
     port: 7377
     path: /solr/collection1
     read_timeout: 5
