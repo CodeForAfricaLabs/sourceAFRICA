@@ -38,6 +38,7 @@ class DocumentImport < DocumentAction
     if duplicate = document.duplicates.first
       Rails.logger.info "Duplicate found, copying pdf"
       asset_store.copy_pdf( duplicate, document, access )
+      document.update_attributes(page_count: duplicate.page_count) if build_pages
     else
       Rails.logger.info "Building PDF"
       File.open(file, 'r') do |f|
@@ -83,7 +84,7 @@ class DocumentImport < DocumentAction
 
   def process_images
     if duplicate = document.duplicates.first
-      @page_aspect_ratios = duplicate.pages.order(:page_number).pluck(:aspect_ratio)
+      @page_aspect_ratios = duplicate.pages.order(:page_number).pluck(:aspect_ratio).map{ |n| n.nil? ? 0 : n }
       asset_store.copy_images( duplicate, document, access )
     else
       Docsplit.extract_images(@pdf, :format => :gif, :size => Page::IMAGE_SIZES.values, :rolling => true, :output => 'images')

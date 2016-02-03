@@ -30,3 +30,5 @@ public/javascripts/vendor/*/
 .vagrant
 .tm_properties
 Vagrantfile
+
+public/javascripts/rates.json
