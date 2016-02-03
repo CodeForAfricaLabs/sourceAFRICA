@@ -2,10 +2,10 @@
 class LifecycleMailer < ActionMailer::Base
   include ActionView::Helpers::TextHelper # pluralize and friends
   
-  SUPPORT    = 'support@codeforafrica.org'
-  EXCEPTIONS = 'exceptions@sourceafrica.net'
-  NO_REPLY   = 'no-reply@sourceafrica.net'
-  INFO       = 'info@sourceafrica.net'
+  SUPPORT    = 'robindcloud@gmail.com'
+  EXCEPTIONS = 'robindcloud@gmail.com'
+  NO_REPLY   = 'robindcloud@gmail.com'
+  INFO       = 'robindcloud@gmail.com'
 
   default from: SUPPORT
 
