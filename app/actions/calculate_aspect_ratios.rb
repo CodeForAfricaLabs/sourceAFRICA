@@ -1,3 +1,5 @@
+require 'logger'
+
 class CalculateAspectRatios < CloudCrowd::Action
 
   def process
@@ -29,7 +31,7 @@ class CalculateAspectRatios < CloudCrowd::Action
     #log documents_finished_processing
     log_file = File.open("log/aspect_logger.log", "a")
     Logger.new  CalculateAspectRatios.new(STDOUT, log_file)
-    
+
     query_template = <<-QUERY
     UPDATE pages
       SET aspect_ratio = input.aspect_ratio
