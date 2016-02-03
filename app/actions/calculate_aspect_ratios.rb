@@ -1,5 +1,3 @@
-require 'logger'
-
 class CalculateAspectRatios < CloudCrowd::Action
 
   def process
@@ -27,7 +25,6 @@ class CalculateAspectRatios < CloudCrowd::Action
   private
   def save_page_aspect_ratios!
     ids = document.pages.order(:page_number).pluck(:id)
-    byebug
     #log documents_finished_processing
     logger = Logger.new(STDOUT)
     logger = Logger.new('log/aspect_logger.log')
