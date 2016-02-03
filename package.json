@@ -1,0 +1,27 @@
+{
+  "name": "sourceafrica",
+  "version": "1.0.0",
+  "description": "sourceAFRICA is Africa's premier repository for 'actionable documents'.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "bower": "^1.7.7",
+    "request": "^2.69.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeForAfrica/sourceAFRICA.git"
+  },
+  "author": "",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/CodeForAfrica/sourceAFRICA/issues"
+  },
+  "homepage": "https://github.com/CodeForAfrica/sourceAFRICA#readme"
+}
