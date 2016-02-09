@@ -1,8 +1,8 @@
 <% secrets = YAML.load_file('./secrets/secrets.yml')[ENV['RAILS_ENV'] || "development"] %>
 defaults: &defaults
-  cloud_crowd_server:   http://ec2-52-19-66-195.eu-west-1.compute.amazonaws.com:8080
-  cloud_crowd_console:  http://ec2-52-19-66-195.eu-west-1.compute.amazonaws.com:8080
-  server_root:          ec2-52-19-66-195.eu-west-1.compute.amazonaws.com
+  cloud_crowd_server:   http://ec2-52-48-89-100.eu-west-1.compute.amazonaws.com:8080
+  cloud_crowd_console:  http://ec2-52-48-89-100.eu-west-1.compute.amazonaws.com:8080
+  server_root:          ec2-52-48-89-100.eu-west-1.compute.amazonaws.com
   asset_root:           s3-eu-west-1.amazonaws.com/dcloud.cfafrica  
   large_file_storage:   /mnt/large_files
   aws_region:           eu-west-1
@@ -22,8 +22,8 @@ staging:
 production:
   <<: *defaults
   cloud_crowd_server:  <%= secrets['db_host'] %>:8080
-  cloud_crowd_console: ec2-52-19-66-195.eu-west-1.compute.amazonaws.com:8080
-  server_root:         ec2-52-19-66-195.eu-west-1.compute.amazonaws.com
+  cloud_crowd_console: ec2-52-48-89-100.eu-west-1.compute.amazonaws.com:8080
+  server_root:         ec2-52-48-89-100.eu-west-1.compute.amazonaws.com
   asset_root:          s3-eu-west-1.amazonaws.com/dcloud.cfafrica
 
 test:
