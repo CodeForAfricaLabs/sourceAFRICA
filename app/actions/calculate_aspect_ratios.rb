@@ -1,5 +1,5 @@
 class CalculateAspectRatios < CloudCrowd::Action
-  
+
   def process
     errors = []
 
@@ -17,17 +17,22 @@ class CalculateAspectRatios < CloudCrowd::Action
         0
       end
     end
-    
+
     save_page_aspect_ratios!
     errors
   end
-  
+
   private
   def save_page_aspect_ratios!
     ids = document.pages.order(:page_number).pluck(:id)
-    
+    #log documents_finished_processing
+    logger = Logger.new(STDOUT)
+    logger = Logger.new('log/aspect_logger.log')
+    log_file = File.open('logger', File::WRONLY | File::APPEND)
+    logger.close
+
     query_template = <<-QUERY
-    UPDATE pages 
+    UPDATE pages
       SET aspect_ratio = input.aspect_ratio
       FROM (SELECT unnest(ARRAY[?]) as id, unnest(ARRAY[?]) as aspect_ratio) AS input
       WHERE pages.id = input.id
@@ -35,7 +40,7 @@ class CalculateAspectRatios < CloudCrowd::Action
     query = Page.send(:replace_bind_variables, query_template, [ids, @page_aspect_ratios])
     Page.connection.execute(query)
   end
-  
+
   def document
     @document ||= Document.find(options['id'])
   end
@@ -43,5 +48,5 @@ class CalculateAspectRatios < CloudCrowd::Action
   def asset_store
     @asset_store ||= DC::Store::AssetStore.new
   end
-  
+
 end
