@@ -119,18 +119,19 @@ dc.ui.PageEmbedDialog = dc.ui.Dialog.extend({
   },
 
   _generateEmbedCode : function(embedOptions) {
-    embedOptions = JSON.stringify(this._embedOptions(embedOptions));
     return JST['workspace/page_embed_code']({
       doc:               this.doc,
       docTitle:          this.doc.get('title'),
       docContributor:    this.doc.get('account_name'),
       docOrganization:   this.doc.get('organization_name'),
+      docContributorDocumentsUrl:  this.doc.get('account_documents_url'),
+      docOrganizationDocumentsUrl: this.doc.get('organization_documents_url'),
       pagePermalink:     this._pagePermalink(),
       pageNumber:        this._selectedPage,
       pageImageUrl:      this._pageImageUrl(this._selectedPage),
       pageImageLargeUrl: this._pageImageUrl(this._selectedPage, 'large'),
       pageTextUrl:       this._pageTextUrl(this._selectedPage),
-      options:           embedOptions
+      optionsJSON:       JSON.stringify(this._embedOptions(embedOptions))
     });
   },
 
@@ -144,14 +145,13 @@ dc.ui.PageEmbedDialog = dc.ui.Dialog.extend({
     }));
   },
 
-  // TODO: Replace contextual page URL with canonical
   _pagePermalink: function() {
-    return this.doc.get('document_viewer_url') + '#document/p' + this._selectedPage;
+    return (this.doc.get('canonical_url') + '#document/p' + this._selectedPage).replace('http:', 'https:');
   },
 
   _pageImageUrl: function(pageNumber, size) {
     size = size || 'normal';
-    return this.doc.get('page_image_url').replace('{page}', pageNumber).replace('{size}', size);
+    return this.doc.get('page_image_url').replace('{page}', pageNumber).replace('{size}', size).replace(/^https?:/, '');
   },
 
   _pageTextUrl: function(pageNumber) {
