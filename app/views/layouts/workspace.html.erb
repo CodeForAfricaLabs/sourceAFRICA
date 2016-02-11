@@ -14,8 +14,8 @@
     <script>window.location = '/workspace/upgrade';</script>
   <![endif]-->
   <!--[if lt IE 9]>
-    <%= include_stylesheets :ie_only, :embed_assets => false %>
-    <%= include_javascripts :ie_only %>
+    <%= include_stylesheets :lt_ie_9, :embed_assets => false %>
+    <%= include_javascripts :lt_ie_9 %>
   <![endif]-->
   <% if Rails.env.development? %>
     <%= include_javascripts :dev_only %>
@@ -42,7 +42,7 @@
       <% if @current_account %>
         <a href="/logout" class="text_link"><%= DC.t( @current_account, 'log_out') %></a>
       <% else %>
-        <a href="/contact" class="text_link">Join</a>
+        <a href="/apply" class="text_link">Join</a>
         &nbsp;/&nbsp;
         <a href="<%= DC.server_root(:force_ssl => true) %>/login" class="text_link">Log In</a>
       <% end %>

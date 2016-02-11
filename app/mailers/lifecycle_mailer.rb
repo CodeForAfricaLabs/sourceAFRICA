@@ -70,6 +70,7 @@ class LifecycleMailer < ActionMailer::Base
     })
   end
 
+<<<<<<< HEAD
   def verification_request_notification(verification_request)
     @request = verification_request
     mail({
@@ -80,6 +81,8 @@ class LifecycleMailer < ActionMailer::Base
       })
   end
 
+=======
+>>>>>>> dc-master
   # When someone sends a message through the "Contact Us" form, deliver it to
   # us via email.
   def contact_us(account, params)

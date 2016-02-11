@@ -168,7 +168,6 @@ class AdminController < ApplicationController
       end
     end
   end
-  
   def organization_statistics
     org = case
     when params[:slug]
@@ -177,7 +176,6 @@ class AdminController < ApplicationController
       Organization.find(params[:id])
     end
     return not_found unless org
-    
     respond_to do |format|
       format.json do
         @response = Document.upload_statistics(:organization, org.id)
@@ -187,7 +185,6 @@ class AdminController < ApplicationController
       format.any{ redirect_to :format => :html, :params => pick(params, :id, :slug) }
     end
   end
-  
   def account_statistics
     account = case
     when params[:email]
