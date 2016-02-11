@@ -2,10 +2,10 @@
 class LifecycleMailer < ActionMailer::Base
   include ActionView::Helpers::TextHelper # pluralize and friends
   
-  SUPPORT    = 'robindcloud@gmail.com'
-  EXCEPTIONS = 'robindcloud@gmail.com'
-  NO_REPLY   = 'robindcloud@gmail.com'
-  INFO       = 'robindcloud@gmail.com'
+  SUPPORT    = 'support@codeforafrica.org'
+  EXCEPTIONS = 'exceptions@sourceafrica.net'
+  NO_REPLY   = 'no-reply@sourceafrica.net'
+  INFO       = 'info@sourceafrica.net'
 
   default from: SUPPORT
 
@@ -70,7 +70,6 @@ class LifecycleMailer < ActionMailer::Base
     })
   end
 
-<<<<<<< HEAD
   def verification_request_notification(verification_request)
     @request = verification_request
     mail({
@@ -81,8 +80,6 @@ class LifecycleMailer < ActionMailer::Base
       })
   end
 
-=======
->>>>>>> dc-master
   # When someone sends a message through the "Contact Us" form, deliver it to
   # us via email.
   def contact_us(account, params)

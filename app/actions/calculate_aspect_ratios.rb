@@ -25,12 +25,6 @@ class CalculateAspectRatios < CloudCrowd::Action
   private
   def save_page_aspect_ratios!
     ids = document.pages.order(:page_number).pluck(:id)
-    #log documents_finished_processing
-    logger = Logger.new(STDOUT)
-    logger = Logger.new('log/aspect_logger.log')
-    log_file = File.open('logger', File::WRONLY | File::APPEND)
-    logger.close
-
     query_template = <<-QUERY
     UPDATE pages
       SET aspect_ratio = input.aspect_ratio
