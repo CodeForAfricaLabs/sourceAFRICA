@@ -89,7 +89,6 @@ In the dialog box that appears next, select the number of the page to embed. A p
 
 Click "Next" to move to Step 2 and generate the HTML embed code. Here is a sample of what it will look like:
 
-<<<<<<< HEAD
     <div class="DC-embed" data-version="1.1">
       <div style="font-size:10pt;line-height:14pt;">
         Page 57 of <a class="DC-embed-resource" href="https://www.documentcloud.org/documents/282753-lefler-thesis.html#document/p57" title="View entire Lefler Thesis on DocumentCloud in new window or tab" target="_blank">Lefler Thesis</a>
@@ -103,14 +102,8 @@ Click "Next" to move to Step 2 and generate the HTML embed code. Here is a sampl
         <a href="https://www.documentcloud.org/documents/282753-lefler-thesis.html#document/p57" title="View entire Lefler Thesis on DocumentCloud in new window or tab" target="_blank">View document</a> or
         <a href="https://www.documentcloud.org/documents/282753/pages/lefler-thesis-p57.txt" title="Read the text of page 57 of Lefler Thesis on DocumentCloud in new window or tab" target="_blank">read text</a>
       </div>
-=======
-    <div class="DC-embed" data-version="1.0" style="font-size:10pt">
-      <p><a class="DC-embed-resource" href="https://sourceafrica.net/documents/19789-everest.html#document/p3" title="View page 3 of A Guide to the Literature on Everest up on sourceAFRICA in new window or tab" target="_blank">Page 3 of A Guide to the Literature on Everest</a></p>
-      <img src="//sourceafrica.net/documents/19789/pages/everest-p3-normal.gif" alt="Page 3 of A Guide to the Literature on Everest" style="border:1px solid #ccc;-webkit-box-sizing:border-box;box-sizing:border-box;width:100%;max-width:700px;">
-      <p>Contributed to sourceAFRICA by David Lemayian of Code for Africa &bull; <a href="https://sourceafrica.net/documents/19789/pages/everest-p3.txt" title="View text of page 3 of A Guide to the Literature on Everest in a new window or tab" target="_blank">View page as text</a></p>
->>>>>>> 7b03b4b... merge branch 'dc-master'
     </div>
-    <script src="//assets.sourceafrica.net/embed/loader/enhance.js"></script>
+    <script src="//assets.documentcloud.org/embed/loader/enhance.js"></script>
 
 Copy and paste the HTML to your site to publish the page.
 
@@ -150,7 +143,7 @@ To get started, find a set of documents you wish to embed -- either by selecting
 Once you're comfortable with your settings, preview the embedded document set. If the preview looks good, copy and paste the HTML embed code. Here's an example of what the embed code should look like:
 
     <div id="DC-search-projectid-8-epa-flouride"></div>
-    <script src="//assets.sourceafrica.net/embed/loader.js"></script>
+    <script src="//assets.documentcloud.org/embed/loader.js"></script>
     <script>
       dc.embed.load('https://www.documentcloud.org/search/embed/', {
         q: "projectid: 8-epa-flouride",

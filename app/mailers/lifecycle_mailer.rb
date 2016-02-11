@@ -1,14 +1,6 @@
 # Responsible for sending out lifecycle emails to active accounts.
 class LifecycleMailer < ActionMailer::Base
   include ActionView::Helpers::TextHelper # pluralize and friends
-<<<<<<< HEAD
-=======
-  
-  SUPPORT    = 'support@codeforafrica.org'
-  EXCEPTIONS = 'exceptions@sourceafrica.net'
-  NO_REPLY   = 'no-reply@sourceafrica.net'
-  INFO       = 'info@sourceafrica.net'
->>>>>>> 7b03b4b... merge branch 'dc-master'
 
   SUPPORT    = 'support@documentcloud.org'
   EXCEPTIONS = 'exceptions@documentcloud.org'
@@ -77,19 +69,6 @@ class LifecycleMailer < ActionMailer::Base
     })
   end
 
-<<<<<<< HEAD
-=======
-  def verification_request_notification(verification_request)
-    @request = verification_request
-    mail({
-        :subject  => "New sourceAFRICA account request from #{verification_request.requester_full_name} (#{verification_request.organization_name}) in #{Rails.env}",
-        :from     => NO_REPLY,
-        :reply_to => verification_request.requester_email,
-        :to       => INFO
-      })
-  end
-
->>>>>>> 7b03b4b... merge branch 'dc-master'
   # When someone sends a message through the "Contact Us" form, deliver it to
   # us via email.
   def contact_us(account, params)
