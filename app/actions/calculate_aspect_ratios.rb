@@ -25,7 +25,10 @@ class CalculateAspectRatios < CloudCrowd::Action
   private
   def save_page_aspect_ratios!
     ids = document.pages.order(:page_number).pluck(:id)
+<<<<<<< HEAD
     
+=======
+>>>>>>> 7b03b4b... merge branch 'dc-master'
     query_template = <<-QUERY
     UPDATE pages 
       SET aspect_ratio = input.aspect_ratio

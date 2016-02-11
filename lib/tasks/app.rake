@@ -66,6 +66,10 @@ namespace :app do
   task :jammit do
     require File.join(Rails.root, 'config', 'initializers', 'configure_jammit')
     config = YAML.load(ERB.new(File.read("#{Rails.root}/config/document_cloud.yml")).result(binding))[Rails.env]
+<<<<<<< HEAD
+=======
+    sh "jammit -u https://#{config['server_root']}"
+>>>>>>> 7b03b4b... merge branch 'dc-master'
     #sh "jammit -u http://#{config['server_root']}"
     Jammit.package!(base_url: "http://#{config['server_root']}", config_paths: DC.jammit_configuration)
   end
