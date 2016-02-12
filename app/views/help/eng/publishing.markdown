@@ -100,7 +100,7 @@ Click "Next" to move to Step 2 and generate the HTML embed code. Here is a sampl
       <img src="//sourceafrica.net/documents/19789/pages/everest-p3-normal.gif" alt="Page 3 of A Guide to the Literature on Everest" style="border:1px solid #ccc;-webkit-box-sizing:border-box;box-sizing:border-box;width:100%;max-width:700px;">
       <p>Contributed to sourceAFRICA by David Lemayian of Code for Africa &bull; <a href="https://sourceafrica.net/documents/19789/pages/everest-p3.txt" title="View text of page 3 of A Guide to the Literature on Everest in a new window or tab" target="_blank">View page as text</a></p>
     </div>
-    <script src="//assets.documentcloud.org/embed/loader/enhance.js"></script>
+    <script src="//assets.sourceafrica.net/embed/loader/enhance.js"></script>
 
 Copy and paste the HTML to your site to publish the page.
 
@@ -140,7 +140,7 @@ To get started, find a set of documents you wish to embed -- either by selecting
 Once you're comfortable with your settings, preview the embedded document set. If the preview looks good, copy and paste the HTML embed code. Here's an example of what the embed code should look like:
 
     <div id="DC-search-projectid-8-epa-flouride"></div>
-    <script src="//assets.documentcloud.org/embed/loader.js"></script>
+    <script src="//assets.sourceafrica.net/embed/loader.js"></script>
     <script>
       dc.embed.load('https://sourceafrica.net/search/embed/', {
         q: "Group: sourceafrica",

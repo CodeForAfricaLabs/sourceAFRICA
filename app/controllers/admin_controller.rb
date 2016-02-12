@@ -6,7 +6,7 @@ class AdminController < ApplicationController
 
   before_action :secure_only,    :only   => [:index, :signup, :login_as]
   before_action :admin_required, :except => [:save_analytics, :queue_length, :test_embedded_search, :test_embedded_note, :test_embedded_page, :test_embedded_viewer, :health_check]
-  
+
   READONLY_ACTIONS = [
     :index, :expire_stats, :hits_on_documents, :all_accounts, :top_documents_csv, :accounts_csv,
     :charge, :download_document_hits, :organization_statistics, :account_statistics, :queue_length,
@@ -59,11 +59,11 @@ class AdminController < ApplicationController
         cache_page @response.to_json
         render_cross_origin_json
       end
-      
+
       format.html{ render }
     end
   end
-  
+
   def expire_stats
     respond_to do |format|
       format.any do
@@ -168,7 +168,7 @@ class AdminController < ApplicationController
       end
     end
   end
-  
+
   def organization_statistics
     org = case
     when params[:slug]
@@ -177,7 +177,7 @@ class AdminController < ApplicationController
       Organization.find(params[:id])
     end
     return not_found unless org
-    
+
     respond_to do |format|
       format.json do
         @response = Document.upload_statistics(:organization, org.id)
@@ -187,7 +187,7 @@ class AdminController < ApplicationController
       format.any{ redirect_to :format => :html, :params => pick(params, :id, :slug) }
     end
   end
-  
+
   def account_statistics
     account = case
     when params[:email]

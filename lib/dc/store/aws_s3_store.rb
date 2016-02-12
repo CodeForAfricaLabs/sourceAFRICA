@@ -4,7 +4,7 @@ module DC
     # An implementation of an AssetStore.
     module AwsS3Store
 
-      BUCKET_NAME     = Rails.env.production? ? 's3.sourceafrica.net' : "dcloud_#{Rails.env}"
+      BUCKET_NAME     = Rails.env.production? ? 'dcloud.cfafrica' : "dcloud_#{Rails.env}"
 
       AUTH_PERIOD     = 5.minutes
 
@@ -22,7 +22,7 @@ module DC
 
       module ClassMethods
         def asset_root
-          if AWS_REGION == 'us-east-1'
+          if AWS_REGION == 'eu-west-1'
             "https://s3.amazonaws.com/#{BUCKET_NAME}"
           else
             "https://s3-#{AWS_REGION}.amazonaws.com/#{BUCKET_NAME}"
