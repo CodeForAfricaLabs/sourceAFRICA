@@ -75,13 +75,13 @@ DC::Application.routes.draw do
     resource :annotation do
       match '(*all)', action: :cors_options, via: :options, allowed_methods: [:get,:post]
     end
-    
+
     # in order not to clobber existing routes
     #resources :pages
-    # When we're using proper routes, we'll also need to update 
-    # `ApiController#resource_embeddable?` to make pages act like notes, and 
+    # When we're using proper routes, we'll also need to update
+    # `ApiController#resource_embeddable?` to make pages act like notes, and
     # untangle `params[:page_number|:id|:document_id]` in `PagesController`
-    
+
     collection do
       get :status
       get :queue_length
@@ -140,8 +140,8 @@ DC::Application.routes.draw do
   match '/accounts/enable/:key' => 'accounts#enable', :via => [:get, :post], :as => :enable_account
   match '/reset_password' => 'accounts#reset', :via => [:get, :post], :as => :reset_password
 
-  get  '/signup' => 'redirect#index', :url => '/plans/apply'
-  get  '/apply'  => 'redirect#index', :url => '/plans/apply'
+  get  '/signup' => 'redirect#index', :url => '/contact'
+  get  '/apply'  => 'redirect#index', :url => '/contact'
 
   # Organizations management
   resources :organizations, :only=>:update
@@ -186,7 +186,7 @@ DC::Application.routes.draw do
 
   get '/admin' => 'admin#index'
   get '/admin/health_check/:subject/:env', to: 'admin#health_check', subject: /page_embed/, env: /production|staging/
-  
+
   # Standard fallback routes
   match '/:controller(/:action(/:id))', :via=>[:get,:post]
   get ':controller/:action.:format'
