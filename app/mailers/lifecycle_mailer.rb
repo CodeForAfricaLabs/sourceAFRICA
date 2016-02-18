@@ -2,10 +2,10 @@
 class LifecycleMailer < ActionMailer::Base
   include ActionView::Helpers::TextHelper # pluralize and friends
   
-  SUPPORT    = 'support@codeforafrica.org'
-  EXCEPTIONS = 'exceptions@sourceafrica.net'
-  NO_REPLY   = 'no-reply@sourceafrica.net'
-  INFO       = 'info@sourceafrica.net'
+  SUPPORT    = 'robindcloud@gmail.com'
+  EXCEPTIONS = 'robindcloud@gmail.com'
+  NO_REPLY   = 'robindcloud@gmail.com'
+  INFO       = 'robindcloud@gmail.com'
 
   default from: SUPPORT
 
@@ -68,16 +68,6 @@ class LifecycleMailer < ActionMailer::Base
         :content_type  => "text/plain",
         :template_path => translation_path_for( account.language )
     })
-  end
-
-  def verification_request_notification(verification_request)
-    @request = verification_request
-    mail({
-        :subject  => "New sourceAFRICA account request from #{verification_request.requester_full_name} (#{verification_request.organization_name}) in #{Rails.env}",
-        :from     => NO_REPLY,
-        :reply_to => verification_request.requester_email,
-        :to       => INFO
-      })
   end
 
   # When someone sends a message through the "Contact Us" form, deliver it to

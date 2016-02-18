@@ -86,10 +86,19 @@ En el cuadro de diálogo que aparece a continuación, seleccione el número de l
 
 Haga clic en "Siguiente" para pasar al paso 2 y generar el código HTML empotrable. He aquí una muestra de lo que se verá así:
 
-    <div class="DC-embed" data-version="1.0" style="font-size:10pt">
-      <p><a class="DC-embed-resource" href="https://sourceafrica.net/documents/19789-everest.html#document/p3" title="View page 3 of A Guide to the Literature on Everest up on sourceAFRICA in new window or tab" target="_blank">Page 3 of A Guide to the Literature on Everest</a></p>
-      <img src="//sourceafrica.net/documents/19789/pages/everest-p3-normal.gif" alt="Page 3 of A Guide to the Literature on Everest" style="border:1px solid #ccc;-webkit-box-sizing:border-box;box-sizing:border-box;width:100%;max-width:700px;">
-      <p>Contributed to sourceAFRICA by David Lemayian of Code for Africa &bull; <a href="https://sourceafrica.net/documents/19789/pages/everest-p3.txt" title="View text of page 3 of A Guide to the Literature on Everest in a new window or tab" target="_blank">View page as text</a></p>
+    <div class="DC-embed" data-version="1.1">
+      <div style="font-size:10pt;line-height:14pt;">
+        Page 3 of <a class="DC-embed-resource" href="https://sourceafrica.net/documents/19789-everest.html#document/p3" title="View entire A Guide to the Literature on Everest up on sourceAFRICA in new window or tab" target="_blank">Guide to the Literature on Everest</a>
+      </div>
+      <img src="//sourceafrica.net/documents/19789/pages/everest-p3-normal.gif" srcset="//sourceafrica.net/documents/19789/pages/everest-p3-normal.gif 700w, //sourceafrica.net/documents/19789/pages/everest-p3-large.gif 1000w" alt="Page 3 of Guide to the Literature on Everest" style="max-width:100%;height:auto;margin:0.5em 0;border:1px solid #ccc;-webkit-box-sizing:border-box;box-sizing:border-box;clear:both">
+      <div style="font-size:8pt;line-height:12pt;text-align:center">
+        Contributed to
+        <a href="https://sourceafrica.net/" title="Go to sourceAFRICA in new window or tab" target="_blank" style="font-weight:700;font-family:Gotham,inherit,sans-serif;color:inherit;text-decoration:none">sourceAFRICA</a> by
+        <a href="https://sourceafrica.net/public/search/Account:1-support-codeforafrica" title="View documents contributed to sourceAFRICA by Support CodeForAfrica in new window or tab" target="_blank">Support CodeForAfrica</a> of
+        <a href="https://sourceafrica.net/public/search/Group:code-for-africa" title="View documents contributed to sourceAFRICA by Code for Africa in new window or tab" target="_blank">Code for Africa</a> &bull;
+        <a href="https://sourceafrica.net/documents/19789-everest.html#document/p3" title="View entire A Guide to the Literature on Everest up on sourceAFRICA in new window or tab" target="_blank">View document</a> or
+        <a href="https://sourceafrica.net/documents/19789/pages/everest-p3.txt" title="Read the text of page 3 of A Guide to the Literature on Everest on sourceAFRICA in new window or tab" target="_blank">read text</a>
+      </div>
     </div>
     <script src="//assets.documentcloud.org/embed/loader/enhance.js"></script>
 
@@ -131,7 +140,7 @@ Para empezar, encuentre un conjunto de documentos que desee incrustar - ya sea m
 
 Una vez que usted se sienta cómodo con la configuración, revise el conjunto de documentos incrustado en vista previa. Si la vista previa se ve bien, copie y pegue el código de inserción HTML.  Este es un ejemplo de cómo se debe ver el código de inserción:
 
-    <div id="DC-search-projectid-8-epa-flouride"></div>
+    <div id="DC-group-sourceafrica"></div>
     <script src="//assets.documentcloud.org/embed/loader.js"></script>
     <script>
       dc.embed.load('https://sourceafrica.net/search/embed/', {

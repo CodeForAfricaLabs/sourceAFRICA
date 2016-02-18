@@ -1,12 +1,12 @@
 <% secrets = YAML.load_file('./secrets/secrets.yml')[ENV['RAILS_ENV'] || "development"] %>
 defaults: &defaults
-  cloud_crowd_server:   http://sourceafrica.net:8080
-  cloud_crowd_console:  http://sourceafrica.net:8080
-  server_root:          sourceafrica.net
-  asset_root:           s3-eu-west-1.amazonaws.com/dcloud.cfafrica  
+  cloud_crowd_server:   http://ec2-52-16-133-220.eu-west-1.compute.amazonaws.com:8080
+  cloud_crowd_console:  http://ec2-52-16-133-220.eu-west-1.compute.amazonaws.com:8080
+  server_root:          ec2-52-16-133-220.eu-west-1.compute.amazonaws.com
+  asset_root:           s3-eu.west-1.amazonaws.com/dcloud.cfafrica
   large_file_storage:   /mnt/large_files
-  aws_region:           eu-west-1
-  aws_zone:             eu-west-1a
+  aws_region:           eu.west-1
+  aws_zone:             eu.west-1b
   preconfigured_ami_id: <%= secrets['ami'] %>
 
 development:
@@ -22,9 +22,9 @@ staging:
 production:
   <<: *defaults
   cloud_crowd_server:  <%= secrets['db_host'] %>:8080
-  cloud_crowd_console: sourceafrica.net:8080
-  server_root:         sourceafrica.net
-  asset_root:          s3-eu-west-1.amazonaws.com/dcloud.cfafrica
-
+  cloud_crowd_console: ec2-52-16-133-220.eu-west-1.compute.amazonaws.com:8080
+  server_root:         ec2-52-16-133-220.eu-west-1.compute.amazonaws.com
+  asset_root:          s3-eu.west-1.amazonaws.com/dcloud.cfafrica
+  db_volume_id:        vol-3248332d
 test:
   <<: *defaults
