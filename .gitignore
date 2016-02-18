@@ -10,7 +10,6 @@ db/*.pid
 db/mongodb*
 db/solr_*
 db/sphinx
-node_modules
 raw
 /secrets
 public/docs
@@ -33,3 +32,4 @@ public/javascripts/vendor/*/
 Vagrantfile
 
 public/javascripts/rates.json
+node_modules
