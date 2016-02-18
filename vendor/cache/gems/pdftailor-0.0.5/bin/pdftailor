@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require 'shellwords'
+
+here = File.dirname(__FILE__)
+jar_path = File.expand_path(File.join(here, "..", "jars"))
+jars = Dir.open(jar_path).select{ |name| name =~ /\.jar$/ }.map{ |jar| File.join(jar_path, jar) }.join(":")
+cmd = "java -verbose:classes -cp #{jars} org.documentcloud.pdftailor.PdfTailor #{ARGV.map{ |arg| Shellwords.shellescape(arg) }.join(' ')}"
+print `#{cmd}`.chomp
+exit($? == 0)
