@@ -1,0 +1,37 @@
+sudo: false
+language: ruby
+rvm:
+  - 2.2
+  - 2.0.0
+  - 2.1
+  - 1.9.3
+  - rbx-2
+  - jruby
+matrix:
+  allow_failures:
+    - rvm: rbx-2 # See rubinius/rubinius#3485 - rubocop segfaults
+script: "bundle exec rake"
+addons:
+  apt:
+    packages:
+    - idn
+    - build-essential  # this and below attempt allow rubinius to be setup ok
+    - bison
+    - ruby-dev
+    - rake zlib1g-dev
+    - libyaml-dev
+    - libssl-dev
+    - libreadline-dev
+    - libncurses5-dev
+    - llvm
+    - llvm-dev
+    - libeditline-dev
+    - libedit-dev
+before_install:
+ - gem update bundler
+notifications:
+  email:
+    recipients:
+      - temiola@google.com
+    on_success: change
+    on_failure: change

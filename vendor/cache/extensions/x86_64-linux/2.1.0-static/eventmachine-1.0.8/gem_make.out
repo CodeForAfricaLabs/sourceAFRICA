@@ -1,0 +1,21 @@
+current directory: /home/ubuntu/sourceAFRICA/vendor/cache/gems/eventmachine-1.0.8/ext/fastfilereader
+/opt/rubies/ruby-2.1.3/bin/ruby -r ./siteconf20151210-3328-1kuhttv.rb extconf.rb
+creating Makefile
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /home/ubuntu/sourceAFRICA/vendor/cache/extensions/x86_64-linux/2.1.0-static/eventmachine-1.0.8/mkmf.log
+
+current directory: /home/ubuntu/sourceAFRICA/vendor/cache/gems/eventmachine-1.0.8/ext/fastfilereader
+make "DESTDIR=" clean
+
+current directory: /home/ubuntu/sourceAFRICA/vendor/cache/gems/eventmachine-1.0.8/ext/fastfilereader
+make "DESTDIR="
+compiling rubymain.cpp
+compiling mapper.cpp
+linking shared-object fastfilereaderext.so
+
+current directory: /home/ubuntu/sourceAFRICA/vendor/cache/gems/eventmachine-1.0.8/ext/fastfilereader
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 fastfilereaderext.so ./.gem.20151210-3328-228qyz
+installing default fastfilereaderext libraries

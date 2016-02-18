@@ -1,0 +1,93 @@
+=                                                                               
+           _  _                                                                
+          ( `   )_                                                             
+         (    )    `)                                                          
+       (_   (_ .  _) _)                                                        
+                                      _                                        
+                                     (  )                                      
+      _ .                         ( `  ) . )                                   
+    (  _ )_                      (_, _(  ,_)_)                                 
+  (_  _(_ ,)                                                                   
+                                                                               
+           _  _               ___ _             _  ___                   _     
+          ( `   )_           / __| |___ _  _ __| |/ __|_ _ _____ __ ____| |    
+         (    )    `)       | (__| / _ \ || / _` | (__| '_/ _ \ V  V / _` |    
+       (_   (_ .  _) _)      \___|_\___/\_,_\__,_|\___|_| \___/\_/\_/\__,_|    
+                                                                               
+                                                     _                         
+                                                    (  )                       
+                  _, _ .                         ( `  ) . )                    
+                 ( (  _ )_                      (_, _(  ,_)_)                  
+               (_(_  _(_ ,)                                                    
+                                                                               
+                                                                               
+                                                                               
+  ~ CloudCrowd ~
+
+    * Parallel processing for the rest of us
+    * Write your scripts in Ruby
+    * Works with Amazon EC2 and S3
+    * split -> process -> merge
+    * As easy as `gem install cloud-crowd`
+
+    Well-suited for:
+    
+    * Generating or resizing images.
+    * Encoding video.
+    * Running text extraction or OCR on PDFs.
+    * Migrating a large file set or database.
+    * Web scraping.
+    
+    
+  ~ Documentation ~
+  
+    Wiki: http://wiki.github.com/documentcloud/cloud-crowd
+    Rdoc: http://rdoc.info/projects/documentcloud/cloud-crowd
+  
+  
+  ~ Getting started ~
+  
+    # Install the gem.
+    
+      >> sudo gem install cloud-crowd
+    
+    # Install the CloudCrowd configuration files to a location of your choosing.
+    
+      >> crowd install ~/config/cloud-crowd
+    
+    # Now, you can use the full complement of `crowd` commands from inside of
+    # this configuration directory. To see the available commands:
+    
+      >> crowd --help
+    
+    # Edit the configuration files to your satisfaction, add AWS credentials, 
+    # and then load the CloudCrowd schema into your configured database.
+    
+      >> cd ~/config/cloud-crowd
+      >> mate config.yml
+      >> mate database.yml
+      >> [create the database you just configured...]
+      >> crowd load_schema
+    
+    # Write your actions, and install them into the 'actions' subdirectory.
+    # CloudCrowd comes with a few default actions as an example.
+    
+    # To launch the central server (make sure that you include its location
+    # in config.yml):
+    
+      >> crowd server
+    
+    # The configuration folder also includes 'config.ru', which can be used by
+     # any Rack-compliant webserver to run your central server.
+    
+    # Then, to launch a node of workers:
+    
+      >> crowd node
+    
+    # To spin up remote nodes, install the 'cloud-crowd' gem and copy over
+    # your configuration directory. Run `crowd node`, and the remote machines
+    # will register with the central server, becoming available for processing.
+    
+    # At this point you can visit your Operations Center at localhost:9173 to 
+    # view all of your nodes, ready for action.
+  

@@ -1,12 +1,11 @@
 # Responsible for sending out lifecycle emails to active accounts.
 class LifecycleMailer < ActionMailer::Base
   include ActionView::Helpers::TextHelper # pluralize and friends
-  
+
   SUPPORT    = 'support@codeforafrica.org'
   EXCEPTIONS = 'exceptions@sourceafrica.net'
   NO_REPLY   = 'no-reply@sourceafrica.net'
   INFO       = 'info@sourceafrica.net'
-
   default from: SUPPORT
 
   # Mail instructions for a new account, with a secure link to activate,

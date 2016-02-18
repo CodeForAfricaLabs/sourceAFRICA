@@ -5,8 +5,8 @@ defaults: &defaults
   server_root:          dev.dcloud.org
   asset_root:           dev.dcloud.org
   large_file_storage:   /mnt/large_files
-  aws_region:           eu-west-1
-  aws_zone:             eu-west-1c
+  aws_region:           eu.west-1
+  aws_zone:             eu.west-1c
   preconfigured_ami_id: <%= secrets['ami'] %>
 
 development:
@@ -25,6 +25,5 @@ production:
   cloud_crowd_console: sourceafrica.net:8080
   server_root:         sourceafrica.net
   asset_root:          s3-eu-west-1.amazonaws.com/s3.sourceafrica.net
-
 test:
   <<: *defaults
