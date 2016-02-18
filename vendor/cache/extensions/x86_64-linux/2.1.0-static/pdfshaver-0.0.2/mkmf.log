@@ -1,0 +1,583 @@
+have_library: checking for main() in -ljavascript... -------------------- yes
+
+"gcc -o conftest -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/x86_64-linux -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/ruby/backward -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0 -I. -I/usr/local/Cellar/pdfium/HEAD/include/public -I/usr/local/Cellar/pdfium/HEAD/include/core/include -I/usr/local/Cellar/pdfium/HEAD/include/fpdfsdk/include -I/usr/local/Cellar/pdfium/HEAD/include/third_party/base/numerics -I/usr/local/include/pdfium/public -I/usr/local/include/pdfium/core/include -I/usr/local/include/pdfium/fpdfsdk/include -I/usr/local/include/pdfium/third_party/base/numerics -I/usr/include/pdfium/public -I/usr/include/pdfium/core/include -I/usr/include/pdfium/fpdfsdk/include -I/usr/include/pdfium/third_party/base/numerics -I/usr/local/include/public -I/usr/local/include/core/include -I/usr/local/include/fpdfsdk/include -I/usr/local/include/third_party/base/numerics -I/usr/include/public -I/usr/include/core/include -I/usr/include/fpdfsdk/include -I/usr/include/third_party/base/numerics -I/usr/local/Cellar/pdfium/HEAD/include -I/usr/local/include/pdfium -I/usr/include/pdfium -I/usr/local/include/ -I/usr/include/     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration conftest.c  -L. -L/opt/rubies/ruby-2.1.3/lib -Wl,-R/opt/rubies/ruby-2.1.3/lib -L/usr/local/Cellar/pdfium/HEAD/lib/third_party -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib/third_party -L/usr/local/lib/pdfium/third_party -Wl,-R/usr/local/lib/pdfium/third_party -L/usr/lib/pdfium/third_party -Wl,-R/usr/lib/pdfium/third_party -L/usr/local/lib/third_party -Wl,-R/usr/local/lib/third_party -L/usr/lib/third_party -Wl,-R/usr/lib/third_party -L/usr/local/Cellar/pdfium/HEAD/lib -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib -L/usr/local/lib/pdfium -Wl,-R/usr/local/lib/pdfium -L/usr/lib/pdfium -Wl,-R/usr/lib/pdfium -L/usr/local/lib -Wl,-R/usr/local/lib -L/usr/lib -Wl,-R/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-R -Wl,/opt/rubies/ruby-2.1.3/lib -L/opt/rubies/ruby-2.1.3/lib -lruby-static  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+"gcc -o conftest -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/x86_64-linux -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/ruby/backward -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0 -I. -I/usr/local/Cellar/pdfium/HEAD/include/public -I/usr/local/Cellar/pdfium/HEAD/include/core/include -I/usr/local/Cellar/pdfium/HEAD/include/fpdfsdk/include -I/usr/local/Cellar/pdfium/HEAD/include/third_party/base/numerics -I/usr/local/include/pdfium/public -I/usr/local/include/pdfium/core/include -I/usr/local/include/pdfium/fpdfsdk/include -I/usr/local/include/pdfium/third_party/base/numerics -I/usr/include/pdfium/public -I/usr/include/pdfium/core/include -I/usr/include/pdfium/fpdfsdk/include -I/usr/include/pdfium/third_party/base/numerics -I/usr/local/include/public -I/usr/local/include/core/include -I/usr/local/include/fpdfsdk/include -I/usr/local/include/third_party/base/numerics -I/usr/include/public -I/usr/include/core/include -I/usr/include/fpdfsdk/include -I/usr/include/third_party/base/numerics -I/usr/local/Cellar/pdfium/HEAD/include -I/usr/local/include/pdfium -I/usr/include/pdfium -I/usr/local/include/ -I/usr/include/     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration conftest.c  -L. -L/opt/rubies/ruby-2.1.3/lib -Wl,-R/opt/rubies/ruby-2.1.3/lib -L/usr/local/Cellar/pdfium/HEAD/lib/third_party -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib/third_party -L/usr/local/lib/pdfium/third_party -Wl,-R/usr/local/lib/pdfium/third_party -L/usr/lib/pdfium/third_party -Wl,-R/usr/lib/pdfium/third_party -L/usr/local/lib/third_party -Wl,-R/usr/local/lib/third_party -L/usr/lib/third_party -Wl,-R/usr/lib/third_party -L/usr/local/Cellar/pdfium/HEAD/lib -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib -L/usr/local/lib/pdfium -Wl,-R/usr/local/lib/pdfium -L/usr/lib/pdfium -Wl,-R/usr/lib/pdfium -L/usr/local/lib -Wl,-R/usr/local/lib -L/usr/lib -Wl,-R/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-R -Wl,/opt/rubies/ruby-2.1.3/lib -L/opt/rubies/ruby-2.1.3/lib -lruby-static -ljavascript  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for main() in -lbigint... -------------------- yes
+
+"gcc -o conftest -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/x86_64-linux -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/ruby/backward -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0 -I. -I/usr/local/Cellar/pdfium/HEAD/include/public -I/usr/local/Cellar/pdfium/HEAD/include/core/include -I/usr/local/Cellar/pdfium/HEAD/include/fpdfsdk/include -I/usr/local/Cellar/pdfium/HEAD/include/third_party/base/numerics -I/usr/local/include/pdfium/public -I/usr/local/include/pdfium/core/include -I/usr/local/include/pdfium/fpdfsdk/include -I/usr/local/include/pdfium/third_party/base/numerics -I/usr/include/pdfium/public -I/usr/include/pdfium/core/include -I/usr/include/pdfium/fpdfsdk/include -I/usr/include/pdfium/third_party/base/numerics -I/usr/local/include/public -I/usr/local/include/core/include -I/usr/local/include/fpdfsdk/include -I/usr/local/include/third_party/base/numerics -I/usr/include/public -I/usr/include/core/include -I/usr/include/fpdfsdk/include -I/usr/include/third_party/base/numerics -I/usr/local/Cellar/pdfium/HEAD/include -I/usr/local/include/pdfium -I/usr/include/pdfium -I/usr/local/include/ -I/usr/include/     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration conftest.c  -L. -L/opt/rubies/ruby-2.1.3/lib -Wl,-R/opt/rubies/ruby-2.1.3/lib -L/usr/local/Cellar/pdfium/HEAD/lib/third_party -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib/third_party -L/usr/local/lib/pdfium/third_party -Wl,-R/usr/local/lib/pdfium/third_party -L/usr/lib/pdfium/third_party -Wl,-R/usr/lib/pdfium/third_party -L/usr/local/lib/third_party -Wl,-R/usr/local/lib/third_party -L/usr/lib/third_party -Wl,-R/usr/lib/third_party -L/usr/local/Cellar/pdfium/HEAD/lib -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib -L/usr/local/lib/pdfium -Wl,-R/usr/local/lib/pdfium -L/usr/lib/pdfium -Wl,-R/usr/lib/pdfium -L/usr/local/lib -Wl,-R/usr/local/lib -L/usr/lib -Wl,-R/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -ljavascript  -Wl,-R -Wl,/opt/rubies/ruby-2.1.3/lib -L/opt/rubies/ruby-2.1.3/lib -lruby-static -lbigint -ljavascript  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for main() in -lfx_freetype... -------------------- yes
+
+"gcc -o conftest -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/x86_64-linux -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/ruby/backward -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0 -I. -I/usr/local/Cellar/pdfium/HEAD/include/public -I/usr/local/Cellar/pdfium/HEAD/include/core/include -I/usr/local/Cellar/pdfium/HEAD/include/fpdfsdk/include -I/usr/local/Cellar/pdfium/HEAD/include/third_party/base/numerics -I/usr/local/include/pdfium/public -I/usr/local/include/pdfium/core/include -I/usr/local/include/pdfium/fpdfsdk/include -I/usr/local/include/pdfium/third_party/base/numerics -I/usr/include/pdfium/public -I/usr/include/pdfium/core/include -I/usr/include/pdfium/fpdfsdk/include -I/usr/include/pdfium/third_party/base/numerics -I/usr/local/include/public -I/usr/local/include/core/include -I/usr/local/include/fpdfsdk/include -I/usr/local/include/third_party/base/numerics -I/usr/include/public -I/usr/include/core/include -I/usr/include/fpdfsdk/include -I/usr/include/third_party/base/numerics -I/usr/local/Cellar/pdfium/HEAD/include -I/usr/local/include/pdfium -I/usr/include/pdfium -I/usr/local/include/ -I/usr/include/     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration conftest.c  -L. -L/opt/rubies/ruby-2.1.3/lib -Wl,-R/opt/rubies/ruby-2.1.3/lib -L/usr/local/Cellar/pdfium/HEAD/lib/third_party -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib/third_party -L/usr/local/lib/pdfium/third_party -Wl,-R/usr/local/lib/pdfium/third_party -L/usr/lib/pdfium/third_party -Wl,-R/usr/lib/pdfium/third_party -L/usr/local/lib/third_party -Wl,-R/usr/local/lib/third_party -L/usr/lib/third_party -Wl,-R/usr/lib/third_party -L/usr/local/Cellar/pdfium/HEAD/lib -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib -L/usr/local/lib/pdfium -Wl,-R/usr/local/lib/pdfium -L/usr/lib/pdfium -Wl,-R/usr/lib/pdfium -L/usr/local/lib -Wl,-R/usr/local/lib -L/usr/lib -Wl,-R/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lbigint -ljavascript  -Wl,-R -Wl,/opt/rubies/ruby-2.1.3/lib -L/opt/rubies/ruby-2.1.3/lib -lruby-static -lfx_freetype -lbigint -ljavascript  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for main() in -lfx_agg... -------------------- yes
+
+"gcc -o conftest -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/x86_64-linux -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/ruby/backward -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0 -I. -I/usr/local/Cellar/pdfium/HEAD/include/public -I/usr/local/Cellar/pdfium/HEAD/include/core/include -I/usr/local/Cellar/pdfium/HEAD/include/fpdfsdk/include -I/usr/local/Cellar/pdfium/HEAD/include/third_party/base/numerics -I/usr/local/include/pdfium/public -I/usr/local/include/pdfium/core/include -I/usr/local/include/pdfium/fpdfsdk/include -I/usr/local/include/pdfium/third_party/base/numerics -I/usr/include/pdfium/public -I/usr/include/pdfium/core/include -I/usr/include/pdfium/fpdfsdk/include -I/usr/include/pdfium/third_party/base/numerics -I/usr/local/include/public -I/usr/local/include/core/include -I/usr/local/include/fpdfsdk/include -I/usr/local/include/third_party/base/numerics -I/usr/include/public -I/usr/include/core/include -I/usr/include/fpdfsdk/include -I/usr/include/third_party/base/numerics -I/usr/local/Cellar/pdfium/HEAD/include -I/usr/local/include/pdfium -I/usr/include/pdfium -I/usr/local/include/ -I/usr/include/     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration conftest.c  -L. -L/opt/rubies/ruby-2.1.3/lib -Wl,-R/opt/rubies/ruby-2.1.3/lib -L/usr/local/Cellar/pdfium/HEAD/lib/third_party -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib/third_party -L/usr/local/lib/pdfium/third_party -Wl,-R/usr/local/lib/pdfium/third_party -L/usr/lib/pdfium/third_party -Wl,-R/usr/lib/pdfium/third_party -L/usr/local/lib/third_party -Wl,-R/usr/local/lib/third_party -L/usr/lib/third_party -Wl,-R/usr/lib/third_party -L/usr/local/Cellar/pdfium/HEAD/lib -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib -L/usr/local/lib/pdfium -Wl,-R/usr/local/lib/pdfium -L/usr/lib/pdfium -Wl,-R/usr/lib/pdfium -L/usr/local/lib -Wl,-R/usr/local/lib -L/usr/lib -Wl,-R/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lfx_freetype -lbigint -ljavascript  -Wl,-R -Wl,/opt/rubies/ruby-2.1.3/lib -L/opt/rubies/ruby-2.1.3/lib -lruby-static -lfx_agg -lfx_freetype -lbigint -ljavascript  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for main() in -lfx_lcms2... -------------------- yes
+
+"gcc -o conftest -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/x86_64-linux -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/ruby/backward -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0 -I. -I/usr/local/Cellar/pdfium/HEAD/include/public -I/usr/local/Cellar/pdfium/HEAD/include/core/include -I/usr/local/Cellar/pdfium/HEAD/include/fpdfsdk/include -I/usr/local/Cellar/pdfium/HEAD/include/third_party/base/numerics -I/usr/local/include/pdfium/public -I/usr/local/include/pdfium/core/include -I/usr/local/include/pdfium/fpdfsdk/include -I/usr/local/include/pdfium/third_party/base/numerics -I/usr/include/pdfium/public -I/usr/include/pdfium/core/include -I/usr/include/pdfium/fpdfsdk/include -I/usr/include/pdfium/third_party/base/numerics -I/usr/local/include/public -I/usr/local/include/core/include -I/usr/local/include/fpdfsdk/include -I/usr/local/include/third_party/base/numerics -I/usr/include/public -I/usr/include/core/include -I/usr/include/fpdfsdk/include -I/usr/include/third_party/base/numerics -I/usr/local/Cellar/pdfium/HEAD/include -I/usr/local/include/pdfium -I/usr/include/pdfium -I/usr/local/include/ -I/usr/include/     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration conftest.c  -L. -L/opt/rubies/ruby-2.1.3/lib -Wl,-R/opt/rubies/ruby-2.1.3/lib -L/usr/local/Cellar/pdfium/HEAD/lib/third_party -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib/third_party -L/usr/local/lib/pdfium/third_party -Wl,-R/usr/local/lib/pdfium/third_party -L/usr/lib/pdfium/third_party -Wl,-R/usr/lib/pdfium/third_party -L/usr/local/lib/third_party -Wl,-R/usr/local/lib/third_party -L/usr/lib/third_party -Wl,-R/usr/lib/third_party -L/usr/local/Cellar/pdfium/HEAD/lib -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib -L/usr/local/lib/pdfium -Wl,-R/usr/local/lib/pdfium -L/usr/lib/pdfium -Wl,-R/usr/lib/pdfium -L/usr/local/lib -Wl,-R/usr/local/lib -L/usr/lib -Wl,-R/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lfx_agg -lfx_freetype -lbigint -ljavascript  -Wl,-R -Wl,/opt/rubies/ruby-2.1.3/lib -L/opt/rubies/ruby-2.1.3/lib -lruby-static -lfx_lcms2 -lfx_agg -lfx_freetype -lbigint -ljavascript  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for main() in -lfx_libjpeg... -------------------- yes
+
+"gcc -o conftest -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/x86_64-linux -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/ruby/backward -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0 -I. -I/usr/local/Cellar/pdfium/HEAD/include/public -I/usr/local/Cellar/pdfium/HEAD/include/core/include -I/usr/local/Cellar/pdfium/HEAD/include/fpdfsdk/include -I/usr/local/Cellar/pdfium/HEAD/include/third_party/base/numerics -I/usr/local/include/pdfium/public -I/usr/local/include/pdfium/core/include -I/usr/local/include/pdfium/fpdfsdk/include -I/usr/local/include/pdfium/third_party/base/numerics -I/usr/include/pdfium/public -I/usr/include/pdfium/core/include -I/usr/include/pdfium/fpdfsdk/include -I/usr/include/pdfium/third_party/base/numerics -I/usr/local/include/public -I/usr/local/include/core/include -I/usr/local/include/fpdfsdk/include -I/usr/local/include/third_party/base/numerics -I/usr/include/public -I/usr/include/core/include -I/usr/include/fpdfsdk/include -I/usr/include/third_party/base/numerics -I/usr/local/Cellar/pdfium/HEAD/include -I/usr/local/include/pdfium -I/usr/include/pdfium -I/usr/local/include/ -I/usr/include/     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration conftest.c  -L. -L/opt/rubies/ruby-2.1.3/lib -Wl,-R/opt/rubies/ruby-2.1.3/lib -L/usr/local/Cellar/pdfium/HEAD/lib/third_party -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib/third_party -L/usr/local/lib/pdfium/third_party -Wl,-R/usr/local/lib/pdfium/third_party -L/usr/lib/pdfium/third_party -Wl,-R/usr/lib/pdfium/third_party -L/usr/local/lib/third_party -Wl,-R/usr/local/lib/third_party -L/usr/lib/third_party -Wl,-R/usr/lib/third_party -L/usr/local/Cellar/pdfium/HEAD/lib -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib -L/usr/local/lib/pdfium -Wl,-R/usr/local/lib/pdfium -L/usr/lib/pdfium -Wl,-R/usr/lib/pdfium -L/usr/local/lib -Wl,-R/usr/local/lib -L/usr/lib -Wl,-R/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lfx_lcms2 -lfx_agg -lfx_freetype -lbigint -ljavascript  -Wl,-R -Wl,/opt/rubies/ruby-2.1.3/lib -L/opt/rubies/ruby-2.1.3/lib -lruby-static -lfx_libjpeg -lfx_lcms2 -lfx_agg -lfx_freetype -lbigint -ljavascript  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for main() in -lfx_libopenjpeg... -------------------- yes
+
+"gcc -o conftest -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/x86_64-linux -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/ruby/backward -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0 -I. -I/usr/local/Cellar/pdfium/HEAD/include/public -I/usr/local/Cellar/pdfium/HEAD/include/core/include -I/usr/local/Cellar/pdfium/HEAD/include/fpdfsdk/include -I/usr/local/Cellar/pdfium/HEAD/include/third_party/base/numerics -I/usr/local/include/pdfium/public -I/usr/local/include/pdfium/core/include -I/usr/local/include/pdfium/fpdfsdk/include -I/usr/local/include/pdfium/third_party/base/numerics -I/usr/include/pdfium/public -I/usr/include/pdfium/core/include -I/usr/include/pdfium/fpdfsdk/include -I/usr/include/pdfium/third_party/base/numerics -I/usr/local/include/public -I/usr/local/include/core/include -I/usr/local/include/fpdfsdk/include -I/usr/local/include/third_party/base/numerics -I/usr/include/public -I/usr/include/core/include -I/usr/include/fpdfsdk/include -I/usr/include/third_party/base/numerics -I/usr/local/Cellar/pdfium/HEAD/include -I/usr/local/include/pdfium -I/usr/include/pdfium -I/usr/local/include/ -I/usr/include/     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration conftest.c  -L. -L/opt/rubies/ruby-2.1.3/lib -Wl,-R/opt/rubies/ruby-2.1.3/lib -L/usr/local/Cellar/pdfium/HEAD/lib/third_party -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib/third_party -L/usr/local/lib/pdfium/third_party -Wl,-R/usr/local/lib/pdfium/third_party -L/usr/lib/pdfium/third_party -Wl,-R/usr/lib/pdfium/third_party -L/usr/local/lib/third_party -Wl,-R/usr/local/lib/third_party -L/usr/lib/third_party -Wl,-R/usr/lib/third_party -L/usr/local/Cellar/pdfium/HEAD/lib -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib -L/usr/local/lib/pdfium -Wl,-R/usr/local/lib/pdfium -L/usr/lib/pdfium -Wl,-R/usr/lib/pdfium -L/usr/local/lib -Wl,-R/usr/local/lib -L/usr/lib -Wl,-R/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lfx_libjpeg -lfx_lcms2 -lfx_agg -lfx_freetype -lbigint -ljavascript  -Wl,-R -Wl,/opt/rubies/ruby-2.1.3/lib -L/opt/rubies/ruby-2.1.3/lib -lruby-static -lfx_libopenjpeg -lfx_libjpeg -lfx_lcms2 -lfx_agg -lfx_freetype -lbigint -ljavascript  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for main() in -lfx_zlib... -------------------- yes
+
+"gcc -o conftest -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/x86_64-linux -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/ruby/backward -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0 -I. -I/usr/local/Cellar/pdfium/HEAD/include/public -I/usr/local/Cellar/pdfium/HEAD/include/core/include -I/usr/local/Cellar/pdfium/HEAD/include/fpdfsdk/include -I/usr/local/Cellar/pdfium/HEAD/include/third_party/base/numerics -I/usr/local/include/pdfium/public -I/usr/local/include/pdfium/core/include -I/usr/local/include/pdfium/fpdfsdk/include -I/usr/local/include/pdfium/third_party/base/numerics -I/usr/include/pdfium/public -I/usr/include/pdfium/core/include -I/usr/include/pdfium/fpdfsdk/include -I/usr/include/pdfium/third_party/base/numerics -I/usr/local/include/public -I/usr/local/include/core/include -I/usr/local/include/fpdfsdk/include -I/usr/local/include/third_party/base/numerics -I/usr/include/public -I/usr/include/core/include -I/usr/include/fpdfsdk/include -I/usr/include/third_party/base/numerics -I/usr/local/Cellar/pdfium/HEAD/include -I/usr/local/include/pdfium -I/usr/include/pdfium -I/usr/local/include/ -I/usr/include/     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration conftest.c  -L. -L/opt/rubies/ruby-2.1.3/lib -Wl,-R/opt/rubies/ruby-2.1.3/lib -L/usr/local/Cellar/pdfium/HEAD/lib/third_party -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib/third_party -L/usr/local/lib/pdfium/third_party -Wl,-R/usr/local/lib/pdfium/third_party -L/usr/lib/pdfium/third_party -Wl,-R/usr/lib/pdfium/third_party -L/usr/local/lib/third_party -Wl,-R/usr/local/lib/third_party -L/usr/lib/third_party -Wl,-R/usr/lib/third_party -L/usr/local/Cellar/pdfium/HEAD/lib -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib -L/usr/local/lib/pdfium -Wl,-R/usr/local/lib/pdfium -L/usr/lib/pdfium -Wl,-R/usr/lib/pdfium -L/usr/local/lib -Wl,-R/usr/local/lib -L/usr/lib -Wl,-R/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lfx_libopenjpeg -lfx_libjpeg -lfx_lcms2 -lfx_agg -lfx_freetype -lbigint -ljavascript  -Wl,-R -Wl,/opt/rubies/ruby-2.1.3/lib -L/opt/rubies/ruby-2.1.3/lib -lruby-static -lfx_zlib -lfx_libopenjpeg -lfx_libjpeg -lfx_lcms2 -lfx_agg -lfx_freetype -lbigint -ljavascript  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for main() in -lfxedit... -------------------- yes
+
+"gcc -o conftest -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/x86_64-linux -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/ruby/backward -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0 -I. -I/usr/local/Cellar/pdfium/HEAD/include/public -I/usr/local/Cellar/pdfium/HEAD/include/core/include -I/usr/local/Cellar/pdfium/HEAD/include/fpdfsdk/include -I/usr/local/Cellar/pdfium/HEAD/include/third_party/base/numerics -I/usr/local/include/pdfium/public -I/usr/local/include/pdfium/core/include -I/usr/local/include/pdfium/fpdfsdk/include -I/usr/local/include/pdfium/third_party/base/numerics -I/usr/include/pdfium/public -I/usr/include/pdfium/core/include -I/usr/include/pdfium/fpdfsdk/include -I/usr/include/pdfium/third_party/base/numerics -I/usr/local/include/public -I/usr/local/include/core/include -I/usr/local/include/fpdfsdk/include -I/usr/local/include/third_party/base/numerics -I/usr/include/public -I/usr/include/core/include -I/usr/include/fpdfsdk/include -I/usr/include/third_party/base/numerics -I/usr/local/Cellar/pdfium/HEAD/include -I/usr/local/include/pdfium -I/usr/include/pdfium -I/usr/local/include/ -I/usr/include/     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration conftest.c  -L. -L/opt/rubies/ruby-2.1.3/lib -Wl,-R/opt/rubies/ruby-2.1.3/lib -L/usr/local/Cellar/pdfium/HEAD/lib/third_party -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib/third_party -L/usr/local/lib/pdfium/third_party -Wl,-R/usr/local/lib/pdfium/third_party -L/usr/lib/pdfium/third_party -Wl,-R/usr/lib/pdfium/third_party -L/usr/local/lib/third_party -Wl,-R/usr/local/lib/third_party -L/usr/lib/third_party -Wl,-R/usr/lib/third_party -L/usr/local/Cellar/pdfium/HEAD/lib -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib -L/usr/local/lib/pdfium -Wl,-R/usr/local/lib/pdfium -L/usr/lib/pdfium -Wl,-R/usr/lib/pdfium -L/usr/local/lib -Wl,-R/usr/local/lib -L/usr/lib -Wl,-R/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lfx_zlib -lfx_libopenjpeg -lfx_libjpeg -lfx_lcms2 -lfx_agg -lfx_freetype -lbigint -ljavascript  -Wl,-R -Wl,/opt/rubies/ruby-2.1.3/lib -L/opt/rubies/ruby-2.1.3/lib -lruby-static -lfxedit -lfx_zlib -lfx_libopenjpeg -lfx_libjpeg -lfx_lcms2 -lfx_agg -lfx_freetype -lbigint -ljavascript  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for main() in -lfxcrt... -------------------- yes
+
+"gcc -o conftest -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/x86_64-linux -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/ruby/backward -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0 -I. -I/usr/local/Cellar/pdfium/HEAD/include/public -I/usr/local/Cellar/pdfium/HEAD/include/core/include -I/usr/local/Cellar/pdfium/HEAD/include/fpdfsdk/include -I/usr/local/Cellar/pdfium/HEAD/include/third_party/base/numerics -I/usr/local/include/pdfium/public -I/usr/local/include/pdfium/core/include -I/usr/local/include/pdfium/fpdfsdk/include -I/usr/local/include/pdfium/third_party/base/numerics -I/usr/include/pdfium/public -I/usr/include/pdfium/core/include -I/usr/include/pdfium/fpdfsdk/include -I/usr/include/pdfium/third_party/base/numerics -I/usr/local/include/public -I/usr/local/include/core/include -I/usr/local/include/fpdfsdk/include -I/usr/local/include/third_party/base/numerics -I/usr/include/public -I/usr/include/core/include -I/usr/include/fpdfsdk/include -I/usr/include/third_party/base/numerics -I/usr/local/Cellar/pdfium/HEAD/include -I/usr/local/include/pdfium -I/usr/include/pdfium -I/usr/local/include/ -I/usr/include/     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration conftest.c  -L. -L/opt/rubies/ruby-2.1.3/lib -Wl,-R/opt/rubies/ruby-2.1.3/lib -L/usr/local/Cellar/pdfium/HEAD/lib/third_party -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib/third_party -L/usr/local/lib/pdfium/third_party -Wl,-R/usr/local/lib/pdfium/third_party -L/usr/lib/pdfium/third_party -Wl,-R/usr/lib/pdfium/third_party -L/usr/local/lib/third_party -Wl,-R/usr/local/lib/third_party -L/usr/lib/third_party -Wl,-R/usr/lib/third_party -L/usr/local/Cellar/pdfium/HEAD/lib -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib -L/usr/local/lib/pdfium -Wl,-R/usr/local/lib/pdfium -L/usr/lib/pdfium -Wl,-R/usr/lib/pdfium -L/usr/local/lib -Wl,-R/usr/local/lib -L/usr/lib -Wl,-R/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lfxedit -lfx_zlib -lfx_libopenjpeg -lfx_libjpeg -lfx_lcms2 -lfx_agg -lfx_freetype -lbigint -ljavascript  -Wl,-R -Wl,/opt/rubies/ruby-2.1.3/lib -L/opt/rubies/ruby-2.1.3/lib -lruby-static -lfxcrt -lfxedit -lfx_zlib -lfx_libopenjpeg -lfx_libjpeg -lfx_lcms2 -lfx_agg -lfx_freetype -lbigint -ljavascript  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for main() in -lfxcodec... -------------------- yes
+
+"gcc -o conftest -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/x86_64-linux -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/ruby/backward -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0 -I. -I/usr/local/Cellar/pdfium/HEAD/include/public -I/usr/local/Cellar/pdfium/HEAD/include/core/include -I/usr/local/Cellar/pdfium/HEAD/include/fpdfsdk/include -I/usr/local/Cellar/pdfium/HEAD/include/third_party/base/numerics -I/usr/local/include/pdfium/public -I/usr/local/include/pdfium/core/include -I/usr/local/include/pdfium/fpdfsdk/include -I/usr/local/include/pdfium/third_party/base/numerics -I/usr/include/pdfium/public -I/usr/include/pdfium/core/include -I/usr/include/pdfium/fpdfsdk/include -I/usr/include/pdfium/third_party/base/numerics -I/usr/local/include/public -I/usr/local/include/core/include -I/usr/local/include/fpdfsdk/include -I/usr/local/include/third_party/base/numerics -I/usr/include/public -I/usr/include/core/include -I/usr/include/fpdfsdk/include -I/usr/include/third_party/base/numerics -I/usr/local/Cellar/pdfium/HEAD/include -I/usr/local/include/pdfium -I/usr/include/pdfium -I/usr/local/include/ -I/usr/include/     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration conftest.c  -L. -L/opt/rubies/ruby-2.1.3/lib -Wl,-R/opt/rubies/ruby-2.1.3/lib -L/usr/local/Cellar/pdfium/HEAD/lib/third_party -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib/third_party -L/usr/local/lib/pdfium/third_party -Wl,-R/usr/local/lib/pdfium/third_party -L/usr/lib/pdfium/third_party -Wl,-R/usr/lib/pdfium/third_party -L/usr/local/lib/third_party -Wl,-R/usr/local/lib/third_party -L/usr/lib/third_party -Wl,-R/usr/lib/third_party -L/usr/local/Cellar/pdfium/HEAD/lib -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib -L/usr/local/lib/pdfium -Wl,-R/usr/local/lib/pdfium -L/usr/lib/pdfium -Wl,-R/usr/lib/pdfium -L/usr/local/lib -Wl,-R/usr/local/lib -L/usr/lib -Wl,-R/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lfxcrt -lfxedit -lfx_zlib -lfx_libopenjpeg -lfx_libjpeg -lfx_lcms2 -lfx_agg -lfx_freetype -lbigint -ljavascript  -Wl,-R -Wl,/opt/rubies/ruby-2.1.3/lib -L/opt/rubies/ruby-2.1.3/lib -lruby-static -lfxcodec -lfxcrt -lfxedit -lfx_zlib -lfx_libopenjpeg -lfx_libjpeg -lfx_lcms2 -lfx_agg -lfx_freetype -lbigint -ljavascript  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for main() in -lfxge... -------------------- yes
+
+"gcc -o conftest -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/x86_64-linux -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/ruby/backward -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0 -I. -I/usr/local/Cellar/pdfium/HEAD/include/public -I/usr/local/Cellar/pdfium/HEAD/include/core/include -I/usr/local/Cellar/pdfium/HEAD/include/fpdfsdk/include -I/usr/local/Cellar/pdfium/HEAD/include/third_party/base/numerics -I/usr/local/include/pdfium/public -I/usr/local/include/pdfium/core/include -I/usr/local/include/pdfium/fpdfsdk/include -I/usr/local/include/pdfium/third_party/base/numerics -I/usr/include/pdfium/public -I/usr/include/pdfium/core/include -I/usr/include/pdfium/fpdfsdk/include -I/usr/include/pdfium/third_party/base/numerics -I/usr/local/include/public -I/usr/local/include/core/include -I/usr/local/include/fpdfsdk/include -I/usr/local/include/third_party/base/numerics -I/usr/include/public -I/usr/include/core/include -I/usr/include/fpdfsdk/include -I/usr/include/third_party/base/numerics -I/usr/local/Cellar/pdfium/HEAD/include -I/usr/local/include/pdfium -I/usr/include/pdfium -I/usr/local/include/ -I/usr/include/     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration conftest.c  -L. -L/opt/rubies/ruby-2.1.3/lib -Wl,-R/opt/rubies/ruby-2.1.3/lib -L/usr/local/Cellar/pdfium/HEAD/lib/third_party -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib/third_party -L/usr/local/lib/pdfium/third_party -Wl,-R/usr/local/lib/pdfium/third_party -L/usr/lib/pdfium/third_party -Wl,-R/usr/lib/pdfium/third_party -L/usr/local/lib/third_party -Wl,-R/usr/local/lib/third_party -L/usr/lib/third_party -Wl,-R/usr/lib/third_party -L/usr/local/Cellar/pdfium/HEAD/lib -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib -L/usr/local/lib/pdfium -Wl,-R/usr/local/lib/pdfium -L/usr/lib/pdfium -Wl,-R/usr/lib/pdfium -L/usr/local/lib -Wl,-R/usr/local/lib -L/usr/lib -Wl,-R/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lfxcodec -lfxcrt -lfxedit -lfx_zlib -lfx_libopenjpeg -lfx_libjpeg -lfx_lcms2 -lfx_agg -lfx_freetype -lbigint -ljavascript  -Wl,-R -Wl,/opt/rubies/ruby-2.1.3/lib -L/opt/rubies/ruby-2.1.3/lib -lruby-static -lfxge -lfxcodec -lfxcrt -lfxedit -lfx_zlib -lfx_libopenjpeg -lfx_libjpeg -lfx_lcms2 -lfx_agg -lfx_freetype -lbigint -ljavascript  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for main() in -lfpdfdoc... -------------------- yes
+
+"gcc -o conftest -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/x86_64-linux -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/ruby/backward -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0 -I. -I/usr/local/Cellar/pdfium/HEAD/include/public -I/usr/local/Cellar/pdfium/HEAD/include/core/include -I/usr/local/Cellar/pdfium/HEAD/include/fpdfsdk/include -I/usr/local/Cellar/pdfium/HEAD/include/third_party/base/numerics -I/usr/local/include/pdfium/public -I/usr/local/include/pdfium/core/include -I/usr/local/include/pdfium/fpdfsdk/include -I/usr/local/include/pdfium/third_party/base/numerics -I/usr/include/pdfium/public -I/usr/include/pdfium/core/include -I/usr/include/pdfium/fpdfsdk/include -I/usr/include/pdfium/third_party/base/numerics -I/usr/local/include/public -I/usr/local/include/core/include -I/usr/local/include/fpdfsdk/include -I/usr/local/include/third_party/base/numerics -I/usr/include/public -I/usr/include/core/include -I/usr/include/fpdfsdk/include -I/usr/include/third_party/base/numerics -I/usr/local/Cellar/pdfium/HEAD/include -I/usr/local/include/pdfium -I/usr/include/pdfium -I/usr/local/include/ -I/usr/include/     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration conftest.c  -L. -L/opt/rubies/ruby-2.1.3/lib -Wl,-R/opt/rubies/ruby-2.1.3/lib -L/usr/local/Cellar/pdfium/HEAD/lib/third_party -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib/third_party -L/usr/local/lib/pdfium/third_party -Wl,-R/usr/local/lib/pdfium/third_party -L/usr/lib/pdfium/third_party -Wl,-R/usr/lib/pdfium/third_party -L/usr/local/lib/third_party -Wl,-R/usr/local/lib/third_party -L/usr/lib/third_party -Wl,-R/usr/lib/third_party -L/usr/local/Cellar/pdfium/HEAD/lib -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib -L/usr/local/lib/pdfium -Wl,-R/usr/local/lib/pdfium -L/usr/lib/pdfium -Wl,-R/usr/lib/pdfium -L/usr/local/lib -Wl,-R/usr/local/lib -L/usr/lib -Wl,-R/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lfxge -lfxcodec -lfxcrt -lfxedit -lfx_zlib -lfx_libopenjpeg -lfx_libjpeg -lfx_lcms2 -lfx_agg -lfx_freetype -lbigint -ljavascript  -Wl,-R -Wl,/opt/rubies/ruby-2.1.3/lib -L/opt/rubies/ruby-2.1.3/lib -lruby-static -lfpdfdoc -lfxge -lfxcodec -lfxcrt -lfxedit -lfx_zlib -lfx_libopenjpeg -lfx_libjpeg -lfx_lcms2 -lfx_agg -lfx_freetype -lbigint -ljavascript  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for main() in -lfpdftext... -------------------- yes
+
+"gcc -o conftest -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/x86_64-linux -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/ruby/backward -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0 -I. -I/usr/local/Cellar/pdfium/HEAD/include/public -I/usr/local/Cellar/pdfium/HEAD/include/core/include -I/usr/local/Cellar/pdfium/HEAD/include/fpdfsdk/include -I/usr/local/Cellar/pdfium/HEAD/include/third_party/base/numerics -I/usr/local/include/pdfium/public -I/usr/local/include/pdfium/core/include -I/usr/local/include/pdfium/fpdfsdk/include -I/usr/local/include/pdfium/third_party/base/numerics -I/usr/include/pdfium/public -I/usr/include/pdfium/core/include -I/usr/include/pdfium/fpdfsdk/include -I/usr/include/pdfium/third_party/base/numerics -I/usr/local/include/public -I/usr/local/include/core/include -I/usr/local/include/fpdfsdk/include -I/usr/local/include/third_party/base/numerics -I/usr/include/public -I/usr/include/core/include -I/usr/include/fpdfsdk/include -I/usr/include/third_party/base/numerics -I/usr/local/Cellar/pdfium/HEAD/include -I/usr/local/include/pdfium -I/usr/include/pdfium -I/usr/local/include/ -I/usr/include/     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration conftest.c  -L. -L/opt/rubies/ruby-2.1.3/lib -Wl,-R/opt/rubies/ruby-2.1.3/lib -L/usr/local/Cellar/pdfium/HEAD/lib/third_party -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib/third_party -L/usr/local/lib/pdfium/third_party -Wl,-R/usr/local/lib/pdfium/third_party -L/usr/lib/pdfium/third_party -Wl,-R/usr/lib/pdfium/third_party -L/usr/local/lib/third_party -Wl,-R/usr/local/lib/third_party -L/usr/lib/third_party -Wl,-R/usr/lib/third_party -L/usr/local/Cellar/pdfium/HEAD/lib -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib -L/usr/local/lib/pdfium -Wl,-R/usr/local/lib/pdfium -L/usr/lib/pdfium -Wl,-R/usr/lib/pdfium -L/usr/local/lib -Wl,-R/usr/local/lib -L/usr/lib -Wl,-R/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lfpdfdoc -lfxge -lfxcodec -lfxcrt -lfxedit -lfx_zlib -lfx_libopenjpeg -lfx_libjpeg -lfx_lcms2 -lfx_agg -lfx_freetype -lbigint -ljavascript  -Wl,-R -Wl,/opt/rubies/ruby-2.1.3/lib -L/opt/rubies/ruby-2.1.3/lib -lruby-static -lfpdftext -lfpdfdoc -lfxge -lfxcodec -lfxcrt -lfxedit -lfx_zlib -lfx_libopenjpeg -lfx_libjpeg -lfx_lcms2 -lfx_agg -lfx_freetype -lbigint -ljavascript  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for main() in -lformfiller... -------------------- yes
+
+"gcc -o conftest -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/x86_64-linux -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/ruby/backward -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0 -I. -I/usr/local/Cellar/pdfium/HEAD/include/public -I/usr/local/Cellar/pdfium/HEAD/include/core/include -I/usr/local/Cellar/pdfium/HEAD/include/fpdfsdk/include -I/usr/local/Cellar/pdfium/HEAD/include/third_party/base/numerics -I/usr/local/include/pdfium/public -I/usr/local/include/pdfium/core/include -I/usr/local/include/pdfium/fpdfsdk/include -I/usr/local/include/pdfium/third_party/base/numerics -I/usr/include/pdfium/public -I/usr/include/pdfium/core/include -I/usr/include/pdfium/fpdfsdk/include -I/usr/include/pdfium/third_party/base/numerics -I/usr/local/include/public -I/usr/local/include/core/include -I/usr/local/include/fpdfsdk/include -I/usr/local/include/third_party/base/numerics -I/usr/include/public -I/usr/include/core/include -I/usr/include/fpdfsdk/include -I/usr/include/third_party/base/numerics -I/usr/local/Cellar/pdfium/HEAD/include -I/usr/local/include/pdfium -I/usr/include/pdfium -I/usr/local/include/ -I/usr/include/     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration conftest.c  -L. -L/opt/rubies/ruby-2.1.3/lib -Wl,-R/opt/rubies/ruby-2.1.3/lib -L/usr/local/Cellar/pdfium/HEAD/lib/third_party -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib/third_party -L/usr/local/lib/pdfium/third_party -Wl,-R/usr/local/lib/pdfium/third_party -L/usr/lib/pdfium/third_party -Wl,-R/usr/lib/pdfium/third_party -L/usr/local/lib/third_party -Wl,-R/usr/local/lib/third_party -L/usr/lib/third_party -Wl,-R/usr/lib/third_party -L/usr/local/Cellar/pdfium/HEAD/lib -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib -L/usr/local/lib/pdfium -Wl,-R/usr/local/lib/pdfium -L/usr/lib/pdfium -Wl,-R/usr/lib/pdfium -L/usr/local/lib -Wl,-R/usr/local/lib -L/usr/lib -Wl,-R/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lfpdftext -lfpdfdoc -lfxge -lfxcodec -lfxcrt -lfxedit -lfx_zlib -lfx_libopenjpeg -lfx_libjpeg -lfx_lcms2 -lfx_agg -lfx_freetype -lbigint -ljavascript  -Wl,-R -Wl,/opt/rubies/ruby-2.1.3/lib -L/opt/rubies/ruby-2.1.3/lib -lruby-static -lformfiller -lfpdftext -lfpdfdoc -lfxge -lfxcodec -lfxcrt -lfxedit -lfx_zlib -lfx_libopenjpeg -lfx_libjpeg -lfx_lcms2 -lfx_agg -lfx_freetype -lbigint -ljavascript  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for main() in -lpdfwindow... -------------------- yes
+
+"gcc -o conftest -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/x86_64-linux -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/ruby/backward -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0 -I. -I/usr/local/Cellar/pdfium/HEAD/include/public -I/usr/local/Cellar/pdfium/HEAD/include/core/include -I/usr/local/Cellar/pdfium/HEAD/include/fpdfsdk/include -I/usr/local/Cellar/pdfium/HEAD/include/third_party/base/numerics -I/usr/local/include/pdfium/public -I/usr/local/include/pdfium/core/include -I/usr/local/include/pdfium/fpdfsdk/include -I/usr/local/include/pdfium/third_party/base/numerics -I/usr/include/pdfium/public -I/usr/include/pdfium/core/include -I/usr/include/pdfium/fpdfsdk/include -I/usr/include/pdfium/third_party/base/numerics -I/usr/local/include/public -I/usr/local/include/core/include -I/usr/local/include/fpdfsdk/include -I/usr/local/include/third_party/base/numerics -I/usr/include/public -I/usr/include/core/include -I/usr/include/fpdfsdk/include -I/usr/include/third_party/base/numerics -I/usr/local/Cellar/pdfium/HEAD/include -I/usr/local/include/pdfium -I/usr/include/pdfium -I/usr/local/include/ -I/usr/include/     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration conftest.c  -L. -L/opt/rubies/ruby-2.1.3/lib -Wl,-R/opt/rubies/ruby-2.1.3/lib -L/usr/local/Cellar/pdfium/HEAD/lib/third_party -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib/third_party -L/usr/local/lib/pdfium/third_party -Wl,-R/usr/local/lib/pdfium/third_party -L/usr/lib/pdfium/third_party -Wl,-R/usr/lib/pdfium/third_party -L/usr/local/lib/third_party -Wl,-R/usr/local/lib/third_party -L/usr/lib/third_party -Wl,-R/usr/lib/third_party -L/usr/local/Cellar/pdfium/HEAD/lib -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib -L/usr/local/lib/pdfium -Wl,-R/usr/local/lib/pdfium -L/usr/lib/pdfium -Wl,-R/usr/lib/pdfium -L/usr/local/lib -Wl,-R/usr/local/lib -L/usr/lib -Wl,-R/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lformfiller -lfpdftext -lfpdfdoc -lfxge -lfxcodec -lfxcrt -lfxedit -lfx_zlib -lfx_libopenjpeg -lfx_libjpeg -lfx_lcms2 -lfx_agg -lfx_freetype -lbigint -ljavascript  -Wl,-R -Wl,/opt/rubies/ruby-2.1.3/lib -L/opt/rubies/ruby-2.1.3/lib -lruby-static -lpdfwindow -lformfiller -lfpdftext -lfpdfdoc -lfxge -lfxcodec -lfxcrt -lfxedit -lfx_zlib -lfx_libopenjpeg -lfx_libjpeg -lfx_lcms2 -lfx_agg -lfx_freetype -lbigint -ljavascript  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for main() in -lfpdfdoc... -------------------- yes
+
+"gcc -o conftest -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/x86_64-linux -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/ruby/backward -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0 -I. -I/usr/local/Cellar/pdfium/HEAD/include/public -I/usr/local/Cellar/pdfium/HEAD/include/core/include -I/usr/local/Cellar/pdfium/HEAD/include/fpdfsdk/include -I/usr/local/Cellar/pdfium/HEAD/include/third_party/base/numerics -I/usr/local/include/pdfium/public -I/usr/local/include/pdfium/core/include -I/usr/local/include/pdfium/fpdfsdk/include -I/usr/local/include/pdfium/third_party/base/numerics -I/usr/include/pdfium/public -I/usr/include/pdfium/core/include -I/usr/include/pdfium/fpdfsdk/include -I/usr/include/pdfium/third_party/base/numerics -I/usr/local/include/public -I/usr/local/include/core/include -I/usr/local/include/fpdfsdk/include -I/usr/local/include/third_party/base/numerics -I/usr/include/public -I/usr/include/core/include -I/usr/include/fpdfsdk/include -I/usr/include/third_party/base/numerics -I/usr/local/Cellar/pdfium/HEAD/include -I/usr/local/include/pdfium -I/usr/include/pdfium -I/usr/local/include/ -I/usr/include/     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration conftest.c  -L. -L/opt/rubies/ruby-2.1.3/lib -Wl,-R/opt/rubies/ruby-2.1.3/lib -L/usr/local/Cellar/pdfium/HEAD/lib/third_party -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib/third_party -L/usr/local/lib/pdfium/third_party -Wl,-R/usr/local/lib/pdfium/third_party -L/usr/lib/pdfium/third_party -Wl,-R/usr/lib/pdfium/third_party -L/usr/local/lib/third_party -Wl,-R/usr/local/lib/third_party -L/usr/lib/third_party -Wl,-R/usr/lib/third_party -L/usr/local/Cellar/pdfium/HEAD/lib -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib -L/usr/local/lib/pdfium -Wl,-R/usr/local/lib/pdfium -L/usr/lib/pdfium -Wl,-R/usr/lib/pdfium -L/usr/local/lib -Wl,-R/usr/local/lib -L/usr/lib -Wl,-R/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lpdfwindow -lformfiller -lfpdftext -lfpdfdoc -lfxge -lfxcodec -lfxcrt -lfxedit -lfx_zlib -lfx_libopenjpeg -lfx_libjpeg -lfx_lcms2 -lfx_agg -lfx_freetype -lbigint -ljavascript  -Wl,-R -Wl,/opt/rubies/ruby-2.1.3/lib -L/opt/rubies/ruby-2.1.3/lib -lruby-static -lfpdfdoc -lpdfwindow -lformfiller -lfpdftext -lfpdfdoc -lfxge -lfxcodec -lfxcrt -lfxedit -lfx_zlib -lfx_libopenjpeg -lfx_libjpeg -lfx_lcms2 -lfx_agg -lfx_freetype -lbigint -ljavascript  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for main() in -lfdrm... -------------------- yes
+
+"gcc -o conftest -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/x86_64-linux -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/ruby/backward -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0 -I. -I/usr/local/Cellar/pdfium/HEAD/include/public -I/usr/local/Cellar/pdfium/HEAD/include/core/include -I/usr/local/Cellar/pdfium/HEAD/include/fpdfsdk/include -I/usr/local/Cellar/pdfium/HEAD/include/third_party/base/numerics -I/usr/local/include/pdfium/public -I/usr/local/include/pdfium/core/include -I/usr/local/include/pdfium/fpdfsdk/include -I/usr/local/include/pdfium/third_party/base/numerics -I/usr/include/pdfium/public -I/usr/include/pdfium/core/include -I/usr/include/pdfium/fpdfsdk/include -I/usr/include/pdfium/third_party/base/numerics -I/usr/local/include/public -I/usr/local/include/core/include -I/usr/local/include/fpdfsdk/include -I/usr/local/include/third_party/base/numerics -I/usr/include/public -I/usr/include/core/include -I/usr/include/fpdfsdk/include -I/usr/include/third_party/base/numerics -I/usr/local/Cellar/pdfium/HEAD/include -I/usr/local/include/pdfium -I/usr/include/pdfium -I/usr/local/include/ -I/usr/include/     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration conftest.c  -L. -L/opt/rubies/ruby-2.1.3/lib -Wl,-R/opt/rubies/ruby-2.1.3/lib -L/usr/local/Cellar/pdfium/HEAD/lib/third_party -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib/third_party -L/usr/local/lib/pdfium/third_party -Wl,-R/usr/local/lib/pdfium/third_party -L/usr/lib/pdfium/third_party -Wl,-R/usr/lib/pdfium/third_party -L/usr/local/lib/third_party -Wl,-R/usr/local/lib/third_party -L/usr/lib/third_party -Wl,-R/usr/lib/third_party -L/usr/local/Cellar/pdfium/HEAD/lib -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib -L/usr/local/lib/pdfium -Wl,-R/usr/local/lib/pdfium -L/usr/lib/pdfium -Wl,-R/usr/lib/pdfium -L/usr/local/lib -Wl,-R/usr/local/lib -L/usr/lib -Wl,-R/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lfpdfdoc -lpdfwindow -lformfiller -lfpdftext -lfpdfdoc -lfxge -lfxcodec -lfxcrt -lfxedit -lfx_zlib -lfx_libopenjpeg -lfx_libjpeg -lfx_lcms2 -lfx_agg -lfx_freetype -lbigint -ljavascript  -Wl,-R -Wl,/opt/rubies/ruby-2.1.3/lib -L/opt/rubies/ruby-2.1.3/lib -lruby-static -lfdrm -lfpdfdoc -lpdfwindow -lformfiller -lfpdftext -lfpdfdoc -lfxge -lfxcodec -lfxcrt -lfxedit -lfx_zlib -lfx_libopenjpeg -lfx_libjpeg -lfx_lcms2 -lfx_agg -lfx_freetype -lbigint -ljavascript  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for main() in -lfpdfapi... -------------------- yes
+
+"gcc -o conftest -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/x86_64-linux -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/ruby/backward -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0 -I. -I/usr/local/Cellar/pdfium/HEAD/include/public -I/usr/local/Cellar/pdfium/HEAD/include/core/include -I/usr/local/Cellar/pdfium/HEAD/include/fpdfsdk/include -I/usr/local/Cellar/pdfium/HEAD/include/third_party/base/numerics -I/usr/local/include/pdfium/public -I/usr/local/include/pdfium/core/include -I/usr/local/include/pdfium/fpdfsdk/include -I/usr/local/include/pdfium/third_party/base/numerics -I/usr/include/pdfium/public -I/usr/include/pdfium/core/include -I/usr/include/pdfium/fpdfsdk/include -I/usr/include/pdfium/third_party/base/numerics -I/usr/local/include/public -I/usr/local/include/core/include -I/usr/local/include/fpdfsdk/include -I/usr/local/include/third_party/base/numerics -I/usr/include/public -I/usr/include/core/include -I/usr/include/fpdfsdk/include -I/usr/include/third_party/base/numerics -I/usr/local/Cellar/pdfium/HEAD/include -I/usr/local/include/pdfium -I/usr/include/pdfium -I/usr/local/include/ -I/usr/include/     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration conftest.c  -L. -L/opt/rubies/ruby-2.1.3/lib -Wl,-R/opt/rubies/ruby-2.1.3/lib -L/usr/local/Cellar/pdfium/HEAD/lib/third_party -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib/third_party -L/usr/local/lib/pdfium/third_party -Wl,-R/usr/local/lib/pdfium/third_party -L/usr/lib/pdfium/third_party -Wl,-R/usr/lib/pdfium/third_party -L/usr/local/lib/third_party -Wl,-R/usr/local/lib/third_party -L/usr/lib/third_party -Wl,-R/usr/lib/third_party -L/usr/local/Cellar/pdfium/HEAD/lib -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib -L/usr/local/lib/pdfium -Wl,-R/usr/local/lib/pdfium -L/usr/lib/pdfium -Wl,-R/usr/lib/pdfium -L/usr/local/lib -Wl,-R/usr/local/lib -L/usr/lib -Wl,-R/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lfdrm -lfpdfdoc -lpdfwindow -lformfiller -lfpdftext -lfpdfdoc -lfxge -lfxcodec -lfxcrt -lfxedit -lfx_zlib -lfx_libopenjpeg -lfx_libjpeg -lfx_lcms2 -lfx_agg -lfx_freetype -lbigint -ljavascript  -Wl,-R -Wl,/opt/rubies/ruby-2.1.3/lib -L/opt/rubies/ruby-2.1.3/lib -lruby-static -lfpdfapi -lfdrm -lfpdfdoc -lpdfwindow -lformfiller -lfpdftext -lfpdfdoc -lfxge -lfxcodec -lfxcrt -lfxedit -lfx_zlib -lfx_libopenjpeg -lfx_libjpeg -lfx_lcms2 -lfx_agg -lfx_freetype -lbigint -ljavascript  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for main() in -lpdfium... -------------------- yes
+
+"gcc -o conftest -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/x86_64-linux -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/ruby/backward -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0 -I. -I/usr/local/Cellar/pdfium/HEAD/include/public -I/usr/local/Cellar/pdfium/HEAD/include/core/include -I/usr/local/Cellar/pdfium/HEAD/include/fpdfsdk/include -I/usr/local/Cellar/pdfium/HEAD/include/third_party/base/numerics -I/usr/local/include/pdfium/public -I/usr/local/include/pdfium/core/include -I/usr/local/include/pdfium/fpdfsdk/include -I/usr/local/include/pdfium/third_party/base/numerics -I/usr/include/pdfium/public -I/usr/include/pdfium/core/include -I/usr/include/pdfium/fpdfsdk/include -I/usr/include/pdfium/third_party/base/numerics -I/usr/local/include/public -I/usr/local/include/core/include -I/usr/local/include/fpdfsdk/include -I/usr/local/include/third_party/base/numerics -I/usr/include/public -I/usr/include/core/include -I/usr/include/fpdfsdk/include -I/usr/include/third_party/base/numerics -I/usr/local/Cellar/pdfium/HEAD/include -I/usr/local/include/pdfium -I/usr/include/pdfium -I/usr/local/include/ -I/usr/include/     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration conftest.c  -L. -L/opt/rubies/ruby-2.1.3/lib -Wl,-R/opt/rubies/ruby-2.1.3/lib -L/usr/local/Cellar/pdfium/HEAD/lib/third_party -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib/third_party -L/usr/local/lib/pdfium/third_party -Wl,-R/usr/local/lib/pdfium/third_party -L/usr/lib/pdfium/third_party -Wl,-R/usr/lib/pdfium/third_party -L/usr/local/lib/third_party -Wl,-R/usr/local/lib/third_party -L/usr/lib/third_party -Wl,-R/usr/lib/third_party -L/usr/local/Cellar/pdfium/HEAD/lib -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib -L/usr/local/lib/pdfium -Wl,-R/usr/local/lib/pdfium -L/usr/lib/pdfium -Wl,-R/usr/lib/pdfium -L/usr/local/lib -Wl,-R/usr/local/lib -L/usr/lib -Wl,-R/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lfpdfapi -lfdrm -lfpdfdoc -lpdfwindow -lformfiller -lfpdftext -lfpdfdoc -lfxge -lfxcodec -lfxcrt -lfxedit -lfx_zlib -lfx_libopenjpeg -lfx_libjpeg -lfx_lcms2 -lfx_agg -lfx_freetype -lbigint -ljavascript  -Wl,-R -Wl,/opt/rubies/ruby-2.1.3/lib -L/opt/rubies/ruby-2.1.3/lib -lruby-static -lpdfium -lfpdfapi -lfdrm -lfpdfdoc -lpdfwindow -lformfiller -lfpdftext -lfpdfdoc -lfxge -lfxcodec -lfxcrt -lfxedit -lfx_zlib -lfx_libopenjpeg -lfx_libjpeg -lfx_lcms2 -lfx_agg -lfx_freetype -lbigint -ljavascript  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for main() in -lpthread... -------------------- yes
+
+"gcc -o conftest -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/x86_64-linux -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/ruby/backward -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0 -I. -I/usr/local/Cellar/pdfium/HEAD/include/public -I/usr/local/Cellar/pdfium/HEAD/include/core/include -I/usr/local/Cellar/pdfium/HEAD/include/fpdfsdk/include -I/usr/local/Cellar/pdfium/HEAD/include/third_party/base/numerics -I/usr/local/include/pdfium/public -I/usr/local/include/pdfium/core/include -I/usr/local/include/pdfium/fpdfsdk/include -I/usr/local/include/pdfium/third_party/base/numerics -I/usr/include/pdfium/public -I/usr/include/pdfium/core/include -I/usr/include/pdfium/fpdfsdk/include -I/usr/include/pdfium/third_party/base/numerics -I/usr/local/include/public -I/usr/local/include/core/include -I/usr/local/include/fpdfsdk/include -I/usr/local/include/third_party/base/numerics -I/usr/include/public -I/usr/include/core/include -I/usr/include/fpdfsdk/include -I/usr/include/third_party/base/numerics -I/usr/local/Cellar/pdfium/HEAD/include -I/usr/local/include/pdfium -I/usr/include/pdfium -I/usr/local/include/ -I/usr/include/     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration conftest.c  -L. -L/opt/rubies/ruby-2.1.3/lib -Wl,-R/opt/rubies/ruby-2.1.3/lib -L/usr/local/Cellar/pdfium/HEAD/lib/third_party -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib/third_party -L/usr/local/lib/pdfium/third_party -Wl,-R/usr/local/lib/pdfium/third_party -L/usr/lib/pdfium/third_party -Wl,-R/usr/lib/pdfium/third_party -L/usr/local/lib/third_party -Wl,-R/usr/local/lib/third_party -L/usr/lib/third_party -Wl,-R/usr/lib/third_party -L/usr/local/Cellar/pdfium/HEAD/lib -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib -L/usr/local/lib/pdfium -Wl,-R/usr/local/lib/pdfium -L/usr/lib/pdfium -Wl,-R/usr/lib/pdfium -L/usr/local/lib -Wl,-R/usr/local/lib -L/usr/lib -Wl,-R/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lpdfium -lfpdfapi -lfdrm -lfpdfdoc -lpdfwindow -lformfiller -lfpdftext -lfpdfdoc -lfxge -lfxcodec -lfxcrt -lfxedit -lfx_zlib -lfx_libopenjpeg -lfx_libjpeg -lfx_lcms2 -lfx_agg -lfx_freetype -lbigint -ljavascript  -Wl,-R -Wl,/opt/rubies/ruby-2.1.3/lib -L/opt/rubies/ruby-2.1.3/lib -lruby-static -lpthread -lpdfium -lfpdfapi -lfdrm -lfpdfdoc -lpdfwindow -lformfiller -lfpdftext -lfpdfdoc -lfxge -lfxcodec -lfxcrt -lfxedit -lfx_zlib -lfx_libopenjpeg -lfx_libjpeg -lfx_lcms2 -lfx_agg -lfx_freetype -lbigint -ljavascript  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for main() in -lfreeimage... -------------------- yes
+
+"gcc -o conftest -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/x86_64-linux -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0/ruby/backward -I/opt/rubies/ruby-2.1.3/include/ruby-2.1.0 -I. -I/usr/local/Cellar/pdfium/HEAD/include/public -I/usr/local/Cellar/pdfium/HEAD/include/core/include -I/usr/local/Cellar/pdfium/HEAD/include/fpdfsdk/include -I/usr/local/Cellar/pdfium/HEAD/include/third_party/base/numerics -I/usr/local/include/pdfium/public -I/usr/local/include/pdfium/core/include -I/usr/local/include/pdfium/fpdfsdk/include -I/usr/local/include/pdfium/third_party/base/numerics -I/usr/include/pdfium/public -I/usr/include/pdfium/core/include -I/usr/include/pdfium/fpdfsdk/include -I/usr/include/pdfium/third_party/base/numerics -I/usr/local/include/public -I/usr/local/include/core/include -I/usr/local/include/fpdfsdk/include -I/usr/local/include/third_party/base/numerics -I/usr/include/public -I/usr/include/core/include -I/usr/include/fpdfsdk/include -I/usr/include/third_party/base/numerics -I/usr/local/Cellar/pdfium/HEAD/include -I/usr/local/include/pdfium -I/usr/include/pdfium -I/usr/local/include/ -I/usr/include/     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration conftest.c  -L. -L/opt/rubies/ruby-2.1.3/lib -Wl,-R/opt/rubies/ruby-2.1.3/lib -L/usr/local/Cellar/pdfium/HEAD/lib/third_party -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib/third_party -L/usr/local/lib/pdfium/third_party -Wl,-R/usr/local/lib/pdfium/third_party -L/usr/lib/pdfium/third_party -Wl,-R/usr/lib/pdfium/third_party -L/usr/local/lib/third_party -Wl,-R/usr/local/lib/third_party -L/usr/lib/third_party -Wl,-R/usr/lib/third_party -L/usr/local/Cellar/pdfium/HEAD/lib -Wl,-R/usr/local/Cellar/pdfium/HEAD/lib -L/usr/local/lib/pdfium -Wl,-R/usr/local/lib/pdfium -L/usr/lib/pdfium -Wl,-R/usr/lib/pdfium -L/usr/local/lib -Wl,-R/usr/local/lib -L/usr/lib -Wl,-R/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic    -lpthread -lpdfium -lfpdfapi -lfdrm -lfpdfdoc -lpdfwindow -lformfiller -lfpdftext -lfpdfdoc -lfxge -lfxcodec -lfxcrt -lfxedit -lfx_zlib -lfx_libopenjpeg -lfx_libjpeg -lfx_lcms2 -lfx_agg -lfx_freetype -lbigint -ljavascript  -Wl,-R -Wl,/opt/rubies/ruby-2.1.3/lib -L/opt/rubies/ruby-2.1.3/lib -lruby-static -lfreeimage -lpthread -lpdfium -lfpdfapi -lfdrm -lfpdfdoc -lpdfwindow -lformfiller -lfpdftext -lfpdfdoc -lfxge -lfxcodec -lfxcrt -lfxedit -lfx_zlib -lfx_libopenjpeg -lfx_libjpeg -lfx_lcms2 -lfx_agg -lfx_freetype -lbigint -ljavascript  -lpthread -lgmp -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+

@@ -1,0 +1,45 @@
+current directory: /home/ubuntu/sourceAFRICA/vendor/cache/gems/pdfshaver-0.0.3/ext/pdfium_ruby
+/home/ubuntu/.rvm/rubies/ruby-2.1.3/bin/ruby -r ./siteconf20160105-2297-kr5s7e.rb extconf.rb
+checking for main() in -ljavascript... yes
+checking for main() in -lbigint... yes
+checking for main() in -lfx_freetype... yes
+checking for main() in -lfx_agg... yes
+checking for main() in -lfx_lcms2... yes
+checking for main() in -lfx_libjpeg... no
+checking for main() in -ljpeg... yes
+checking for main() in -lfx_libopenjpeg... yes
+checking for main() in -lfx_zlib... yes
+checking for main() in -lfxedit... yes
+checking for main() in -lfxcrt... yes
+checking for main() in -lfxcodec... yes
+checking for main() in -lfxge... yes
+checking for main() in -lfpdfdoc... yes
+checking for main() in -lfpdftext... yes
+checking for main() in -lformfiller... yes
+checking for main() in -lpdfwindow... yes
+checking for main() in -lfpdfdoc... yes
+checking for main() in -lfdrm... yes
+checking for main() in -lfpdfapi... yes
+checking for main() in -lpdfium... yes
+checking for main() in -lpthread... yes
+checking for main() in -lfreeimage... yes
+creating Makefile
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /home/ubuntu/sourceAFRICA/vendor/cache/extensions/x86_64-linux/2.1.0/pdfshaver-0.0.3/mkmf.log
+
+current directory: /home/ubuntu/sourceAFRICA/vendor/cache/gems/pdfshaver-0.0.3/ext/pdfium_ruby
+make "DESTDIR=" clean
+
+current directory: /home/ubuntu/sourceAFRICA/vendor/cache/gems/pdfshaver-0.0.3/ext/pdfium_ruby
+make "DESTDIR="
+compiling document.cpp
+compiling pdfium_ruby.cpp
+compiling page.cpp
+linking shared-object pdfium_ruby.so
+
+current directory: /home/ubuntu/sourceAFRICA/vendor/cache/gems/pdfshaver-0.0.3/ext/pdfium_ruby
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 pdfium_ruby.so ./.gem.20160105-2297-12n2lkc
+installing default pdfium_ruby libraries
