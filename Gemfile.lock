@@ -21,17 +21,6 @@ GIT
       multi_json
       multi_xml
 
-GIT
-  remote: git@github.com:documentcloud/bull_proof_china_shop
-  revision: 708dd24c734f423b5305680e226a1c93b56f4328
-  branch: master
-  specs:
-    bull_proof_china_shop (0.0.1)
-      country_select (~> 2.2.0)
-      has_secure_token (~> 1.0.0)
-      rails (~> 4.2.3)
-      stripe (~> 1.24.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -173,8 +162,6 @@ GEM
     guard-minitest (2.4.4)
       guard-compat (~> 1.2)
       minitest (>= 3.0)
-    has_secure_token (1.0.0)
-      activerecord (>= 3.0)
     hashdiff (0.3.0)
     hashie (3.4.3)
     highline (1.7.8)
@@ -327,9 +314,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    stripe (1.24.0)
-      json (~> 1.8.1)
-      rest-client (~> 1.4)
     sunspot (2.2.0)
       pr_geohash (~> 1.0)
       rsolr (~> 1.0.7)
@@ -367,7 +351,6 @@ DEPENDENCIES
   actionpack-page_caching
   aws-sdk (~> 1.30)
   bcrypt (~> 3.1.1)
-  bull_proof_china_shop!
   byebug
   closure-compiler
   cloud-crowd (~> 0.7.6)
