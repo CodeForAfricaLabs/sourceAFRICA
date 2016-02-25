@@ -305,8 +305,7 @@ class ApplicationController < ActionController::Base
   # Generic error response helper. Defaults to 200 because never called directly
   def error_response(status=200, options={})
     options = {
-      :template => status, # Exists only for `doc_404`
-      :locals   => {}
+      :locals => {}
     }.merge(options)
 
     obj          = {}
@@ -316,7 +315,7 @@ class ApplicationController < ActionController::Base
     respond_to do |format|
       format.js   { render_cross_origin_json(obj, {:status => status}) }
       format.json { render_cross_origin_json(obj, {:status => status}) }
-      format.any  { render :file => "#{Rails.root}/public/#{options[:template]}.html", :locals => options[:locals], :status => status }
+      format.any  { render :file => "#{Rails.root}/public/#{options[:template]}.html", :locals => options[:locals], :status => status, :layout => nil }
     end
 
     false
