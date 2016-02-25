@@ -22,11 +22,12 @@ class DocumentsController < ApplicationController
     Account.login_reviewer(params[:key], session, cookies) if params[:key]
     doc = current_document(true)
     return forbidden if doc.nil? && Document.exists?(params[:id].to_i)
-    return not_found(:template => "doc_404") unless doc
+    return not_found unless doc
     options = {data: true}.merge(pick(params, :data))
     respond_to do |format|
       format.html do
-        @no_sidebar = (params[:sidebar] || '').match /no|false/
+        @sidebar    = !(params[:sidebar] || '').match(/no|false/)
+        @responsive = (params[:responsive] || '').match /yes|true/
         populate_editor_data if current_account && current_organization
         return if date_requested?
         return if entity_requested?
