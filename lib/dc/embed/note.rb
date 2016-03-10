@@ -41,8 +41,8 @@ module DC
 
       def content_markup
         template_options = {
-          :default_container_id => "DC-note-#{@resource.id}",
-          :resource_url         => @resource.resource_url
+          default_container_id: "DC-note-#{@resource.id}",
+          resource_url:         @resource.resource_url
         }
         template_options[:generate_default_container] = @embed_config[:container].nil? || @embed_config[:container].empty? || @embed_config[:container] == '#' + template_options[:default_container_id]
 
@@ -59,12 +59,12 @@ module DC
         <script>
         #{ERB.new(File.read("#{Rails.root}/app/views/annotations/oembed_loader.js.erb")).result(binding)}
         </script>
-        <script type="text/javascript" src="#{DC.cdn_root(:agnostic => true)}/note_embed/note_embed.js"></script>
+        <script type="text/javascript" src="#{DC.cdn_root(agnostic: true)}/note_embed/note_embed.js"></script>
         SCRIPT
       end
   
       def static_loader
-        %(<script type="text/javascript" src="#{DC.cdn_root(:agnostic => true)}/notes/loader.js"></script>)
+        %(<script type="text/javascript" src="#{DC.cdn_root(agnostic: true)}/notes/loader.js"></script>)
       end
   
       # intended for use in the static deployment to s3.
@@ -86,7 +86,7 @@ module DC
             :html             => code,
           }
         else
-          @resource.as_json.merge(:html => code)
+          @resource.as_json.merge(html: code)
         end
       end
     end
