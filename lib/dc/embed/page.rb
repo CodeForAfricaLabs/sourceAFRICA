@@ -50,7 +50,7 @@ module DC
 
       def content_markup
         template_options = {
-          :resource_url => @resource.resource_url
+          resource_url: @resource.resource_url
         }
 
         render(@embed_config.dump, template_options)
@@ -69,7 +69,7 @@ module DC
       end
   
       def static_loader
-        %(<script type="text/javascript" src="#{DC.cdn_root(:agnostic => true)}/embed/loader/enhance.js"></script>)
+        %(<script type="text/javascript" src="#{DC.cdn_root(agnostic: true)}/embed/loader/enhance.js"></script>)
       end
 
       # intended for use in the static deployment to s3.
@@ -91,7 +91,7 @@ module DC
             :html             => code,
           }
         else
-          @resource.as_json.merge(:html => code)
+          @resource.as_json.merge(html: code)
         end
       end
     end
