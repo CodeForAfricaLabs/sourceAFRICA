@@ -46,7 +46,7 @@ gem 'bootstrap_form',         git:    'https://github.com/documentcloud/rails-bo
 gem 'stripe',                 '~> 1.56.2'
 
 gem 'active_model_serializers', '~>0.9.0'
-gem 'passenger'
+gem 'passenger', '>= 5.3.2'
 gem 'descriptive_statistics'
 gem 'user_agent_parser'
 

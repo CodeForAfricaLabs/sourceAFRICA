@@ -1,15 +1,4 @@
 GIT
-  remote: git@github.com:documentcloud/bull_proof_china_shop
-  revision: 9cd0d29b25feb42e5a501db00ba56e66b99e42e4
-  branch: master
-  specs:
-    bull_proof_china_shop (0.0.1)
-      country_select (~> 2.2.0)
-      has_secure_token (~> 1.0.0)
-      rails (~> 4.2.3)
-      stripe (~> 1.56.2)
-
-GIT
   remote: https://github.com/documentcloud/jammit.git
   revision: 5ddcf9c415b2e3985628c35e2ea5bdf94a383284
   branch: master
@@ -182,8 +171,6 @@ GEM
     guard-minitest (2.4.6)
       guard-compat (~> 1.2)
       minitest (>= 3.0)
-    has_secure_token (1.0.0)
-      activerecord (>= 3.0)
     hashdiff (0.3.1)
     hashie (3.4.6)
     highline (1.7.8)
@@ -259,7 +246,7 @@ GEM
       omniauth-oauth (~> 1.1)
     options (2.3.2)
     os (0.9.6)
-    passenger (5.0.30)
+    passenger (6.0.2)
       rack
       rake (>= 0.8.1)
     pdfshaver (0.0.3)
@@ -277,7 +264,7 @@ GEM
       pry (~> 0.9)
       slop (~> 3.0)
     public_suffix (2.0.4)
-    rack (1.6.5)
+    rack (1.6.11)
     rack-protection (1.5.3)
       rack
     rack-test (0.6.3)
@@ -306,7 +293,7 @@ GEM
       activesupport (= 4.2.7.1)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    rake (12.0.0)
+    rake (12.3.2)
     rb-fsevent (0.9.8)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
@@ -412,7 +399,7 @@ DEPENDENCIES
   omniauth-google-oauth2 (~> 0.2)
   omniauth-twitter (~> 1.0)
   open_calais!
-  passenger
+  passenger (>= 5.3.2)
   pdfshaver (>= 0.0.2)
   pdftailor
   pg
@@ -436,4 +423,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-   1.14.6
+   1.17.3
